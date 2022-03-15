@@ -2,4 +2,8 @@
 EWARM/*
 cmake-build-debug/*
 .vscode/*
-.build/*
+build/*
+.clang-format
+.cproject.bak
+.mxproject
+.project.bak
