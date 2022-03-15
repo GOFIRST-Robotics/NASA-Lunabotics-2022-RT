@@ -1,0 +1,314 @@
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccihyXHq.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"buffer.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.buffer_pop_int32,"ax",%progbits
+  20              		.align	1
+  21              		.global	buffer_pop_int32
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	buffer_pop_int32:
+  27              	.LVL0:
+  28              	.LFB0:
+  29              		.file 1 "Src/buffer.c"
+   1:Src/buffer.c  **** #include "buffer.h"
+   2:Src/buffer.c  **** 
+   3:Src/buffer.c  **** S32 buffer_pop_int32(U8 const* buffer, S32* index) {
+  30              		.loc 1 3 52 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		@ link register save eliminated.
+  35              		.loc 1 3 52 is_stmt 0 view .LVU1
+  36 0000 10B4     		push	{r4}
+  37              	.LCFI0:
+  38              		.cfi_def_cfa_offset 4
+  39              		.cfi_offset 4, -4
+   4:Src/buffer.c  ****   S32 buf;
+  40              		.loc 1 4 3 is_stmt 1 view .LVU2
+   5:Src/buffer.c  ****   buf = buffer[(*index)++] << 24;
+  41              		.loc 1 5 3 view .LVU3
+  42              		.loc 1 5 17 is_stmt 0 view .LVU4
+  43 0002 0B68     		ldr	r3, [r1]
+  44              		.loc 1 5 24 view .LVU5
+  45 0004 5A1C     		adds	r2, r3, #1
+  46 0006 0A60     		str	r2, [r1]
+  47              		.loc 1 5 15 view .LVU6
+  48 0008 10F803C0 		ldrb	ip, [r0, r3]	@ zero_extendqisi2
+  49              	.LVL1:
+   6:Src/buffer.c  ****   buf |= buffer[(*index)++] << 16;
+  50              		.loc 1 6 3 is_stmt 1 view .LVU7
+  51              		.loc 1 6 25 is_stmt 0 view .LVU8
+  52 000c 9C1C     		adds	r4, r3, #2
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccihyXHq.s 			page 2
+
+
+  53 000e 0C60     		str	r4, [r1]
+  54              		.loc 1 6 16 view .LVU9
+  55 0010 835C     		ldrb	r3, [r0, r2]	@ zero_extendqisi2
+  56              		.loc 1 6 29 view .LVU10
+  57 0012 1B04     		lsls	r3, r3, #16
+  58              		.loc 1 6 7 view .LVU11
+  59 0014 43EA0C63 		orr	r3, r3, ip, lsl #24
+  60              	.LVL2:
+   7:Src/buffer.c  ****   buf |= buffer[(*index)++] << 8;
+  61              		.loc 1 7 3 is_stmt 1 view .LVU12
+  62              		.loc 1 7 25 is_stmt 0 view .LVU13
+  63 0018 0232     		adds	r2, r2, #2
+  64 001a 0A60     		str	r2, [r1]
+  65              		.loc 1 7 16 view .LVU14
+  66 001c 045D     		ldrb	r4, [r0, r4]	@ zero_extendqisi2
+  67              		.loc 1 7 7 view .LVU15
+  68 001e 43EA0423 		orr	r3, r3, r4, lsl #8
+  69              	.LVL3:
+   8:Src/buffer.c  ****   buf |= buffer[(*index)++];
+  70              		.loc 1 8 3 is_stmt 1 view .LVU16
+  71              		.loc 1 8 25 is_stmt 0 view .LVU17
+  72 0022 541C     		adds	r4, r2, #1
+  73 0024 0C60     		str	r4, [r1]
+  74              		.loc 1 8 16 view .LVU18
+  75 0026 805C     		ldrb	r0, [r0, r2]	@ zero_extendqisi2
+  76              	.LVL4:
+   9:Src/buffer.c  ****   return buf;
+  77              		.loc 1 9 3 is_stmt 1 view .LVU19
+  10:Src/buffer.c  **** }
+  78              		.loc 1 10 1 is_stmt 0 view .LVU20
+  79 0028 1843     		orrs	r0, r0, r3
+  80              	.LVL5:
+  81              		.loc 1 10 1 view .LVU21
+  82 002a 5DF8044B 		ldr	r4, [sp], #4
+  83              	.LCFI1:
+  84              		.cfi_restore 4
+  85              		.cfi_def_cfa_offset 0
+  86 002e 7047     		bx	lr
+  87              		.cfi_endproc
+  88              	.LFE0:
+  90              		.section	.text.buffer_pop_int16,"ax",%progbits
+  91              		.align	1
+  92              		.global	buffer_pop_int16
+  93              		.syntax unified
+  94              		.thumb
+  95              		.thumb_func
+  97              	buffer_pop_int16:
+  98              	.LVL6:
+  99              	.LFB1:
+  11:Src/buffer.c  **** 
+  12:Src/buffer.c  **** int16_t buffer_pop_int16(U8 const* buffer, S32* index) {
+ 100              		.loc 1 12 56 is_stmt 1 view -0
+ 101              		.cfi_startproc
+ 102              		@ args = 0, pretend = 0, frame = 0
+ 103              		@ frame_needed = 0, uses_anonymous_args = 0
+ 104              		@ link register save eliminated.
+ 105              		.loc 1 12 56 is_stmt 0 view .LVU23
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccihyXHq.s 			page 3
+
+
+ 106 0000 10B4     		push	{r4}
+ 107              	.LCFI2:
+ 108              		.cfi_def_cfa_offset 4
+ 109              		.cfi_offset 4, -4
+  13:Src/buffer.c  ****   int16_t buf;
+ 110              		.loc 1 13 3 is_stmt 1 view .LVU24
+  14:Src/buffer.c  ****   buf |= buffer[(*index)++] << 8;
+ 111              		.loc 1 14 3 view .LVU25
+ 112              		.loc 1 14 18 is_stmt 0 view .LVU26
+ 113 0002 0B68     		ldr	r3, [r1]
+ 114              		.loc 1 14 25 view .LVU27
+ 115 0004 5A1C     		adds	r2, r3, #1
+ 116 0006 0A60     		str	r2, [r1]
+ 117              		.loc 1 14 16 view .LVU28
+ 118 0008 C35C     		ldrb	r3, [r0, r3]	@ zero_extendqisi2
+ 119              		.loc 1 14 29 view .LVU29
+ 120 000a 1B02     		lsls	r3, r3, #8
+ 121              		.loc 1 14 7 view .LVU30
+ 122 000c 1BB2     		sxth	r3, r3
+ 123              	.LVL7:
+  15:Src/buffer.c  ****   buf |= buffer[(*index)++];
+ 124              		.loc 1 15 3 is_stmt 1 view .LVU31
+ 125              		.loc 1 15 25 is_stmt 0 view .LVU32
+ 126 000e 541C     		adds	r4, r2, #1
+ 127 0010 0C60     		str	r4, [r1]
+ 128              		.loc 1 15 16 view .LVU33
+ 129 0012 805C     		ldrb	r0, [r0, r2]	@ zero_extendqisi2
+ 130              	.LVL8:
+  16:Src/buffer.c  ****   return buf;
+ 131              		.loc 1 16 3 is_stmt 1 view .LVU34
+  17:Src/buffer.c  **** }
+ 132              		.loc 1 17 1 is_stmt 0 view .LVU35
+ 133 0014 1843     		orrs	r0, r0, r3
+ 134              	.LVL9:
+ 135              		.loc 1 17 1 view .LVU36
+ 136 0016 5DF8044B 		ldr	r4, [sp], #4
+ 137              	.LCFI3:
+ 138              		.cfi_restore 4
+ 139              		.cfi_def_cfa_offset 0
+ 140 001a 7047     		bx	lr
+ 141              		.cfi_endproc
+ 142              	.LFE1:
+ 144              		.section	.text.buffer_put_int32,"ax",%progbits
+ 145              		.align	1
+ 146              		.global	buffer_put_int32
+ 147              		.syntax unified
+ 148              		.thumb
+ 149              		.thumb_func
+ 151              	buffer_put_int32:
+ 152              	.LVL10:
+ 153              	.LFB2:
+  18:Src/buffer.c  **** 
+  19:Src/buffer.c  **** void buffer_put_int32(U8* buffer, S32* index, S32 const value) {
+ 154              		.loc 1 19 64 is_stmt 1 view -0
+ 155              		.cfi_startproc
+ 156              		@ args = 0, pretend = 0, frame = 0
+ 157              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccihyXHq.s 			page 4
+
+
+ 158              		@ link register save eliminated.
+ 159              		.loc 1 19 64 is_stmt 0 view .LVU38
+ 160 0000 30B4     		push	{r4, r5}
+ 161              	.LCFI4:
+ 162              		.cfi_def_cfa_offset 8
+ 163              		.cfi_offset 4, -8
+ 164              		.cfi_offset 5, -4
+  20:Src/buffer.c  ****   buffer[(*index)++] = value >> 24u;
+ 165              		.loc 1 20 3 is_stmt 1 view .LVU39
+ 166              		.loc 1 20 30 is_stmt 0 view .LVU40
+ 167 0002 1416     		asrs	r4, r2, #24
+ 168              		.loc 1 20 11 view .LVU41
+ 169 0004 0B68     		ldr	r3, [r1]
+ 170              		.loc 1 20 18 view .LVU42
+ 171 0006 5D1C     		adds	r5, r3, #1
+ 172 0008 0D60     		str	r5, [r1]
+ 173              		.loc 1 20 22 view .LVU43
+ 174 000a C454     		strb	r4, [r0, r3]
+  21:Src/buffer.c  ****   buffer[(*index)++] = value >> 16u;
+ 175              		.loc 1 21 3 is_stmt 1 view .LVU44
+ 176              		.loc 1 21 30 is_stmt 0 view .LVU45
+ 177 000c 1414     		asrs	r4, r2, #16
+ 178              		.loc 1 21 11 view .LVU46
+ 179 000e 0B68     		ldr	r3, [r1]
+ 180              		.loc 1 21 18 view .LVU47
+ 181 0010 5D1C     		adds	r5, r3, #1
+ 182 0012 0D60     		str	r5, [r1]
+ 183              		.loc 1 21 22 view .LVU48
+ 184 0014 C454     		strb	r4, [r0, r3]
+  22:Src/buffer.c  ****   buffer[(*index)++] = value >> 8u;
+ 185              		.loc 1 22 3 is_stmt 1 view .LVU49
+ 186              		.loc 1 22 30 is_stmt 0 view .LVU50
+ 187 0016 1412     		asrs	r4, r2, #8
+ 188              		.loc 1 22 11 view .LVU51
+ 189 0018 0B68     		ldr	r3, [r1]
+ 190              		.loc 1 22 18 view .LVU52
+ 191 001a 5D1C     		adds	r5, r3, #1
+ 192 001c 0D60     		str	r5, [r1]
+ 193              		.loc 1 22 22 view .LVU53
+ 194 001e C454     		strb	r4, [r0, r3]
+  23:Src/buffer.c  ****   buffer[(*index)++] = value;
+ 195              		.loc 1 23 3 is_stmt 1 view .LVU54
+ 196              		.loc 1 23 11 is_stmt 0 view .LVU55
+ 197 0020 0B68     		ldr	r3, [r1]
+ 198              		.loc 1 23 18 view .LVU56
+ 199 0022 5C1C     		adds	r4, r3, #1
+ 200 0024 0C60     		str	r4, [r1]
+ 201              		.loc 1 23 22 view .LVU57
+ 202 0026 C254     		strb	r2, [r0, r3]
+  24:Src/buffer.c  **** }
+ 203              		.loc 1 24 1 view .LVU58
+ 204 0028 30BC     		pop	{r4, r5}
+ 205              	.LCFI5:
+ 206              		.cfi_restore 5
+ 207              		.cfi_restore 4
+ 208              		.cfi_def_cfa_offset 0
+ 209 002a 7047     		bx	lr
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccihyXHq.s 			page 5
+
+
+ 210              		.cfi_endproc
+ 211              	.LFE2:
+ 213              		.section	.text.buffer_put_int16,"ax",%progbits
+ 214              		.align	1
+ 215              		.global	buffer_put_int16
+ 216              		.syntax unified
+ 217              		.thumb
+ 218              		.thumb_func
+ 220              	buffer_put_int16:
+ 221              	.LVL11:
+ 222              	.LFB3:
+  25:Src/buffer.c  **** 
+  26:Src/buffer.c  **** void buffer_put_int16(U8* buffer, S32* index, S16 const value) {
+ 223              		.loc 1 26 64 is_stmt 1 view -0
+ 224              		.cfi_startproc
+ 225              		@ args = 0, pretend = 0, frame = 0
+ 226              		@ frame_needed = 0, uses_anonymous_args = 0
+ 227              		@ link register save eliminated.
+ 228              		.loc 1 26 64 is_stmt 0 view .LVU60
+ 229 0000 10B4     		push	{r4}
+ 230              	.LCFI6:
+ 231              		.cfi_def_cfa_offset 4
+ 232              		.cfi_offset 4, -4
+  27:Src/buffer.c  ****   buffer[(*index)++] = value >> 8u;
+ 233              		.loc 1 27 3 is_stmt 1 view .LVU61
+ 234              		.loc 1 27 11 is_stmt 0 view .LVU62
+ 235 0002 0B68     		ldr	r3, [r1]
+ 236              		.loc 1 27 18 view .LVU63
+ 237 0004 5C1C     		adds	r4, r3, #1
+ 238 0006 0C60     		str	r4, [r1]
+ 239              		.loc 1 27 22 view .LVU64
+ 240 0008 1412     		asrs	r4, r2, #8
+ 241 000a C454     		strb	r4, [r0, r3]
+  28:Src/buffer.c  ****   buffer[(*index)++] = value;
+ 242              		.loc 1 28 3 is_stmt 1 view .LVU65
+ 243              		.loc 1 28 11 is_stmt 0 view .LVU66
+ 244 000c 0B68     		ldr	r3, [r1]
+ 245              		.loc 1 28 18 view .LVU67
+ 246 000e 5C1C     		adds	r4, r3, #1
+ 247 0010 0C60     		str	r4, [r1]
+ 248              		.loc 1 28 22 view .LVU68
+ 249 0012 C254     		strb	r2, [r0, r3]
+  29:Src/buffer.c  **** }...
+ 250              		.loc 1 29 1 view .LVU69
+ 251 0014 5DF8044B 		ldr	r4, [sp], #4
+ 252              	.LCFI7:
+ 253              		.cfi_restore 4
+ 254              		.cfi_def_cfa_offset 0
+ 255 0018 7047     		bx	lr
+ 256              		.cfi_endproc
+ 257              	.LFE3:
+ 259              		.text
+ 260              	.Letext0:
+ 261              		.file 2 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\\
+ 262              		.file 3 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\\
+ 263              		.file 4 "Inc/types.h"
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccihyXHq.s 			page 6
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 buffer.c
+C:\Users\jmbli\AppData\Local\Temp\ccihyXHq.s:20     .text.buffer_pop_int32:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccihyXHq.s:26     .text.buffer_pop_int32:00000000 buffer_pop_int32
+C:\Users\jmbli\AppData\Local\Temp\ccihyXHq.s:91     .text.buffer_pop_int16:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccihyXHq.s:97     .text.buffer_pop_int16:00000000 buffer_pop_int16
+C:\Users\jmbli\AppData\Local\Temp\ccihyXHq.s:145    .text.buffer_put_int32:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccihyXHq.s:151    .text.buffer_put_int32:00000000 buffer_put_int32
+C:\Users\jmbli\AppData\Local\Temp\ccihyXHq.s:214    .text.buffer_put_int16:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccihyXHq.s:220    .text.buffer_put_int16:00000000 buffer_put_int16
+
+NO UNDEFINED SYMBOLS

@@ -1,0 +1,171 @@
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccGd0VJJ.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"freertos.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.vApplicationGetIdleTaskMemory,"ax",%progbits
+  20              		.align	1
+  21              		.global	vApplicationGetIdleTaskMemory
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	vApplicationGetIdleTaskMemory:
+  27              	.LVL0:
+  28              	.LFB135:
+  29              		.file 1 "Src/freertos.c"
+   1:Src/freertos.c **** /* USER CODE BEGIN Header */
+   2:Src/freertos.c **** /**
+   3:Src/freertos.c ****  ******************************************************************************
+   4:Src/freertos.c ****  * File Name          : freertos.c
+   5:Src/freertos.c ****  * Description        : Code for freertos applications
+   6:Src/freertos.c ****  ******************************************************************************
+   7:Src/freertos.c ****  * @attention
+   8:Src/freertos.c ****  *
+   9:Src/freertos.c ****  * <h2><center>&copy; Copyright (c) 2019 STMicroelectronics.
+  10:Src/freertos.c ****  * All rights reserved.</center></h2>
+  11:Src/freertos.c ****  *
+  12:Src/freertos.c ****  * This software component is licensed by ST under Ultimate Liberty license
+  13:Src/freertos.c ****  * SLA0044, the "License"; You may not use this file except in compliance with
+  14:Src/freertos.c ****  * the License. You may obtain a copy of the License at:
+  15:Src/freertos.c ****  *                             www.st.com/SLA0044
+  16:Src/freertos.c ****  *
+  17:Src/freertos.c ****  ******************************************************************************
+  18:Src/freertos.c ****  */
+  19:Src/freertos.c **** /* USER CODE END Header */
+  20:Src/freertos.c **** 
+  21:Src/freertos.c **** /* Includes ------------------------------------------------------------------*/
+  22:Src/freertos.c **** #include "FreeRTOS.h"
+  23:Src/freertos.c **** #include "task.h"
+  24:Src/freertos.c **** #include "main.h"
+  25:Src/freertos.c **** 
+  26:Src/freertos.c **** /* Private includes ----------------------------------------------------------*/
+  27:Src/freertos.c **** /* USER CODE BEGIN Includes */
+  28:Src/freertos.c **** 
+  29:Src/freertos.c **** /* USER CODE END Includes */
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccGd0VJJ.s 			page 2
+
+
+  30:Src/freertos.c **** 
+  31:Src/freertos.c **** /* Private typedef -----------------------------------------------------------*/
+  32:Src/freertos.c **** /* USER CODE BEGIN PTD */
+  33:Src/freertos.c **** 
+  34:Src/freertos.c **** /* USER CODE END PTD */
+  35:Src/freertos.c **** 
+  36:Src/freertos.c **** /* Private define ------------------------------------------------------------*/
+  37:Src/freertos.c **** /* USER CODE BEGIN PD */
+  38:Src/freertos.c **** 
+  39:Src/freertos.c **** /* USER CODE END PD */
+  40:Src/freertos.c **** 
+  41:Src/freertos.c **** /* Private macro -------------------------------------------------------------*/
+  42:Src/freertos.c **** /* USER CODE BEGIN PM */
+  43:Src/freertos.c **** 
+  44:Src/freertos.c **** /* USER CODE END PM */
+  45:Src/freertos.c **** 
+  46:Src/freertos.c **** /* Private variables ---------------------------------------------------------*/
+  47:Src/freertos.c **** /* USER CODE BEGIN Variables */
+  48:Src/freertos.c **** 
+  49:Src/freertos.c **** /* USER CODE END Variables */
+  50:Src/freertos.c **** 
+  51:Src/freertos.c **** /* Private function prototypes -----------------------------------------------*/
+  52:Src/freertos.c **** /* USER CODE BEGIN FunctionPrototypes */
+  53:Src/freertos.c **** 
+  54:Src/freertos.c **** /* USER CODE END FunctionPrototypes */
+  55:Src/freertos.c **** 
+  56:Src/freertos.c **** /* GetIdleTaskMemory prototype (linked to static allocation support) */
+  57:Src/freertos.c **** void vApplicationGetIdleTaskMemory( StaticTask_t **ppxIdleTaskTCBBuffer, StackType_t **ppxIdleTaskS
+  58:Src/freertos.c **** 
+  59:Src/freertos.c **** /* USER CODE BEGIN GET_IDLE_TASK_MEMORY */
+  60:Src/freertos.c **** static StaticTask_t xIdleTaskTCBBuffer;
+  61:Src/freertos.c **** static StackType_t xIdleStack[configMINIMAL_STACK_SIZE];
+  62:Src/freertos.c **** 
+  63:Src/freertos.c **** void vApplicationGetIdleTaskMemory(StaticTask_t **ppxIdleTaskTCBBuffer,
+  64:Src/freertos.c ****                                    StackType_t **ppxIdleTaskStackBuffer,
+  65:Src/freertos.c ****                                    uint32_t *pulIdleTaskStackSize) {
+  30              		.loc 1 65 68 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		@ link register save eliminated.
+  66:Src/freertos.c ****   *ppxIdleTaskTCBBuffer = &xIdleTaskTCBBuffer;
+  35              		.loc 1 66 3 view .LVU1
+  36              		.loc 1 66 25 is_stmt 0 view .LVU2
+  37 0000 034B     		ldr	r3, .L2
+  38 0002 0360     		str	r3, [r0]
+  67:Src/freertos.c ****   *ppxIdleTaskStackBuffer = &xIdleStack[0];
+  39              		.loc 1 67 3 is_stmt 1 view .LVU3
+  40              		.loc 1 67 27 is_stmt 0 view .LVU4
+  41 0004 034B     		ldr	r3, .L2+4
+  42 0006 0B60     		str	r3, [r1]
+  68:Src/freertos.c ****   *pulIdleTaskStackSize = configMINIMAL_STACK_SIZE;
+  43              		.loc 1 68 3 is_stmt 1 view .LVU5
+  44              		.loc 1 68 25 is_stmt 0 view .LVU6
+  45 0008 8023     		movs	r3, #128
+  46 000a 1360     		str	r3, [r2]
+  69:Src/freertos.c ****   /* place for user code */
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccGd0VJJ.s 			page 3
+
+
+  70:Src/freertos.c **** }
+  47              		.loc 1 70 1 view .LVU7
+  48 000c 7047     		bx	lr
+  49              	.L3:
+  50 000e 00BF     		.align	2
+  51              	.L2:
+  52 0010 00000000 		.word	.LANCHOR0
+  53 0014 00000000 		.word	.LANCHOR1
+  54              		.cfi_endproc
+  55              	.LFE135:
+  57              		.section	.bss.xIdleStack,"aw",%nobits
+  58              		.align	2
+  59              		.set	.LANCHOR1,. + 0
+  62              	xIdleStack:
+  63 0000 00000000 		.space	512
+  63      00000000 
+  63      00000000 
+  63      00000000 
+  63      00000000 
+  64              		.section	.bss.xIdleTaskTCBBuffer,"aw",%nobits
+  65              		.align	2
+  66              		.set	.LANCHOR0,. + 0
+  69              	xIdleTaskTCBBuffer:
+  70 0000 00000000 		.space	84
+  70      00000000 
+  70      00000000 
+  70      00000000 
+  70      00000000 
+  71              		.text
+  72              	.Letext0:
+  73              		.file 2 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\\
+  74              		.file 3 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\\
+  75              		.file 4 "Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h"
+  76              		.file 5 "Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h"
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccGd0VJJ.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 freertos.c
+C:\Users\jmbli\AppData\Local\Temp\ccGd0VJJ.s:20     .text.vApplicationGetIdleTaskMemory:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccGd0VJJ.s:26     .text.vApplicationGetIdleTaskMemory:00000000 vApplicationGetIdleTaskMemory
+C:\Users\jmbli\AppData\Local\Temp\ccGd0VJJ.s:52     .text.vApplicationGetIdleTaskMemory:00000010 $d
+C:\Users\jmbli\AppData\Local\Temp\ccGd0VJJ.s:58     .bss.xIdleStack:00000000 $d
+C:\Users\jmbli\AppData\Local\Temp\ccGd0VJJ.s:62     .bss.xIdleStack:00000000 xIdleStack
+C:\Users\jmbli\AppData\Local\Temp\ccGd0VJJ.s:65     .bss.xIdleTaskTCBBuffer:00000000 $d
+C:\Users\jmbli\AppData\Local\Temp\ccGd0VJJ.s:69     .bss.xIdleTaskTCBBuffer:00000000 xIdleTaskTCBBuffer
+
+NO UNDEFINED SYMBOLS

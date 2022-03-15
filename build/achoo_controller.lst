@@ -1,0 +1,647 @@
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cca1EcVn.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"achoo_controller.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.achooCANCallback,"ax",%progbits
+  20              		.align	1
+  21              		.global	achooCANCallback
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	achooCANCallback:
+  27              	.LFB135:
+  28              		.file 1 "Src/achoo_controller.c"
+   1:Src/achoo_controller.c **** //
+   2:Src/achoo_controller.c **** // Created by julia on 11/5/19.
+   3:Src/achoo_controller.c **** //
+   4:Src/achoo_controller.c **** 
+   5:Src/achoo_controller.c **** #include "achoo_controller.h"
+   6:Src/achoo_controller.c **** #include <can_manager.h>
+   7:Src/achoo_controller.c **** #include <main.h>
+   8:Src/achoo_controller.c **** #include <rt_conf.h>
+   9:Src/achoo_controller.c **** #include "VESC.h"
+  10:Src/achoo_controller.c **** 
+  11:Src/achoo_controller.c **** #include <FreeRTOS.h>
+  12:Src/achoo_controller.c **** #include <stm32f3xx_hal_conf.h>
+  13:Src/achoo_controller.c **** #include <task.h>
+  14:Src/achoo_controller.c **** 
+  15:Src/achoo_controller.c **** static KneelState targetState = KNEELING;
+  16:Src/achoo_controller.c **** static KneelState currentState = KNEELING;
+  17:Src/achoo_controller.c **** VESC* leftMotor;
+  18:Src/achoo_controller.c **** VESC* rightMotor;
+  19:Src/achoo_controller.c **** 
+  20:Src/achoo_controller.c **** void achooCANCallback(rmc_can_msg msg) {
+  29              		.loc 1 20 40 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 16
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33              		@ link register save eliminated.
+  34 0000 84B0     		sub	sp, sp, #16
+  35              	.LCFI0:
+  36              		.cfi_def_cfa_offset 16
+  37 0002 0DF1100C 		add	ip, sp, #16
+  38 0006 0CE90F00 		stmdb	ip, {r0, r1, r2, r3}
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cca1EcVn.s 			page 2
+
+
+  21:Src/achoo_controller.c ****   // Because of the mask we only get messages that have our ID
+  22:Src/achoo_controller.c ****   U32 msg_type = msg.id >> 8u;
+  39              		.loc 1 22 3 view .LVU1
+  40              		.loc 1 22 7 is_stmt 0 view .LVU2
+  41 000a 030A     		lsrs	r3, r0, #8
+  42              	.LVL0:
+  23:Src/achoo_controller.c ****   if (msg_type == ACHOO_MSG_SET_KNEEL && msg.length >= 1) {
+  43              		.loc 1 23 3 is_stmt 1 view .LVU3
+  44              		.loc 1 23 6 is_stmt 0 view .LVU4
+  45 000c 282B     		cmp	r3, #40
+  46 000e 01D0     		beq	.L5
+  47              	.LVL1:
+  48              	.L1:
+  24:Src/achoo_controller.c ****     U8 param = msg.buf[0];
+  25:Src/achoo_controller.c ****     switch (param) {
+  26:Src/achoo_controller.c ****       case 1:
+  27:Src/achoo_controller.c ****         targetState = KNEELING;
+  28:Src/achoo_controller.c ****         break;
+  29:Src/achoo_controller.c ****       default:
+  30:Src/achoo_controller.c ****       case 0:
+  31:Src/achoo_controller.c ****         targetState = STANDING;
+  32:Src/achoo_controller.c ****     }
+  33:Src/achoo_controller.c ****   }
+  34:Src/achoo_controller.c **** }
+  49              		.loc 1 34 1 view .LVU5
+  50 0010 04B0     		add	sp, sp, #16
+  51              	.LCFI1:
+  52              		.cfi_remember_state
+  53              		.cfi_def_cfa_offset 0
+  54              		@ sp needed
+  55 0012 7047     		bx	lr
+  56              	.LVL2:
+  57              	.L5:
+  58              	.LCFI2:
+  59              		.cfi_restore_state
+  23:Src/achoo_controller.c ****   if (msg_type == ACHOO_MSG_SET_KNEEL && msg.length >= 1) {
+  60              		.loc 1 23 45 discriminator 1 view .LVU6
+  61 0014 039B     		ldr	r3, [sp, #12]
+  62              	.LVL3:
+  23:Src/achoo_controller.c ****   if (msg_type == ACHOO_MSG_SET_KNEEL && msg.length >= 1) {
+  63              		.loc 1 23 39 discriminator 1 view .LVU7
+  64 0016 002B     		cmp	r3, #0
+  65 0018 FADD     		ble	.L1
+  66              	.LBB2:
+  24:Src/achoo_controller.c ****     U8 param = msg.buf[0];
+  67              		.loc 1 24 5 is_stmt 1 view .LVU8
+  24:Src/achoo_controller.c ****     U8 param = msg.buf[0];
+  68              		.loc 1 24 8 is_stmt 0 view .LVU9
+  69 001a 9DF80430 		ldrb	r3, [sp, #4]	@ zero_extendqisi2
+  70              	.LVL4:
+  25:Src/achoo_controller.c ****       case 1:
+  71              		.loc 1 25 5 is_stmt 1 view .LVU10
+  72 001e 012B     		cmp	r3, #1
+  73 0020 03D0     		beq	.L6
+  31:Src/achoo_controller.c ****     }
+  74              		.loc 1 31 9 view .LVU11
+  31:Src/achoo_controller.c ****     }
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cca1EcVn.s 			page 3
+
+
+  75              		.loc 1 31 21 is_stmt 0 view .LVU12
+  76 0022 044B     		ldr	r3, .L7
+  77              	.LVL5:
+  31:Src/achoo_controller.c ****     }
+  78              		.loc 1 31 21 view .LVU13
+  79 0024 0022     		movs	r2, #0
+  80 0026 1A70     		strb	r2, [r3]
+  81              	.LBE2:
+  82              		.loc 1 34 1 view .LVU14
+  83 0028 F2E7     		b	.L1
+  84              	.LVL6:
+  85              	.L6:
+  86              	.LBB3:
+  27:Src/achoo_controller.c ****         break;
+  87              		.loc 1 27 9 is_stmt 1 view .LVU15
+  27:Src/achoo_controller.c ****         break;
+  88              		.loc 1 27 21 is_stmt 0 view .LVU16
+  89 002a 024B     		ldr	r3, .L7
+  90              	.LVL7:
+  27:Src/achoo_controller.c ****         break;
+  91              		.loc 1 27 21 view .LVU17
+  92 002c 0322     		movs	r2, #3
+  93 002e 1A70     		strb	r2, [r3]
+  28:Src/achoo_controller.c ****       default:
+  94              		.loc 1 28 9 is_stmt 1 view .LVU18
+  95 0030 EEE7     		b	.L1
+  96              	.L8:
+  97 0032 00BF     		.align	2
+  98              	.L7:
+  99 0034 00000000 		.word	.LANCHOR0
+ 100              	.LBE3:
+ 101              		.cfi_endproc
+ 102              	.LFE135:
+ 104              		.section	.text.achooControllerFunc,"ax",%progbits
+ 105              		.align	1
+ 106              		.global	achooControllerFunc
+ 107              		.syntax unified
+ 108              		.thumb
+ 109              		.thumb_func
+ 111              	achooControllerFunc:
+ 112              	.LVL8:
+ 113              	.LFB136:
+  35:Src/achoo_controller.c **** 
+  36:Src/achoo_controller.c **** void achooControllerFunc(void const* argument) {
+ 114              		.loc 1 36 48 view -0
+ 115              		.cfi_startproc
+ 116              		@ args = 0, pretend = 0, frame = 8
+ 117              		@ frame_needed = 0, uses_anonymous_args = 0
+ 118              		.loc 1 36 48 is_stmt 0 view .LVU20
+ 119 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 120              	.LCFI3:
+ 121              		.cfi_def_cfa_offset 20
+ 122              		.cfi_offset 4, -20
+ 123              		.cfi_offset 5, -16
+ 124              		.cfi_offset 6, -12
+ 125              		.cfi_offset 7, -8
+ 126              		.cfi_offset 14, -4
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cca1EcVn.s 			page 4
+
+
+ 127 0002 83B0     		sub	sp, sp, #12
+ 128              	.LCFI4:
+ 129              		.cfi_def_cfa_offset 32
+  37:Src/achoo_controller.c ****   // System setup
+  38:Src/achoo_controller.c ****   registerCANMsgHandler(ACHOO_SYS_ID, &achooCANCallback);
+ 130              		.loc 1 38 3 is_stmt 1 view .LVU21
+ 131 0004 4B49     		ldr	r1, .L33
+ 132 0006 6520     		movs	r0, #101
+ 133              	.LVL9:
+ 134              		.loc 1 38 3 is_stmt 0 view .LVU22
+ 135 0008 FFF7FEFF 		bl	registerCANMsgHandler
+ 136              	.LVL10:
+  39:Src/achoo_controller.c ****   leftMotor = create_vesc(ACHOO_MOTOR_L, ACHOO_MOTOR_POLE_PAIRS);
+ 137              		.loc 1 39 3 is_stmt 1 view .LVU23
+ 138              		.loc 1 39 15 is_stmt 0 view .LVU24
+ 139 000c 0721     		movs	r1, #7
+ 140 000e 0A20     		movs	r0, #10
+ 141 0010 FFF7FEFF 		bl	create_vesc
+ 142              	.LVL11:
+ 143              		.loc 1 39 13 view .LVU25
+ 144 0014 484B     		ldr	r3, .L33+4
+ 145 0016 1860     		str	r0, [r3]
+  40:Src/achoo_controller.c ****   rightMotor = create_vesc(ACHOO_MOTOR_R, ACHOO_MOTOR_POLE_PAIRS);
+ 146              		.loc 1 40 3 is_stmt 1 view .LVU26
+ 147              		.loc 1 40 16 is_stmt 0 view .LVU27
+ 148 0018 0721     		movs	r1, #7
+ 149 001a 0B20     		movs	r0, #11
+ 150 001c FFF7FEFF 		bl	create_vesc
+ 151              	.LVL12:
+ 152              		.loc 1 40 14 view .LVU28
+ 153 0020 464B     		ldr	r3, .L33+8
+ 154 0022 1860     		str	r0, [r3]
+ 155 0024 31E0     		b	.L18
+ 156              	.L30:
+ 157              	.LBB4:
+  41:Src/achoo_controller.c **** 
+  42:Src/achoo_controller.c ****   TickType_t lastWakeTime;
+  43:Src/achoo_controller.c ****   while (1) {
+  44:Src/achoo_controller.c ****     vTaskDelayUntil(&lastWakeTime, ACHOO_LOOP_MS * portTICK_RATE_MS);
+  45:Src/achoo_controller.c ****     // Handle target state transitions
+  46:Src/achoo_controller.c ****     if (targetState == KNEELING &&
+  47:Src/achoo_controller.c ****         (currentState == STANDING || currentState == MOVING_STAND)) {
+ 158              		.loc 1 47 35 discriminator 1 view .LVU29
+ 159 0026 464A     		ldr	r2, .L33+12
+ 160 0028 1278     		ldrb	r2, [r2]	@ zero_extendqisi2
+  46:Src/achoo_controller.c ****         (currentState == STANDING || currentState == MOVING_STAND)) {
+ 161              		.loc 1 46 33 discriminator 1 view .LVU30
+ 162 002a 012A     		cmp	r2, #1
+ 163 002c 35D8     		bhi	.L10
+  48:Src/achoo_controller.c ****       currentState = MOVING_KNEEL;
+ 164              		.loc 1 48 7 is_stmt 1 view .LVU31
+ 165              		.loc 1 48 20 is_stmt 0 view .LVU32
+ 166 002e 444B     		ldr	r3, .L33+12
+ 167 0030 0222     		movs	r2, #2
+ 168 0032 1A70     		strb	r2, [r3]
+ 169 0034 38E0     		b	.L11
+ 170              	.L31:
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cca1EcVn.s 			page 5
+
+
+  49:Src/achoo_controller.c ****     } else if (targetState == STANDING &&
+  50:Src/achoo_controller.c ****                (currentState == KNEELING || currentState == MOVING_KNEEL)) {
+  51:Src/achoo_controller.c ****       currentState = MOVING_STAND;
+ 171              		.loc 1 51 7 is_stmt 1 view .LVU33
+ 172              		.loc 1 51 20 is_stmt 0 view .LVU34
+ 173 0036 424B     		ldr	r3, .L33+12
+ 174 0038 0122     		movs	r2, #1
+ 175 003a 1A70     		strb	r2, [r3]
+ 176 003c 34E0     		b	.L11
+ 177              	.LVL13:
+ 178              	.L32:
+  52:Src/achoo_controller.c ****     }
+  53:Src/achoo_controller.c ****     bool lowLimitR =
+  54:Src/achoo_controller.c ****         HAL_GPIO_ReadPin(ACHOO_LimitRL_GPIO_Port, ACHOO_LimitRL_Pin) == 0;
+  55:Src/achoo_controller.c ****     bool lowLimitL =
+  56:Src/achoo_controller.c ****         HAL_GPIO_ReadPin(ACHOO_LimitLL_GPIO_Port, ACHOO_LimitLL_Pin) == 0;
+  57:Src/achoo_controller.c ****     bool highLimitR =
+  58:Src/achoo_controller.c ****         HAL_GPIO_ReadPin(ACHOO_LimitRH_GPIO_Port, ACHOO_LimitRH_Pin) == 0;
+  59:Src/achoo_controller.c ****     bool highLimitL =
+  60:Src/achoo_controller.c ****         HAL_GPIO_ReadPin(ACHOO_LimitLH_GPIO_Port, ACHOO_LimitLH_Pin) == 0;
+  61:Src/achoo_controller.c ****     // Check if our movement has completed
+  62:Src/achoo_controller.c ****     if (lowLimitR && lowLimitL && currentState == MOVING_KNEEL) {
+  63:Src/achoo_controller.c ****       currentState = KNEELING;
+ 179              		.loc 1 63 7 is_stmt 1 view .LVU35
+ 180              		.loc 1 63 20 is_stmt 0 view .LVU36
+ 181 003e 404B     		ldr	r3, .L33+12
+ 182 0040 0322     		movs	r2, #3
+ 183 0042 1A70     		strb	r2, [r3]
+ 184 0044 51E0     		b	.L12
+ 185              	.L13:
+  64:Src/achoo_controller.c ****     }
+  65:Src/achoo_controller.c ****     if (highLimitR && highLimitL && currentState == MOVING_STAND) {
+  66:Src/achoo_controller.c ****       currentState = STANDING;
+  67:Src/achoo_controller.c ****     }
+  68:Src/achoo_controller.c **** 
+  69:Src/achoo_controller.c ****     // Set VESC movement
+  70:Src/achoo_controller.c ****     F32 currentR = 0.0f;
+ 186              		.loc 1 70 5 is_stmt 1 view .LVU37
+ 187              	.LVL14:
+  71:Src/achoo_controller.c ****     if (currentState == MOVING_STAND && !highLimitR) {
+ 188              		.loc 1 71 5 view .LVU38
+ 189              		.loc 1 71 22 is_stmt 0 view .LVU39
+ 190 0046 3E4B     		ldr	r3, .L33+12
+ 191 0048 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 192              		.loc 1 71 8 view .LVU40
+ 193 004a 012B     		cmp	r3, #1
+ 194 004c 59D0     		beq	.L26
+ 195              	.L14:
+  72:Src/achoo_controller.c ****       currentR = 10.0f;
+  73:Src/achoo_controller.c ****     } else if (currentState == MOVING_KNEEL && !lowLimitR) {
+ 196              		.loc 1 73 12 is_stmt 1 view .LVU41
+ 197              		.loc 1 73 15 is_stmt 0 view .LVU42
+ 198 004e 022B     		cmp	r3, #2
+ 199 0050 5CD0     		beq	.L27
+  70:Src/achoo_controller.c ****     if (currentState == MOVING_STAND && !highLimitR) {
+ 200              		.loc 1 70 9 view .LVU43
+ 201 0052 9FED3C0A 		vldr.32	s0, .L33+16
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cca1EcVn.s 			page 6
+
+
+ 202              	.L15:
+ 203              	.LVL15:
+  74:Src/achoo_controller.c ****       currentR = -10.0f;
+  75:Src/achoo_controller.c ****     }
+  76:Src/achoo_controller.c ****     vesc_set_current(rightMotor, currentR);
+ 204              		.loc 1 76 5 is_stmt 1 view .LVU44
+ 205 0056 394B     		ldr	r3, .L33+8
+ 206 0058 1868     		ldr	r0, [r3]
+ 207 005a FFF7FEFF 		bl	vesc_set_current
+ 208              	.LVL16:
+  77:Src/achoo_controller.c ****     F32 currentL = 0.0f;
+ 209              		.loc 1 77 5 view .LVU45
+  78:Src/achoo_controller.c ****     if (currentState == MOVING_STAND && !highLimitL) {
+ 210              		.loc 1 78 5 view .LVU46
+ 211              		.loc 1 78 22 is_stmt 0 view .LVU47
+ 212 005e 384B     		ldr	r3, .L33+12
+ 213 0060 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 214              		.loc 1 78 8 view .LVU48
+ 215 0062 012B     		cmp	r3, #1
+ 216 0064 59D0     		beq	.L28
+ 217              	.L16:
+  79:Src/achoo_controller.c ****       currentL = 10.0f;
+  80:Src/achoo_controller.c ****     } else if (currentState == MOVING_KNEEL && !lowLimitL) {
+ 218              		.loc 1 80 12 is_stmt 1 view .LVU49
+ 219              		.loc 1 80 15 is_stmt 0 view .LVU50
+ 220 0066 022B     		cmp	r3, #2
+ 221 0068 5CD0     		beq	.L29
+  77:Src/achoo_controller.c ****     if (currentState == MOVING_STAND && !highLimitL) {
+ 222              		.loc 1 77 9 view .LVU51
+ 223 006a 9FED360A 		vldr.32	s0, .L33+16
+ 224              	.L17:
+ 225              	.LVL17:
+  81:Src/achoo_controller.c ****       currentL = -10.0f;
+  82:Src/achoo_controller.c ****     }
+  83:Src/achoo_controller.c ****     vesc_set_current(leftMotor, currentL);
+ 226              		.loc 1 83 5 is_stmt 1 view .LVU52
+ 227 006e 324B     		ldr	r3, .L33+4
+ 228 0070 1868     		ldr	r0, [r3]
+ 229 0072 FFF7FEFF 		bl	vesc_set_current
+ 230              	.LVL18:
+  84:Src/achoo_controller.c **** 
+  85:Src/achoo_controller.c ****     // Send status message
+  86:Src/achoo_controller.c ****     U8 data[1];
+ 231              		.loc 1 86 5 view .LVU53
+  87:Src/achoo_controller.c ****     data[0] = currentState;
+ 232              		.loc 1 87 5 view .LVU54
+ 233              		.loc 1 87 13 is_stmt 0 view .LVU55
+ 234 0076 324B     		ldr	r3, .L33+12
+ 235 0078 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 236 007a 8DF80030 		strb	r3, [sp]
+  88:Src/achoo_controller.c ****     do_send_can_message((ACHOO_MSG_STATUS << 8u) | ACHOO_SYS_ID, data, 1);
+ 237              		.loc 1 88 5 is_stmt 1 view .LVU56
+ 238 007e 0122     		movs	r2, #1
+ 239 0080 6946     		mov	r1, sp
+ 240 0082 42F66510 		movw	r0, #10597
+ 241 0086 FFF7FEFF 		bl	do_send_can_message
+ 242              	.LVL19:
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cca1EcVn.s 			page 7
+
+
+ 243              	.LBE4:
+  43:Src/achoo_controller.c ****     vTaskDelayUntil(&lastWakeTime, ACHOO_LOOP_MS * portTICK_RATE_MS);
+ 244              		.loc 1 43 9 view .LVU57
+ 245              	.L18:
+  42:Src/achoo_controller.c ****   while (1) {
+ 246              		.loc 1 42 3 view .LVU58
+  43:Src/achoo_controller.c ****     vTaskDelayUntil(&lastWakeTime, ACHOO_LOOP_MS * portTICK_RATE_MS);
+ 247              		.loc 1 43 3 view .LVU59
+ 248              	.LBB5:
+  44:Src/achoo_controller.c ****     // Handle target state transitions
+ 249              		.loc 1 44 5 view .LVU60
+ 250 008a 1421     		movs	r1, #20
+ 251 008c 01A8     		add	r0, sp, #4
+ 252 008e FFF7FEFF 		bl	vTaskDelayUntil
+ 253              	.LVL20:
+  46:Src/achoo_controller.c ****         (currentState == STANDING || currentState == MOVING_STAND)) {
+ 254              		.loc 1 46 5 view .LVU61
+  46:Src/achoo_controller.c ****         (currentState == STANDING || currentState == MOVING_STAND)) {
+ 255              		.loc 1 46 21 is_stmt 0 view .LVU62
+ 256 0092 2D4B     		ldr	r3, .L33+20
+ 257 0094 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+  46:Src/achoo_controller.c ****         (currentState == STANDING || currentState == MOVING_STAND)) {
+ 258              		.loc 1 46 8 view .LVU63
+ 259 0096 032B     		cmp	r3, #3
+ 260 0098 C5D0     		beq	.L30
+ 261              	.L10:
+  49:Src/achoo_controller.c ****                (currentState == KNEELING || currentState == MOVING_KNEEL)) {
+ 262              		.loc 1 49 12 is_stmt 1 view .LVU64
+  49:Src/achoo_controller.c ****                (currentState == KNEELING || currentState == MOVING_KNEEL)) {
+ 263              		.loc 1 49 15 is_stmt 0 view .LVU65
+ 264 009a 2BB9     		cbnz	r3, .L11
+  50:Src/achoo_controller.c ****       currentState = MOVING_STAND;
+ 265              		.loc 1 50 42 discriminator 1 view .LVU66
+ 266 009c 284B     		ldr	r3, .L33+12
+ 267 009e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 268 00a0 023B     		subs	r3, r3, #2
+ 269 00a2 DBB2     		uxtb	r3, r3
+  49:Src/achoo_controller.c ****                (currentState == KNEELING || currentState == MOVING_KNEEL)) {
+ 270              		.loc 1 49 40 discriminator 1 view .LVU67
+ 271 00a4 012B     		cmp	r3, #1
+ 272 00a6 C6D9     		bls	.L31
+ 273              	.L11:
+  53:Src/achoo_controller.c ****         HAL_GPIO_ReadPin(ACHOO_LimitRL_GPIO_Port, ACHOO_LimitRL_Pin) == 0;
+ 274              		.loc 1 53 5 is_stmt 1 view .LVU68
+  54:Src/achoo_controller.c ****     bool lowLimitL =
+ 275              		.loc 1 54 9 is_stmt 0 view .LVU69
+ 276 00a8 4FF40071 		mov	r1, #512
+ 277 00ac 4FF09040 		mov	r0, #1207959552
+ 278 00b0 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 279              	.LVL21:
+ 280 00b4 0746     		mov	r7, r0
+ 281              	.LVL22:
+  55:Src/achoo_controller.c ****         HAL_GPIO_ReadPin(ACHOO_LimitLL_GPIO_Port, ACHOO_LimitLL_Pin) == 0;
+ 282              		.loc 1 55 5 is_stmt 1 view .LVU70
+  56:Src/achoo_controller.c ****     bool highLimitR =
+ 283              		.loc 1 56 9 is_stmt 0 view .LVU71
+ 284 00b6 4FF40071 		mov	r1, #512
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cca1EcVn.s 			page 8
+
+
+ 285 00ba 2448     		ldr	r0, .L33+24
+ 286 00bc FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 287              	.LVL23:
+ 288 00c0 0546     		mov	r5, r0
+ 289              	.LVL24:
+  57:Src/achoo_controller.c ****         HAL_GPIO_ReadPin(ACHOO_LimitRH_GPIO_Port, ACHOO_LimitRH_Pin) == 0;
+ 290              		.loc 1 57 5 is_stmt 1 view .LVU72
+  58:Src/achoo_controller.c ****     bool highLimitL =
+ 291              		.loc 1 58 9 is_stmt 0 view .LVU73
+ 292 00c2 4FF48061 		mov	r1, #1024
+ 293 00c6 4FF09040 		mov	r0, #1207959552
+ 294 00ca FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 295              	.LVL25:
+ 296 00ce 0446     		mov	r4, r0
+ 297              	.LVL26:
+  59:Src/achoo_controller.c ****         HAL_GPIO_ReadPin(ACHOO_LimitLH_GPIO_Port, ACHOO_LimitLH_Pin) == 0;
+ 298              		.loc 1 59 5 is_stmt 1 view .LVU74
+  60:Src/achoo_controller.c ****     // Check if our movement has completed
+ 299              		.loc 1 60 9 is_stmt 0 view .LVU75
+ 300 00d0 4FF48071 		mov	r1, #256
+ 301 00d4 4FF09040 		mov	r0, #1207959552
+ 302 00d8 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 303              	.LVL27:
+ 304 00dc 0646     		mov	r6, r0
+ 305              	.LVL28:
+  62:Src/achoo_controller.c ****       currentState = KNEELING;
+ 306              		.loc 1 62 5 is_stmt 1 view .LVU76
+  62:Src/achoo_controller.c ****       currentState = KNEELING;
+ 307              		.loc 1 62 8 is_stmt 0 view .LVU77
+ 308 00de 27B9     		cbnz	r7, .L12
+  62:Src/achoo_controller.c ****       currentState = KNEELING;
+ 309              		.loc 1 62 19 discriminator 1 view .LVU78
+ 310 00e0 1DB9     		cbnz	r5, .L12
+  62:Src/achoo_controller.c ****       currentState = KNEELING;
+ 311              		.loc 1 62 48 discriminator 2 view .LVU79
+ 312 00e2 174B     		ldr	r3, .L33+12
+ 313 00e4 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+  62:Src/achoo_controller.c ****       currentState = KNEELING;
+ 314              		.loc 1 62 32 discriminator 2 view .LVU80
+ 315 00e6 022B     		cmp	r3, #2
+ 316 00e8 A9D0     		beq	.L32
+ 317              	.L12:
+  65:Src/achoo_controller.c ****       currentState = STANDING;
+ 318              		.loc 1 65 5 is_stmt 1 view .LVU81
+  65:Src/achoo_controller.c ****       currentState = STANDING;
+ 319              		.loc 1 65 8 is_stmt 0 view .LVU82
+ 320 00ea 002C     		cmp	r4, #0
+ 321 00ec ABD1     		bne	.L13
+  65:Src/achoo_controller.c ****       currentState = STANDING;
+ 322              		.loc 1 65 20 discriminator 1 view .LVU83
+ 323 00ee 002E     		cmp	r6, #0
+ 324 00f0 A9D1     		bne	.L13
+  65:Src/achoo_controller.c ****       currentState = STANDING;
+ 325              		.loc 1 65 50 discriminator 2 view .LVU84
+ 326 00f2 134B     		ldr	r3, .L33+12
+ 327 00f4 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+  65:Src/achoo_controller.c ****       currentState = STANDING;
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cca1EcVn.s 			page 9
+
+
+ 328              		.loc 1 65 34 discriminator 2 view .LVU85
+ 329 00f6 012B     		cmp	r3, #1
+ 330 00f8 A5D1     		bne	.L13
+  66:Src/achoo_controller.c ****     }
+ 331              		.loc 1 66 7 is_stmt 1 view .LVU86
+  66:Src/achoo_controller.c ****     }
+ 332              		.loc 1 66 20 is_stmt 0 view .LVU87
+ 333 00fa 114B     		ldr	r3, .L33+12
+ 334 00fc 0022     		movs	r2, #0
+ 335 00fe 1A70     		strb	r2, [r3]
+ 336 0100 A1E7     		b	.L13
+ 337              	.LVL29:
+ 338              	.L26:
+  71:Src/achoo_controller.c ****       currentR = 10.0f;
+ 339              		.loc 1 71 38 discriminator 1 view .LVU88
+ 340 0102 002C     		cmp	r4, #0
+ 341 0104 A3D0     		beq	.L14
+  72:Src/achoo_controller.c ****     } else if (currentState == MOVING_KNEEL && !lowLimitR) {
+ 342              		.loc 1 72 16 view .LVU89
+ 343 0106 B2EE040A 		vmov.f32	s0, #1.0e+1
+ 344 010a A4E7     		b	.L15
+ 345              	.L27:
+  73:Src/achoo_controller.c ****       currentR = -10.0f;
+ 346              		.loc 1 73 45 discriminator 1 view .LVU90
+ 347 010c 17B9     		cbnz	r7, .L21
+  70:Src/achoo_controller.c ****     if (currentState == MOVING_STAND && !highLimitR) {
+ 348              		.loc 1 70 9 view .LVU91
+ 349 010e 9FED0D0A 		vldr.32	s0, .L33+16
+ 350 0112 A0E7     		b	.L15
+ 351              	.L21:
+  74:Src/achoo_controller.c ****     }
+ 352              		.loc 1 74 16 view .LVU92
+ 353 0114 BAEE040A 		vmov.f32	s0, #-1.0e+1
+ 354 0118 9DE7     		b	.L15
+ 355              	.LVL30:
+ 356              	.L28:
+  78:Src/achoo_controller.c ****       currentL = 10.0f;
+ 357              		.loc 1 78 38 discriminator 1 view .LVU93
+ 358 011a 002E     		cmp	r6, #0
+ 359 011c A3D0     		beq	.L16
+  79:Src/achoo_controller.c ****     } else if (currentState == MOVING_KNEEL && !lowLimitL) {
+ 360              		.loc 1 79 16 view .LVU94
+ 361 011e B2EE040A 		vmov.f32	s0, #1.0e+1
+ 362 0122 A4E7     		b	.L17
+ 363              	.L29:
+  80:Src/achoo_controller.c ****       currentL = -10.0f;
+ 364              		.loc 1 80 45 discriminator 1 view .LVU95
+ 365 0124 15B9     		cbnz	r5, .L24
+  77:Src/achoo_controller.c ****     if (currentState == MOVING_STAND && !highLimitL) {
+ 366              		.loc 1 77 9 view .LVU96
+ 367 0126 9FED070A 		vldr.32	s0, .L33+16
+ 368 012a A0E7     		b	.L17
+ 369              	.L24:
+  81:Src/achoo_controller.c ****     }
+ 370              		.loc 1 81 16 view .LVU97
+ 371 012c BAEE040A 		vmov.f32	s0, #-1.0e+1
+ 372 0130 9DE7     		b	.L17
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cca1EcVn.s 			page 10
+
+
+ 373              	.L34:
+ 374 0132 00BF     		.align	2
+ 375              	.L33:
+ 376 0134 00000000 		.word	achooCANCallback
+ 377 0138 00000000 		.word	.LANCHOR1
+ 378 013c 00000000 		.word	.LANCHOR2
+ 379 0140 00000000 		.word	.LANCHOR3
+ 380 0144 00000000 		.word	0
+ 381 0148 00000000 		.word	.LANCHOR0
+ 382 014c 00080048 		.word	1207961600
+ 383              	.LBE5:
+ 384              		.cfi_endproc
+ 385              	.LFE136:
+ 387              		.section	.text.getACHOOState,"ax",%progbits
+ 388              		.align	1
+ 389              		.global	getACHOOState
+ 390              		.syntax unified
+ 391              		.thumb
+ 392              		.thumb_func
+ 394              	getACHOOState:
+ 395              	.LFB137:
+  89:Src/achoo_controller.c ****   }
+  90:Src/achoo_controller.c **** }
+  91:Src/achoo_controller.c **** 
+  92:Src/achoo_controller.c **** KneelState getACHOOState() { return currentState; }
+ 396              		.loc 1 92 28 is_stmt 1 view -0
+ 397              		.cfi_startproc
+ 398              		@ args = 0, pretend = 0, frame = 0
+ 399              		@ frame_needed = 0, uses_anonymous_args = 0
+ 400              		@ link register save eliminated.
+ 401              		.loc 1 92 30 view .LVU99
+ 402              		.loc 1 92 51 is_stmt 0 view .LVU100
+ 403 0000 014B     		ldr	r3, .L36
+ 404 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 405 0004 7047     		bx	lr
+ 406              	.L37:
+ 407 0006 00BF     		.align	2
+ 408              	.L36:
+ 409 0008 00000000 		.word	.LANCHOR3
+ 410              		.cfi_endproc
+ 411              	.LFE137:
+ 413              		.global	rightMotor
+ 414              		.global	leftMotor
+ 415              		.section	.bss.leftMotor,"aw",%nobits
+ 416              		.align	2
+ 417              		.set	.LANCHOR1,. + 0
+ 420              	leftMotor:
+ 421 0000 00000000 		.space	4
+ 422              		.section	.bss.rightMotor,"aw",%nobits
+ 423              		.align	2
+ 424              		.set	.LANCHOR2,. + 0
+ 427              	rightMotor:
+ 428 0000 00000000 		.space	4
+ 429              		.section	.data.currentState,"aw"
+ 430              		.set	.LANCHOR3,. + 0
+ 433              	currentState:
+ 434 0000 03       		.byte	3
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cca1EcVn.s 			page 11
+
+
+ 435              		.section	.data.targetState,"aw"
+ 436              		.set	.LANCHOR0,. + 0
+ 439              	targetState:
+ 440 0000 03       		.byte	3
+ 441              		.text
+ 442              	.Letext0:
+ 443              		.file 2 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\\
+ 444              		.file 3 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\\
+ 445              		.file 4 "Inc/types.h"
+ 446              		.file 5 "Inc/can_manager.h"
+ 447              		.file 6 "Inc/achoo_controller.h"
+ 448              		.file 7 "Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303xe.h"
+ 449              		.file 8 "Inc/VESC.h"
+ 450              		.file 9 "Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h"
+ 451              		.file 10 "Middlewares/Third_Party/FreeRTOS/Source/include/task.h"
+ 452              		.file 11 "Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_gpio.h"
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cca1EcVn.s 			page 12
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 achoo_controller.c
+C:\Users\jmbli\AppData\Local\Temp\cca1EcVn.s:20     .text.achooCANCallback:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\cca1EcVn.s:26     .text.achooCANCallback:00000000 achooCANCallback
+C:\Users\jmbli\AppData\Local\Temp\cca1EcVn.s:99     .text.achooCANCallback:00000034 $d
+C:\Users\jmbli\AppData\Local\Temp\cca1EcVn.s:105    .text.achooControllerFunc:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\cca1EcVn.s:111    .text.achooControllerFunc:00000000 achooControllerFunc
+C:\Users\jmbli\AppData\Local\Temp\cca1EcVn.s:376    .text.achooControllerFunc:00000134 $d
+C:\Users\jmbli\AppData\Local\Temp\cca1EcVn.s:388    .text.getACHOOState:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\cca1EcVn.s:394    .text.getACHOOState:00000000 getACHOOState
+C:\Users\jmbli\AppData\Local\Temp\cca1EcVn.s:409    .text.getACHOOState:00000008 $d
+C:\Users\jmbli\AppData\Local\Temp\cca1EcVn.s:427    .bss.rightMotor:00000000 rightMotor
+C:\Users\jmbli\AppData\Local\Temp\cca1EcVn.s:420    .bss.leftMotor:00000000 leftMotor
+C:\Users\jmbli\AppData\Local\Temp\cca1EcVn.s:416    .bss.leftMotor:00000000 $d
+C:\Users\jmbli\AppData\Local\Temp\cca1EcVn.s:423    .bss.rightMotor:00000000 $d
+C:\Users\jmbli\AppData\Local\Temp\cca1EcVn.s:433    .data.currentState:00000000 currentState
+C:\Users\jmbli\AppData\Local\Temp\cca1EcVn.s:439    .data.targetState:00000000 targetState
+
+UNDEFINED SYMBOLS
+registerCANMsgHandler
+create_vesc
+vesc_set_current
+do_send_can_message
+vTaskDelayUntil
+HAL_GPIO_ReadPin

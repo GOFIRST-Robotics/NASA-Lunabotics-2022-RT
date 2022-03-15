@@ -1,0 +1,548 @@
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccW36Yjy.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"can_manager.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.do_send_can_message,"ax",%progbits
+  20              		.align	1
+  21              		.global	do_send_can_message
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	do_send_can_message:
+  27              	.LVL0:
+  28              	.LFB135:
+  29              		.file 1 "Src/can_manager.c"
+   1:Src/can_manager.c **** //
+   2:Src/can_manager.c **** // Created by julia on 10/22/19.
+   3:Src/can_manager.c **** //
+   4:Src/can_manager.c **** 
+   5:Src/can_manager.c **** #include <print.h>
+   6:Src/can_manager.c **** #include <stm32f3xx.h>
+   7:Src/can_manager.c **** #include "FreeRTOS.h"
+   8:Src/can_manager.c **** #include "cmsis_os.h"
+   9:Src/can_manager.c **** #include "main.h"
+  10:Src/can_manager.c **** #include "queue.h"
+  11:Src/can_manager.c **** #include "task.h"
+  12:Src/can_manager.c **** 
+  13:Src/can_manager.c **** #include "can_manager.h"
+  14:Src/can_manager.c **** #include "string.h"
+  15:Src/can_manager.c **** 
+  16:Src/can_manager.c **** extern CAN_HandleTypeDef hcan;
+  17:Src/can_manager.c **** extern UART_HandleTypeDef huart2;
+  18:Src/can_manager.c **** extern QueueHandle_t xCanRxQueue;
+  19:Src/can_manager.c **** extern osMutexId canTxMutexHandle;
+  20:Src/can_manager.c **** U32 CurTxMailbox;
+  21:Src/can_manager.c **** CAN_TxHeaderTypeDef TxHeader;
+  22:Src/can_manager.c **** CAN_RxHeaderTypeDef RxHeader;
+  23:Src/can_manager.c **** U8 RxData[8];
+  24:Src/can_manager.c **** CANMsgHandlerPair msgHandlers[CAN_HANDLERS_SIZE];
+  25:Src/can_manager.c **** int canHandlersCt = 0;
+  26:Src/can_manager.c **** 
+  27:Src/can_manager.c **** void do_send_can_message(U32 const id, U8 const* buf, S32 const length) {
+  30              		.loc 1 27 73 view -0
+  31              		.cfi_startproc
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccW36Yjy.s 			page 2
+
+
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		.loc 1 27 73 is_stmt 0 view .LVU1
+  35 0000 10B5     		push	{r4, lr}
+  36              	.LCFI0:
+  37              		.cfi_def_cfa_offset 8
+  38              		.cfi_offset 4, -8
+  39              		.cfi_offset 14, -4
+  40 0002 0C46     		mov	r4, r1
+  28:Src/can_manager.c ****   TxHeader.IDE = CAN_ID_EXT;
+  41              		.loc 1 28 3 is_stmt 1 view .LVU2
+  42              		.loc 1 28 16 is_stmt 0 view .LVU3
+  43 0004 124B     		ldr	r3, .L5
+  44 0006 0421     		movs	r1, #4
+  45              	.LVL1:
+  46              		.loc 1 28 16 view .LVU4
+  47 0008 9960     		str	r1, [r3, #8]
+  29:Src/can_manager.c ****   TxHeader.ExtId = id;
+  48              		.loc 1 29 3 is_stmt 1 view .LVU5
+  49              		.loc 1 29 18 is_stmt 0 view .LVU6
+  50 000a 5860     		str	r0, [r3, #4]
+  30:Src/can_manager.c ****   TxHeader.RTR = CAN_RTR_DATA;
+  51              		.loc 1 30 3 is_stmt 1 view .LVU7
+  52              		.loc 1 30 16 is_stmt 0 view .LVU8
+  53 000c 0021     		movs	r1, #0
+  54 000e D960     		str	r1, [r3, #12]
+  31:Src/can_manager.c ****   TxHeader.DLC = length;
+  55              		.loc 1 31 3 is_stmt 1 view .LVU9
+  56              		.loc 1 31 16 is_stmt 0 view .LVU10
+  57 0010 1A61     		str	r2, [r3, #16]
+  32:Src/can_manager.c ****   TxHeader.TransmitGlobalTime = DISABLE;
+  58              		.loc 1 32 3 is_stmt 1 view .LVU11
+  59              		.loc 1 32 31 is_stmt 0 view .LVU12
+  60 0012 1975     		strb	r1, [r3, #20]
+  33:Src/can_manager.c ****   xSemaphoreTake(canTxMutexHandle, portMAX_DELAY);
+  61              		.loc 1 33 3 is_stmt 1 view .LVU13
+  62 0014 4FF0FF31 		mov	r1, #-1
+  63 0018 0E4B     		ldr	r3, .L5+4
+  64 001a 1868     		ldr	r0, [r3]
+  65              	.LVL2:
+  66              		.loc 1 33 3 is_stmt 0 view .LVU14
+  67 001c FFF7FEFF 		bl	xQueueSemaphoreTake
+  68              	.LVL3:
+  34:Src/can_manager.c ****   while (HAL_CAN_GetTxMailboxesFreeLevel(&hcan) ==
+  69              		.loc 1 34 3 is_stmt 1 view .LVU15
+  70              		.loc 1 34 9 is_stmt 0 view .LVU16
+  71 0020 02E0     		b	.L2
+  72              	.L3:
+  35:Src/can_manager.c ****          0) {  // Block until a mailbox is open
+  36:Src/can_manager.c ****     vTaskDelay(1);
+  73              		.loc 1 36 5 is_stmt 1 view .LVU17
+  74 0022 0120     		movs	r0, #1
+  75 0024 FFF7FEFF 		bl	vTaskDelay
+  76              	.LVL4:
+  77              	.L2:
+  34:Src/can_manager.c ****   while (HAL_CAN_GetTxMailboxesFreeLevel(&hcan) ==
+  78              		.loc 1 34 9 view .LVU18
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccW36Yjy.s 			page 3
+
+
+  34:Src/can_manager.c ****   while (HAL_CAN_GetTxMailboxesFreeLevel(&hcan) ==
+  79              		.loc 1 34 10 is_stmt 0 view .LVU19
+  80 0028 0B48     		ldr	r0, .L5+8
+  81 002a FFF7FEFF 		bl	HAL_CAN_GetTxMailboxesFreeLevel
+  82              	.LVL5:
+  34:Src/can_manager.c ****   while (HAL_CAN_GetTxMailboxesFreeLevel(&hcan) ==
+  83              		.loc 1 34 9 view .LVU20
+  84 002e 0028     		cmp	r0, #0
+  85 0030 F7D0     		beq	.L3
+  37:Src/can_manager.c ****   }
+  38:Src/can_manager.c **** 
+  39:Src/can_manager.c ****   int retval = HAL_CAN_AddTxMessage(&hcan, &TxHeader, buf, &CurTxMailbox);
+  86              		.loc 1 39 3 is_stmt 1 view .LVU21
+  87              		.loc 1 39 16 is_stmt 0 view .LVU22
+  88 0032 0A4B     		ldr	r3, .L5+12
+  89 0034 2246     		mov	r2, r4
+  90 0036 0649     		ldr	r1, .L5
+  91 0038 0748     		ldr	r0, .L5+8
+  92 003a FFF7FEFF 		bl	HAL_CAN_AddTxMessage
+  93              	.LVL6:
+  40:Src/can_manager.c ****   xSemaphoreGive(canTxMutexHandle);
+  94              		.loc 1 40 3 is_stmt 1 view .LVU23
+  95 003e 0023     		movs	r3, #0
+  96 0040 1A46     		mov	r2, r3
+  97 0042 1946     		mov	r1, r3
+  98 0044 0348     		ldr	r0, .L5+4
+  99 0046 0068     		ldr	r0, [r0]
+ 100 0048 FFF7FEFF 		bl	xQueueGenericSend
+ 101              	.LVL7:
+  41:Src/can_manager.c **** }
+ 102              		.loc 1 41 1 is_stmt 0 view .LVU24
+ 103 004c 10BD     		pop	{r4, pc}
+ 104              	.LVL8:
+ 105              	.L6:
+ 106              		.loc 1 41 1 view .LVU25
+ 107 004e 00BF     		.align	2
+ 108              	.L5:
+ 109 0050 00000000 		.word	.LANCHOR0
+ 110 0054 00000000 		.word	canTxMutexHandle
+ 111 0058 00000000 		.word	hcan
+ 112 005c 00000000 		.word	.LANCHOR1
+ 113              		.cfi_endproc
+ 114              	.LFE135:
+ 116              		.section	.text.registerCANMsgHandler,"ax",%progbits
+ 117              		.align	1
+ 118              		.global	registerCANMsgHandler
+ 119              		.syntax unified
+ 120              		.thumb
+ 121              		.thumb_func
+ 123              	registerCANMsgHandler:
+ 124              	.LVL9:
+ 125              	.LFB136:
+  42:Src/can_manager.c **** 
+  43:Src/can_manager.c **** void registerCANMsgHandler(U32 const mask,
+  44:Src/can_manager.c ****                            void (*const callback)(rmc_can_msg msg)) {
+ 126              		.loc 1 44 69 is_stmt 1 view -0
+ 127              		.cfi_startproc
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccW36Yjy.s 			page 4
+
+
+ 128              		@ args = 0, pretend = 0, frame = 0
+ 129              		@ frame_needed = 0, uses_anonymous_args = 0
+ 130              		@ link register save eliminated.
+ 131              		.loc 1 44 69 is_stmt 0 view .LVU27
+ 132 0000 10B4     		push	{r4}
+ 133              	.LCFI1:
+ 134              		.cfi_def_cfa_offset 4
+ 135              		.cfi_offset 4, -4
+  45:Src/can_manager.c ****   msgHandlers[canHandlersCt++] =
+ 136              		.loc 1 45 3 is_stmt 1 view .LVU28
+ 137              		.loc 1 45 28 is_stmt 0 view .LVU29
+ 138 0002 064B     		ldr	r3, .L9
+ 139 0004 1A68     		ldr	r2, [r3]
+ 140 0006 541C     		adds	r4, r2, #1
+ 141 0008 1C60     		str	r4, [r3]
+ 142              		.loc 1 45 32 view .LVU30
+ 143 000a 054B     		ldr	r3, .L9+4
+ 144 000c 43F83200 		str	r0, [r3, r2, lsl #3]
+ 145 0010 03EBC203 		add	r3, r3, r2, lsl #3
+ 146 0014 5960     		str	r1, [r3, #4]
+  46:Src/can_manager.c ****       (CANMsgHandlerPair){.mask = mask, .callback = callback};
+  47:Src/can_manager.c **** }
+ 147              		.loc 1 47 1 view .LVU31
+ 148 0016 5DF8044B 		ldr	r4, [sp], #4
+ 149              	.LCFI2:
+ 150              		.cfi_restore 4
+ 151              		.cfi_def_cfa_offset 0
+ 152 001a 7047     		bx	lr
+ 153              	.L10:
+ 154              		.align	2
+ 155              	.L9:
+ 156 001c 00000000 		.word	.LANCHOR2
+ 157 0020 00000000 		.word	.LANCHOR3
+ 158              		.cfi_endproc
+ 159              	.LFE136:
+ 161              		.section	.text.HAL_CAN_RxFifo0MsgPendingCallback,"ax",%progbits
+ 162              		.align	1
+ 163              		.global	HAL_CAN_RxFifo0MsgPendingCallback
+ 164              		.syntax unified
+ 165              		.thumb
+ 166              		.thumb_func
+ 168              	HAL_CAN_RxFifo0MsgPendingCallback:
+ 169              	.LVL10:
+ 170              	.LFB137:
+  48:Src/can_manager.c **** 
+  49:Src/can_manager.c **** void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef* hcan_) {
+ 171              		.loc 1 49 66 is_stmt 1 view -0
+ 172              		.cfi_startproc
+ 173              		@ args = 0, pretend = 0, frame = 16
+ 174              		@ frame_needed = 0, uses_anonymous_args = 0
+ 175              		.loc 1 49 66 is_stmt 0 view .LVU33
+ 176 0000 00B5     		push	{lr}
+ 177              	.LCFI3:
+ 178              		.cfi_def_cfa_offset 4
+ 179              		.cfi_offset 14, -4
+ 180 0002 85B0     		sub	sp, sp, #20
+ 181              	.LCFI4:
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccW36Yjy.s 			page 5
+
+
+ 182              		.cfi_def_cfa_offset 24
+  50:Src/can_manager.c ****   /* Get RX message */
+  51:Src/can_manager.c ****   if (HAL_CAN_GetRxMessage(hcan_, CAN_RX_FIFO0, &RxHeader, RxData) != HAL_OK) {
+ 183              		.loc 1 51 3 is_stmt 1 view .LVU34
+ 184              		.loc 1 51 7 is_stmt 0 view .LVU35
+ 185 0004 0D4B     		ldr	r3, .L15
+ 186 0006 0E4A     		ldr	r2, .L15+4
+ 187 0008 0021     		movs	r1, #0
+ 188 000a FFF7FEFF 		bl	HAL_CAN_GetRxMessage
+ 189              	.LVL11:
+ 190              		.loc 1 51 6 view .LVU36
+ 191 000e 90B9     		cbnz	r0, .L14
+ 192              	.L12:
+  52:Src/can_manager.c ****     /* Reception Error */
+  53:Src/can_manager.c ****     Error_Handler();
+  54:Src/can_manager.c ****   }
+  55:Src/can_manager.c ****   rmc_can_msg msg;
+ 193              		.loc 1 55 3 is_stmt 1 view .LVU37
+  56:Src/can_manager.c ****   msg.id = RxHeader.ExtId;
+ 194              		.loc 1 56 3 view .LVU38
+ 195              		.loc 1 56 20 is_stmt 0 view .LVU39
+ 196 0010 0B4B     		ldr	r3, .L15+4
+ 197 0012 5A68     		ldr	r2, [r3, #4]
+ 198              		.loc 1 56 10 view .LVU40
+ 199 0014 0092     		str	r2, [sp]
+  57:Src/can_manager.c ****   msg.length = RxHeader.DLC;
+ 200              		.loc 1 57 3 is_stmt 1 view .LVU41
+ 201              		.loc 1 57 24 is_stmt 0 view .LVU42
+ 202 0016 1A69     		ldr	r2, [r3, #16]
+ 203              		.loc 1 57 14 view .LVU43
+ 204 0018 0392     		str	r2, [sp, #12]
+  58:Src/can_manager.c ****   memcpy(&msg.buf, RxData, msg.length);
+ 205              		.loc 1 58 3 is_stmt 1 view .LVU44
+ 206 001a 0849     		ldr	r1, .L15
+ 207 001c 01A8     		add	r0, sp, #4
+ 208 001e FFF7FEFF 		bl	memcpy
+ 209              	.LVL12:
+  59:Src/can_manager.c ****   xQueueSendFromISR(xCanRxQueue, &msg, NULL);
+ 210              		.loc 1 59 3 view .LVU45
+ 211 0022 0023     		movs	r3, #0
+ 212 0024 1A46     		mov	r2, r3
+ 213 0026 6946     		mov	r1, sp
+ 214 0028 0648     		ldr	r0, .L15+8
+ 215 002a 0068     		ldr	r0, [r0]
+ 216 002c FFF7FEFF 		bl	xQueueGenericSendFromISR
+ 217              	.LVL13:
+  60:Src/can_manager.c ****   // todo worry about failure to post and/or higher priority task woken?
+  61:Src/can_manager.c **** }
+ 218              		.loc 1 61 1 is_stmt 0 view .LVU46
+ 219 0030 05B0     		add	sp, sp, #20
+ 220              	.LCFI5:
+ 221              		.cfi_remember_state
+ 222              		.cfi_def_cfa_offset 4
+ 223              		@ sp needed
+ 224 0032 5DF804FB 		ldr	pc, [sp], #4
+ 225              	.L14:
+ 226              	.LCFI6:
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccW36Yjy.s 			page 6
+
+
+ 227              		.cfi_restore_state
+  53:Src/can_manager.c ****   }
+ 228              		.loc 1 53 5 is_stmt 1 view .LVU47
+ 229 0036 FFF7FEFF 		bl	Error_Handler
+ 230              	.LVL14:
+ 231 003a E9E7     		b	.L12
+ 232              	.L16:
+ 233              		.align	2
+ 234              	.L15:
+ 235 003c 00000000 		.word	.LANCHOR4
+ 236 0040 00000000 		.word	.LANCHOR5
+ 237 0044 00000000 		.word	xCanRxQueue
+ 238              		.cfi_endproc
+ 239              	.LFE137:
+ 241              		.section	.text.canRxDispatchTask,"ax",%progbits
+ 242              		.align	1
+ 243              		.global	canRxDispatchTask
+ 244              		.syntax unified
+ 245              		.thumb
+ 246              		.thumb_func
+ 248              	canRxDispatchTask:
+ 249              	.LFB138:
+  62:Src/can_manager.c **** 
+  63:Src/can_manager.c **** void canRxDispatchTask(void const* argument) {
+ 250              		.loc 1 63 46 view -0
+ 251              		.cfi_startproc
+ 252              		@ args = 0, pretend = 0, frame = 24
+ 253              		@ frame_needed = 0, uses_anonymous_args = 0
+ 254              	.LVL15:
+ 255              		.loc 1 63 46 is_stmt 0 view .LVU49
+ 256 0000 30B5     		push	{r4, r5, lr}
+ 257              	.LCFI7:
+ 258              		.cfi_def_cfa_offset 12
+ 259              		.cfi_offset 4, -12
+ 260              		.cfi_offset 5, -8
+ 261              		.cfi_offset 14, -4
+ 262 0002 87B0     		sub	sp, sp, #28
+ 263              	.LCFI8:
+ 264              		.cfi_def_cfa_offset 40
+ 265 0004 14E0     		b	.L19
+ 266              	.LVL16:
+ 267              	.L21:
+ 268              	.LBB2:
+ 269              	.LBB3:
+  64:Src/can_manager.c ****   rmc_can_msg msg;
+  65:Src/can_manager.c ****   while (1) {
+  66:Src/can_manager.c ****     // Because we use the suspend feature (portMAX_DELAY), this should always
+  67:Src/can_manager.c ****     // return true This should suspend until an item is available
+  68:Src/can_manager.c ****     if (xQueueReceive(xCanRxQueue, &msg, portMAX_DELAY) == pdTRUE) {
+  69:Src/can_manager.c ****       for (S32 i = 0; i < canHandlersCt; ++i) {
+  70:Src/can_manager.c ****         CANMsgHandlerPair handlerPair = msgHandlers[i];
+ 270              		.loc 1 70 9 is_stmt 1 view .LVU50
+ 271              		.loc 1 70 27 is_stmt 0 view .LVU51
+ 272 0006 6A46     		mov	r2, sp
+ 273 0008 0F4B     		ldr	r3, .L25
+ 274 000a 03EBC403 		add	r3, r3, r4, lsl #3
+ 275 000e 93E80300 		ldm	r3, {r0, r1}
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccW36Yjy.s 			page 7
+
+
+ 276 0012 82E80300 		stm	r2, {r0, r1}
+  71:Src/can_manager.c ****         if (msg.id & handlerPair.mask) {
+ 277              		.loc 1 71 9 is_stmt 1 view .LVU52
+ 278              		.loc 1 71 12 is_stmt 0 view .LVU53
+ 279 0016 029A     		ldr	r2, [sp, #8]
+ 280 0018 0242     		tst	r2, r0
+ 281 001a 04D0     		beq	.L20
+  72:Src/can_manager.c ****           handlerPair.callback(msg);
+ 282              		.loc 1 72 11 is_stmt 1 view .LVU54
+ 283 001c 06AB     		add	r3, sp, #24
+ 284 001e 13E90F00 		ldmdb	r3, {r0, r1, r2, r3}
+ 285 0022 019D     		ldr	r5, [sp, #4]
+ 286 0024 A847     		blx	r5
+ 287              	.LVL17:
+ 288              	.L20:
+ 289              		.loc 1 72 11 is_stmt 0 view .LVU55
+ 290              	.LBE3:
+  69:Src/can_manager.c ****         CANMsgHandlerPair handlerPair = msgHandlers[i];
+ 291              		.loc 1 69 42 is_stmt 1 discriminator 2 view .LVU56
+ 292 0026 0134     		adds	r4, r4, #1
+ 293              	.LVL18:
+ 294              	.L18:
+  69:Src/can_manager.c ****         CANMsgHandlerPair handlerPair = msgHandlers[i];
+ 295              		.loc 1 69 23 discriminator 1 view .LVU57
+  69:Src/can_manager.c ****         CANMsgHandlerPair handlerPair = msgHandlers[i];
+ 296              		.loc 1 69 25 is_stmt 0 discriminator 1 view .LVU58
+ 297 0028 084B     		ldr	r3, .L25+4
+ 298 002a 1B68     		ldr	r3, [r3]
+  69:Src/can_manager.c ****         CANMsgHandlerPair handlerPair = msgHandlers[i];
+ 299              		.loc 1 69 7 discriminator 1 view .LVU59
+ 300 002c A342     		cmp	r3, r4
+ 301 002e EADC     		bgt	.L21
+ 302              	.LVL19:
+ 303              	.L19:
+  69:Src/can_manager.c ****         CANMsgHandlerPair handlerPair = msgHandlers[i];
+ 304              		.loc 1 69 7 discriminator 1 view .LVU60
+ 305              	.LBE2:
+  64:Src/can_manager.c ****   while (1) {
+ 306              		.loc 1 64 3 is_stmt 1 view .LVU61
+  65:Src/can_manager.c ****     // Because we use the suspend feature (portMAX_DELAY), this should always
+ 307              		.loc 1 65 3 view .LVU62
+  68:Src/can_manager.c ****       for (S32 i = 0; i < canHandlersCt; ++i) {
+ 308              		.loc 1 68 5 view .LVU63
+  68:Src/can_manager.c ****       for (S32 i = 0; i < canHandlersCt; ++i) {
+ 309              		.loc 1 68 9 is_stmt 0 view .LVU64
+ 310 0030 4FF0FF32 		mov	r2, #-1
+ 311 0034 02A9     		add	r1, sp, #8
+ 312 0036 064B     		ldr	r3, .L25+8
+ 313 0038 1868     		ldr	r0, [r3]
+ 314 003a FFF7FEFF 		bl	xQueueReceive
+ 315              	.LVL20:
+  68:Src/can_manager.c ****       for (S32 i = 0; i < canHandlersCt; ++i) {
+ 316              		.loc 1 68 8 view .LVU65
+ 317 003e 0128     		cmp	r0, #1
+ 318 0040 F6D1     		bne	.L19
+ 319              	.LBB4:
+  69:Src/can_manager.c ****         CANMsgHandlerPair handlerPair = msgHandlers[i];
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccW36Yjy.s 			page 8
+
+
+ 320              		.loc 1 69 16 view .LVU66
+ 321 0042 0024     		movs	r4, #0
+ 322 0044 F0E7     		b	.L18
+ 323              	.L26:
+ 324 0046 00BF     		.align	2
+ 325              	.L25:
+ 326 0048 00000000 		.word	.LANCHOR3
+ 327 004c 00000000 		.word	.LANCHOR2
+ 328 0050 00000000 		.word	xCanRxQueue
+ 329              	.LBE4:
+ 330              		.cfi_endproc
+ 331              	.LFE138:
+ 333              		.global	canHandlersCt
+ 334              		.global	msgHandlers
+ 335              		.global	RxData
+ 336              		.global	RxHeader
+ 337              		.global	TxHeader
+ 338              		.global	CurTxMailbox
+ 339              		.section	.bss.CurTxMailbox,"aw",%nobits
+ 340              		.align	2
+ 341              		.set	.LANCHOR1,. + 0
+ 344              	CurTxMailbox:
+ 345 0000 00000000 		.space	4
+ 346              		.section	.bss.RxData,"aw",%nobits
+ 347              		.align	2
+ 348              		.set	.LANCHOR4,. + 0
+ 351              	RxData:
+ 352 0000 00000000 		.space	8
+ 352      00000000 
+ 353              		.section	.bss.RxHeader,"aw",%nobits
+ 354              		.align	2
+ 355              		.set	.LANCHOR5,. + 0
+ 358              	RxHeader:
+ 359 0000 00000000 		.space	28
+ 359      00000000 
+ 359      00000000 
+ 359      00000000 
+ 359      00000000 
+ 360              		.section	.bss.TxHeader,"aw",%nobits
+ 361              		.align	2
+ 362              		.set	.LANCHOR0,. + 0
+ 365              	TxHeader:
+ 366 0000 00000000 		.space	24
+ 366      00000000 
+ 366      00000000 
+ 366      00000000 
+ 366      00000000 
+ 367              		.section	.bss.canHandlersCt,"aw",%nobits
+ 368              		.align	2
+ 369              		.set	.LANCHOR2,. + 0
+ 372              	canHandlersCt:
+ 373 0000 00000000 		.space	4
+ 374              		.section	.bss.msgHandlers,"aw",%nobits
+ 375              		.align	2
+ 376              		.set	.LANCHOR3,. + 0
+ 379              	msgHandlers:
+ 380 0000 00000000 		.space	80
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccW36Yjy.s 			page 9
+
+
+ 380      00000000 
+ 380      00000000 
+ 380      00000000 
+ 380      00000000 
+ 381              		.text
+ 382              	.Letext0:
+ 383              		.file 2 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\\
+ 384              		.file 3 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\\
+ 385              		.file 4 "Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303xe.h"
+ 386              		.file 5 "Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h"
+ 387              		.file 6 "Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h"
+ 388              		.file 7 "Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_can.h"
+ 389              		.file 8 "Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h"
+ 390              		.file 9 "Middlewares/Third_Party/FreeRTOS/Source/include/queue.h"
+ 391              		.file 10 "Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h"
+ 392              		.file 11 "Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h"
+ 393              		.file 12 "Inc/types.h"
+ 394              		.file 13 "Inc/can_manager.h"
+ 395              		.file 14 "Inc/main.h"
+ 396              		.file 15 "Middlewares/Third_Party/FreeRTOS/Source/include/task.h"
+ 397              		.file 16 "<built-in>"
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccW36Yjy.s 			page 10
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 can_manager.c
+C:\Users\jmbli\AppData\Local\Temp\ccW36Yjy.s:20     .text.do_send_can_message:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccW36Yjy.s:26     .text.do_send_can_message:00000000 do_send_can_message
+C:\Users\jmbli\AppData\Local\Temp\ccW36Yjy.s:109    .text.do_send_can_message:00000050 $d
+C:\Users\jmbli\AppData\Local\Temp\ccW36Yjy.s:117    .text.registerCANMsgHandler:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccW36Yjy.s:123    .text.registerCANMsgHandler:00000000 registerCANMsgHandler
+C:\Users\jmbli\AppData\Local\Temp\ccW36Yjy.s:156    .text.registerCANMsgHandler:0000001c $d
+C:\Users\jmbli\AppData\Local\Temp\ccW36Yjy.s:162    .text.HAL_CAN_RxFifo0MsgPendingCallback:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccW36Yjy.s:168    .text.HAL_CAN_RxFifo0MsgPendingCallback:00000000 HAL_CAN_RxFifo0MsgPendingCallback
+C:\Users\jmbli\AppData\Local\Temp\ccW36Yjy.s:235    .text.HAL_CAN_RxFifo0MsgPendingCallback:0000003c $d
+C:\Users\jmbli\AppData\Local\Temp\ccW36Yjy.s:242    .text.canRxDispatchTask:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccW36Yjy.s:248    .text.canRxDispatchTask:00000000 canRxDispatchTask
+C:\Users\jmbli\AppData\Local\Temp\ccW36Yjy.s:326    .text.canRxDispatchTask:00000048 $d
+C:\Users\jmbli\AppData\Local\Temp\ccW36Yjy.s:372    .bss.canHandlersCt:00000000 canHandlersCt
+C:\Users\jmbli\AppData\Local\Temp\ccW36Yjy.s:379    .bss.msgHandlers:00000000 msgHandlers
+C:\Users\jmbli\AppData\Local\Temp\ccW36Yjy.s:351    .bss.RxData:00000000 RxData
+C:\Users\jmbli\AppData\Local\Temp\ccW36Yjy.s:358    .bss.RxHeader:00000000 RxHeader
+C:\Users\jmbli\AppData\Local\Temp\ccW36Yjy.s:365    .bss.TxHeader:00000000 TxHeader
+C:\Users\jmbli\AppData\Local\Temp\ccW36Yjy.s:344    .bss.CurTxMailbox:00000000 CurTxMailbox
+C:\Users\jmbli\AppData\Local\Temp\ccW36Yjy.s:340    .bss.CurTxMailbox:00000000 $d
+C:\Users\jmbli\AppData\Local\Temp\ccW36Yjy.s:347    .bss.RxData:00000000 $d
+C:\Users\jmbli\AppData\Local\Temp\ccW36Yjy.s:354    .bss.RxHeader:00000000 $d
+C:\Users\jmbli\AppData\Local\Temp\ccW36Yjy.s:361    .bss.TxHeader:00000000 $d
+C:\Users\jmbli\AppData\Local\Temp\ccW36Yjy.s:368    .bss.canHandlersCt:00000000 $d
+C:\Users\jmbli\AppData\Local\Temp\ccW36Yjy.s:375    .bss.msgHandlers:00000000 $d
+
+UNDEFINED SYMBOLS
+xQueueSemaphoreTake
+vTaskDelay
+HAL_CAN_GetTxMailboxesFreeLevel
+HAL_CAN_AddTxMessage
+xQueueGenericSend
+canTxMutexHandle
+hcan
+HAL_CAN_GetRxMessage
+memcpy
+xQueueGenericSendFromISR
+Error_Handler
+xCanRxQueue
+xQueueReceive

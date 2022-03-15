@@ -1,0 +1,242 @@
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cce10DFe.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"relay.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.create_relay,"ax",%progbits
+  20              		.align	1
+  21              		.global	create_relay
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	create_relay:
+  27              	.LVL0:
+  28              	.LFB130:
+  29              		.file 1 "Src/relay.c"
+   1:Src/relay.c   **** #include "relay.h"
+   2:Src/relay.c   **** 
+   3:Src/relay.c   **** Relay create_relay(GPIO_TypeDef* port_fw, U16 pin_fw, GPIO_TypeDef* port_rv,
+   4:Src/relay.c   ****                    U16 pin_rv) {
+  30              		.loc 1 4 32 view -0
+  31              		.cfi_startproc
+  32              		@ args = 4, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		@ link register save eliminated.
+   5:Src/relay.c   ****   Relay relay = {port_fw, pin_fw, port_rv, pin_rv, RELAY_OFF};
+  35              		.loc 1 5 3 view .LVU1
+  36              		.loc 1 5 9 is_stmt 0 view .LVU2
+  37 0000 0160     		str	r1, [r0]
+  38 0002 8280     		strh	r2, [r0, #4]	@ movhi
+  39 0004 8360     		str	r3, [r0, #8]
+  40 0006 BDF80030 		ldrh	r3, [sp]
+  41              	.LVL1:
+  42              		.loc 1 5 9 view .LVU3
+  43 000a 8381     		strh	r3, [r0, #12]	@ movhi
+  44 000c 0023     		movs	r3, #0
+  45 000e 8373     		strb	r3, [r0, #14]
+   6:Src/relay.c   ****   return relay;
+  46              		.loc 1 6 3 is_stmt 1 view .LVU4
+   7:Src/relay.c   **** }
+  47              		.loc 1 7 1 is_stmt 0 view .LVU5
+  48 0010 7047     		bx	lr
+  49              		.cfi_endproc
+  50              	.LFE130:
+  52              		.section	.text.set_relay,"ax",%progbits
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cce10DFe.s 			page 2
+
+
+  53              		.align	1
+  54              		.global	set_relay
+  55              		.syntax unified
+  56              		.thumb
+  57              		.thumb_func
+  59              	set_relay:
+  60              	.LVL2:
+  61              	.LFB131:
+   8:Src/relay.c   **** 
+   9:Src/relay.c   **** void set_relay(Relay* relay, RelayState state) {
+  62              		.loc 1 9 48 is_stmt 1 view -0
+  63              		.cfi_startproc
+  64              		@ args = 0, pretend = 0, frame = 0
+  65              		@ frame_needed = 0, uses_anonymous_args = 0
+  66              		.loc 1 9 48 is_stmt 0 view .LVU7
+  67 0000 10B5     		push	{r4, lr}
+  68              	.LCFI0:
+  69              		.cfi_def_cfa_offset 8
+  70              		.cfi_offset 4, -8
+  71              		.cfi_offset 14, -4
+  72 0002 0446     		mov	r4, r0
+  10:Src/relay.c   ****   relay->state = state;
+  73              		.loc 1 10 3 is_stmt 1 view .LVU8
+  74              		.loc 1 10 16 is_stmt 0 view .LVU9
+  75 0004 8173     		strb	r1, [r0, #14]
+  11:Src/relay.c   ****   if (state == RELAY_OFF) {
+  76              		.loc 1 11 3 is_stmt 1 view .LVU10
+  77              		.loc 1 11 6 is_stmt 0 view .LVU11
+  78 0006 31B1     		cbz	r1, .L8
+  12:Src/relay.c   ****     HAL_GPIO_WritePin(relay->port_fw, relay->pin_fw, GPIO_PIN_RESET);
+  13:Src/relay.c   ****     HAL_GPIO_WritePin(relay->port_rv, relay->pin_rv, GPIO_PIN_RESET);
+  14:Src/relay.c   ****   } else if (state == RELAY_FORWARD) {
+  79              		.loc 1 14 10 is_stmt 1 view .LVU12
+  80              		.loc 1 14 13 is_stmt 0 view .LVU13
+  81 0008 0129     		cmp	r1, #1
+  82 000a 0FD0     		beq	.L9
+  15:Src/relay.c   ****     HAL_GPIO_WritePin(relay->port_fw, relay->pin_fw, GPIO_PIN_SET);
+  16:Src/relay.c   ****     HAL_GPIO_WritePin(relay->port_rv, relay->pin_rv, GPIO_PIN_RESET);
+  17:Src/relay.c   ****   } else if (state == RELAY_REVERSE) {
+  83              		.loc 1 17 10 is_stmt 1 view .LVU14
+  84              		.loc 1 17 13 is_stmt 0 view .LVU15
+  85 000c 0229     		cmp	r1, #2
+  86 000e 18D0     		beq	.L10
+  18:Src/relay.c   ****     HAL_GPIO_WritePin(relay->port_fw, relay->pin_fw, GPIO_PIN_RESET);
+  19:Src/relay.c   ****     HAL_GPIO_WritePin(relay->port_rv, relay->pin_rv, GPIO_PIN_SET);
+  20:Src/relay.c   ****   } else if (state == RELAY_ON) {
+  87              		.loc 1 20 10 is_stmt 1 view .LVU16
+  88              		.loc 1 20 13 is_stmt 0 view .LVU17
+  89 0010 0329     		cmp	r1, #3
+  90 0012 21D0     		beq	.L11
+  91              	.LVL3:
+  92              	.L2:
+  21:Src/relay.c   ****     HAL_GPIO_WritePin(relay->port_fw, relay->pin_fw, GPIO_PIN_SET);
+  22:Src/relay.c   ****     HAL_GPIO_WritePin(relay->port_rv, relay->pin_rv, GPIO_PIN_SET);
+  23:Src/relay.c   ****   }
+  24:Src/relay.c   **** }...
+  93              		.loc 1 24 1 view .LVU18
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cce10DFe.s 			page 3
+
+
+  94 0014 10BD     		pop	{r4, pc}
+  95              	.LVL4:
+  96              	.L8:
+  12:Src/relay.c   ****     HAL_GPIO_WritePin(relay->port_fw, relay->pin_fw, GPIO_PIN_RESET);
+  97              		.loc 1 12 5 is_stmt 1 view .LVU19
+  98 0016 0022     		movs	r2, #0
+  99 0018 8188     		ldrh	r1, [r0, #4]
+ 100              	.LVL5:
+  12:Src/relay.c   ****     HAL_GPIO_WritePin(relay->port_fw, relay->pin_fw, GPIO_PIN_RESET);
+ 101              		.loc 1 12 5 is_stmt 0 view .LVU20
+ 102 001a 0068     		ldr	r0, [r0]
+ 103              	.LVL6:
+  12:Src/relay.c   ****     HAL_GPIO_WritePin(relay->port_fw, relay->pin_fw, GPIO_PIN_RESET);
+ 104              		.loc 1 12 5 view .LVU21
+ 105 001c FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 106              	.LVL7:
+  13:Src/relay.c   ****     HAL_GPIO_WritePin(relay->port_rv, relay->pin_rv, GPIO_PIN_RESET);
+ 107              		.loc 1 13 5 is_stmt 1 view .LVU22
+ 108 0020 0022     		movs	r2, #0
+ 109 0022 A189     		ldrh	r1, [r4, #12]
+ 110 0024 A068     		ldr	r0, [r4, #8]
+ 111 0026 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 112              	.LVL8:
+ 113 002a F3E7     		b	.L2
+ 114              	.LVL9:
+ 115              	.L9:
+  15:Src/relay.c   ****     HAL_GPIO_WritePin(relay->port_fw, relay->pin_fw, GPIO_PIN_SET);
+ 116              		.loc 1 15 5 view .LVU23
+ 117 002c 0122     		movs	r2, #1
+ 118 002e 8188     		ldrh	r1, [r0, #4]
+ 119              	.LVL10:
+  15:Src/relay.c   ****     HAL_GPIO_WritePin(relay->port_fw, relay->pin_fw, GPIO_PIN_SET);
+ 120              		.loc 1 15 5 is_stmt 0 view .LVU24
+ 121 0030 0068     		ldr	r0, [r0]
+ 122              	.LVL11:
+  15:Src/relay.c   ****     HAL_GPIO_WritePin(relay->port_fw, relay->pin_fw, GPIO_PIN_SET);
+ 123              		.loc 1 15 5 view .LVU25
+ 124 0032 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 125              	.LVL12:
+  16:Src/relay.c   ****     HAL_GPIO_WritePin(relay->port_rv, relay->pin_rv, GPIO_PIN_RESET);
+ 126              		.loc 1 16 5 is_stmt 1 view .LVU26
+ 127 0036 0022     		movs	r2, #0
+ 128 0038 A189     		ldrh	r1, [r4, #12]
+ 129 003a A068     		ldr	r0, [r4, #8]
+ 130 003c FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 131              	.LVL13:
+ 132 0040 E8E7     		b	.L2
+ 133              	.LVL14:
+ 134              	.L10:
+  18:Src/relay.c   ****     HAL_GPIO_WritePin(relay->port_fw, relay->pin_fw, GPIO_PIN_RESET);
+ 135              		.loc 1 18 5 view .LVU27
+ 136 0042 0022     		movs	r2, #0
+ 137 0044 8188     		ldrh	r1, [r0, #4]
+ 138              	.LVL15:
+  18:Src/relay.c   ****     HAL_GPIO_WritePin(relay->port_fw, relay->pin_fw, GPIO_PIN_RESET);
+ 139              		.loc 1 18 5 is_stmt 0 view .LVU28
+ 140 0046 0068     		ldr	r0, [r0]
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cce10DFe.s 			page 4
+
+
+ 141              	.LVL16:
+  18:Src/relay.c   ****     HAL_GPIO_WritePin(relay->port_fw, relay->pin_fw, GPIO_PIN_RESET);
+ 142              		.loc 1 18 5 view .LVU29
+ 143 0048 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 144              	.LVL17:
+  19:Src/relay.c   ****     HAL_GPIO_WritePin(relay->port_rv, relay->pin_rv, GPIO_PIN_SET);
+ 145              		.loc 1 19 5 is_stmt 1 view .LVU30
+ 146 004c 0122     		movs	r2, #1
+ 147 004e A189     		ldrh	r1, [r4, #12]
+ 148 0050 A068     		ldr	r0, [r4, #8]
+ 149 0052 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 150              	.LVL18:
+ 151 0056 DDE7     		b	.L2
+ 152              	.LVL19:
+ 153              	.L11:
+  21:Src/relay.c   ****     HAL_GPIO_WritePin(relay->port_fw, relay->pin_fw, GPIO_PIN_SET);
+ 154              		.loc 1 21 5 view .LVU31
+ 155 0058 0122     		movs	r2, #1
+ 156 005a 8188     		ldrh	r1, [r0, #4]
+ 157              	.LVL20:
+  21:Src/relay.c   ****     HAL_GPIO_WritePin(relay->port_fw, relay->pin_fw, GPIO_PIN_SET);
+ 158              		.loc 1 21 5 is_stmt 0 view .LVU32
+ 159 005c 0068     		ldr	r0, [r0]
+ 160              	.LVL21:
+  21:Src/relay.c   ****     HAL_GPIO_WritePin(relay->port_fw, relay->pin_fw, GPIO_PIN_SET);
+ 161              		.loc 1 21 5 view .LVU33
+ 162 005e FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 163              	.LVL22:
+  22:Src/relay.c   ****     HAL_GPIO_WritePin(relay->port_rv, relay->pin_rv, GPIO_PIN_SET);
+ 164              		.loc 1 22 5 is_stmt 1 view .LVU34
+ 165 0062 0122     		movs	r2, #1
+ 166 0064 A189     		ldrh	r1, [r4, #12]
+ 167 0066 A068     		ldr	r0, [r4, #8]
+ 168 0068 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 169              	.LVL23:
+ 170              		.loc 1 24 1 is_stmt 0 view .LVU35
+ 171 006c D2E7     		b	.L2
+ 172              		.cfi_endproc
+ 173              	.LFE131:
+ 175              		.text
+ 176              	.Letext0:
+ 177              		.file 2 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\\
+ 178              		.file 3 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2021.10\\arm-none-eabi\\include\\
+ 179              		.file 4 "Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303xe.h"
+ 180              		.file 5 "Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_gpio.h"
+ 181              		.file 6 "Inc/relay.h"
+ 182              		.file 7 "Inc/types.h"
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cce10DFe.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 relay.c
+C:\Users\jmbli\AppData\Local\Temp\cce10DFe.s:20     .text.create_relay:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\cce10DFe.s:26     .text.create_relay:00000000 create_relay
+C:\Users\jmbli\AppData\Local\Temp\cce10DFe.s:53     .text.set_relay:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\cce10DFe.s:59     .text.set_relay:00000000 set_relay
+
+UNDEFINED SYMBOLS
+HAL_GPIO_WritePin
