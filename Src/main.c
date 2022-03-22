@@ -53,18 +53,15 @@ UART_HandleTypeDef huart2;
 osThreadId defaultTaskHandle;
 uint32_t defaultTaskBuffer[ 128 ];
 osStaticThreadDef_t defaultTaskControlBlock;
-osThreadId achooControllerHandle;
-uint32_t achooControllerBuffer[ 128 ];
-osStaticThreadDef_t achooControllerControlBlock;
+osThreadId intakeControllerHandle;
+uint32_t intakeControllerBuffer[ 128 ];
+osStaticThreadDef_t intakeControllerControlBlock;
+osThreadId excavateControllerHandle;
+uint32_t excavateControllerBuffer[ 128 ];
+osStaticThreadDef_t excavateControllerControlBlock;
 osThreadId canRxDispatchHandle;
 uint32_t canRxDispatchBuffer[ 128 ];
 osStaticThreadDef_t canRxDispatchControlBlock;
-osThreadId gesundheitTaskHandle;
-uint32_t gesundheitTaskBuffer[ 128 ];
-osStaticThreadDef_t gesundheitTaskControlBlock;
-osThreadId sneezeControlHandle;
-uint32_t sneezeControlBuffer[ 128 ];
-osStaticThreadDef_t sneezeControlControlBlock;
 osThreadId drivetrainTaskHandle;
 uint32_t drivetrainTaskBuffer[ 128 ];
 osStaticThreadDef_t drivetrainTaskControlBlock;
@@ -86,6 +83,10 @@ extern void canRxDispatchTask(void const * argument);
 extern void gesundheitControllerFunc(void const * argument);
 extern void sneezeControllerFunc(void const * argument);
 extern void drivetrain_loop(void const * argument);
+extern void excavateControllerFunc(void const * argument);
+extern void intakeControllerFunc(void const * argument);
+
+
 
 /* USER CODE BEGIN PFP */
 
@@ -156,21 +157,19 @@ int main(void)
   osThreadStaticDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 128, defaultTaskBuffer, &defaultTaskControlBlock);
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
-  /* definition and creation of achooController */
-  osThreadStaticDef(achooController, achooControllerFunc, osPriorityNormal, 0, 128, achooControllerBuffer, &achooControllerControlBlock);
-  achooControllerHandle = osThreadCreate(osThread(achooController), NULL);
+ 
+
+  /*definition and creation of the intakeController */
+  osThreadStaticDef(intakeController, intakeControllerFunc, osPriorityNormal, 0 , 128, intakeControllerBuffer, &intakeControllerControlBlock);
+  intakeControllerHandle = isThreadCreate(osThread(intakeController), NULL);
+
+  /*definition and creation of the excavateController */
+  osThreadStaticDef(excavateController, excavateControllerFunc, osPriorityNormal, 0, 128, intakeControllerBuffer, &intakeControllerControlBlock);
+  excavateControllerHandle = isThreadCreate(osThread(excavateController), NULL);
 
   /* definition and creation of canRxDispatch */
   osThreadStaticDef(canRxDispatch, canRxDispatchTask, osPriorityAboveNormal, 0, 128, canRxDispatchBuffer, &canRxDispatchControlBlock);
   canRxDispatchHandle = osThreadCreate(osThread(canRxDispatch), NULL);
-
-  /* definition and creation of gesundheitTask */
-  osThreadStaticDef(gesundheitTask, gesundheitControllerFunc, osPriorityNormal, 0, 128, gesundheitTaskBuffer, &gesundheitTaskControlBlock);
-  gesundheitTaskHandle = osThreadCreate(osThread(gesundheitTask), NULL);
-
-  /* definition and creation of sneezeControl */
-  osThreadStaticDef(sneezeControl, sneezeControllerFunc, osPriorityNormal, 0, 128, sneezeControlBuffer, &sneezeControlControlBlock);
-  sneezeControlHandle = osThreadCreate(osThread(sneezeControl), NULL);
 
   /* definition and creation of drivetrainTask */
   osThreadStaticDef(drivetrainTask, drivetrain_loop, osPriorityNormal, 0, 128, drivetrainTaskBuffer, &drivetrainTaskControlBlock);
@@ -471,6 +470,12 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : INTAKE_LimitLH_Pin INTAKE_LimitRL_Pin INTAKE_LimitRH_Pin */
+  GPIO_InitStruct.Pin = INTAKE_LimitLH_Pin|INTAKE_LimitRL_Pin|INTAKE_LimitRH_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
 }
 

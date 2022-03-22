@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s 			page 1
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s 			page 1
   28:Src/VESC.c    ****   vesc->id = id;
   29:Src/VESC.c    ****   vesc->pole_pairs = pole_pairs;
   30:Src/VESC.c    ****   return vesc;
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s 			page 2
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s 			page 2
 
 
   31:Src/VESC.c    **** }
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s 			page 1
   38:Src/VESC.c    ****     if (vesc_map[i].id == vesc_id) {
   76              		.loc 1 38 5 is_stmt 1 view .LVU13
   77              		.loc 1 38 20 is_stmt 0 view .LVU14
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s 			page 3
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s 			page 3
 
 
   78 0020 C3EB0312 		rsb	r2, r3, r3, lsl #4
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s 			page 1
  122 004e 0A       		.byte	(.L13-.L9)/2
  123 004f 0D       		.byte	(.L1-.L9)/2
  124 0050 0D       		.byte	(.L1-.L9)/2
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s 			page 4
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s 			page 4
 
 
  125 0051 0D       		.byte	(.L1-.L9)/2
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s 			page 1
   74:Src/VESC.c    ****       case VESC_PACKET_STATUS_4: {
   75:Src/VESC.c    ****         if (msg.length < 8) {
   76:Src/VESC.c    ****           break;
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s 			page 5
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s 			page 5
 
 
   77:Src/VESC.c    ****         }
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s 			page 1
  183 0080 C5ED027A 		vstr.32	s15, [r5, #8]
   54:Src/VESC.c    ****         ptr->duty = (F32)buffer_pop_int16(buf, &index) / 1000.0f;
  184              		.loc 1 54 9 is_stmt 1 view .LVU41
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s 			page 6
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s 			page 6
 
 
   54:Src/VESC.c    ****         ptr->duty = (F32)buffer_pop_int16(buf, &index) / 1000.0f;
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s 			page 1
  223              		.loc 1 59 16 is_stmt 0 view .LVU57
  224 00be 039B     		ldr	r3, [sp, #12]
   59:Src/VESC.c    ****           break;
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s 			page 7
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s 			page 7
 
 
  225              		.loc 1 59 12 view .LVU58
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s 			page 1
  264              	.L11:
   67:Src/VESC.c    ****           break;
  265              		.loc 1 67 9 view .LVU74
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s 			page 8
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s 			page 8
 
 
   67:Src/VESC.c    ****           break;
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s 			page 1
   72:Src/VESC.c    ****       }
  304              		.loc 1 72 9 is_stmt 1 view .LVU91
  305 0134 98E7     		b	.L1
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s 			page 9
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s 			page 9
 
 
  306              	.LVL28:
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s 			page 1
  344 0168 87EE887A 		vdiv.f32	s14, s15, s16
   79:Src/VESC.c    ****         ptr->current_in = (F32)buffer_pop_int16(buf, &index) / 10.0f;
  345              		.loc 1 79 25 view .LVU108
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s 			page 10
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s 			page 10
 
 
  346 016c 85ED0A7A 		vstr.32	s14, [r5, #40]
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s 			page 1
  384              		.loc 1 85 9 view .LVU124
   85:Src/VESC.c    ****           break;
  385              		.loc 1 85 16 is_stmt 0 view .LVU125
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s 			page 11
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s 			page 11
 
 
  386 01a6 039B     		ldr	r3, [sp, #12]
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s 			page 1
  427 01e4 00401C46 		.word	1176256512
  428 01e8 00004842 		.word	1112014848
  429              		.cfi_endproc
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s 			page 12
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s 			page 12
 
 
  430              	.LFE3:
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s 			page 1
  483              		.cfi_offset 14, -4
  484 0002 8C46     		mov	ip, r1
  485 0004 1146     		mov	r1, r2
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s 			page 13
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s 			page 13
 
 
  486              	.LVL44:
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s 			page 1
   27:Src/VESC.c    ****   vesc->id = id;
  532              		.loc 1 27 3 is_stmt 1 view .LVU155
  533 000c 5D1C     		adds	r5, r3, #1
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s 			page 14
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s 			page 14
 
 
  534 000e 2560     		str	r5, [r4]
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s 			page 1
  580              		.loc 1 96 66 is_stmt 0 view .LVU165
  581 0000 30B5     		push	{r4, r5, lr}
  582              	.LCFI10:
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s 			page 15
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s 			page 15
 
 
  583              		.cfi_def_cfa_offset 12
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s 			page 1
  631 003a 30BD     		pop	{r4, r5, pc}
  632              	.LVL61:
  633              	.L32:
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s 			page 16
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s 			page 16
 
 
  634              		.loc 1 102 1 view .LVU177
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s 			page 1
  683 0020 01A8     		add	r0, sp, #4
  684              	.LVL65:
  685              		.loc 1 109 3 view .LVU187
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s 			page 17
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s 			page 17
 
 
  686 0022 FFF7FEFF 		bl	buffer_put_int32
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s 			page 1
  735              		.loc 1 116 43 view .LVU197
  736 0014 9FED087A 		vldr.32	s14, .L37
  737 0018 67EE877A 		vmul.f32	s15, s15, s14
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s 			page 18
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s 			page 18
 
 
  738              		.loc 1 116 13 view .LVU198
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s 			page 1
  788              		.loc 1 122 3 is_stmt 1 view .LVU204
  123:Src/VESC.c    ****   S32 val = (S32)(current * 1000.0);
  789              		.loc 1 123 3 view .LVU205
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s 			page 19
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s 			page 19
 
 
  790              		.loc 1 123 27 is_stmt 0 view .LVU206
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s 			page 1
  841              		@ link register save eliminated.
  842              		.loc 1 128 38 view .LVU215
  843              		.loc 1 128 49 is_stmt 0 view .LVU216
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s 			page 20
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s 			page 20
 
 
  844 0000 90ED020A 		vldr.32	s0, [r0, #8]
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s 			page 1
  899 0000 00000000 		.space	4
  900              		.section	.bss.vesc_map,"aw",%nobits
  901              		.align	2
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s 			page 21
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s 			page 21
 
 
  902              		.set	.LANCHOR0,. + 0
@@ -1216,45 +1216,45 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s 			page 1
  912              		.file 5 "Inc/can_manager.h"
  913              		.file 6 "Inc/VESC.h"
  914              		.file 7 "Inc/buffer.h"
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s 			page 22
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s 			page 22
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 VESC.c
-C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s:20     .text.handle_vesc_can_recv:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s:26     .text.handle_vesc_can_recv:00000000 handle_vesc_can_recv
-C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s:122    .text.handle_vesc_can_recv:0000004e $d
-C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s:424    .text.handle_vesc_can_recv:000001d8 $d
-C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s:433    .text.vesc_system_init:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s:439    .text.vesc_system_init:00000000 vesc_system_init
-C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s:460    .text.vesc_system_init:00000010 $d
-C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s:465    .text.vesc_send_message:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s:471    .text.vesc_send_message:00000000 vesc_send_message
-C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s:504    .text.create_vesc:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s:510    .text.create_vesc:00000000 create_vesc
-C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s:558    .text.create_vesc:00000020 $d
-C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s:567    .text.vesc_set_duty_cycle:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s:573    .text.vesc_set_duty_cycle:00000000 vesc_set_duty_cycle
-C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s:637    .text.vesc_set_duty_cycle:00000040 $d
-C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s:643    .text.vesc_set_rpm:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s:649    .text.vesc_set_rpm:00000000 vesc_set_rpm
-C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s:706    .text.vesc_set_position:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s:712    .text.vesc_set_position:00000000 vesc_set_position
-C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s:758    .text.vesc_set_position:00000038 $d
-C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s:763    .text.vesc_set_current:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s:769    .text.vesc_set_current:00000000 vesc_set_current
-C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s:823    .text.vesc_set_current:00000030 $d
-C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s:828    .text.vesc_get_rpm:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s:834    .text.vesc_get_rpm:00000000 vesc_get_rpm
-C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s:856    .text.vesc_get_position:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s:862    .text.vesc_get_position:00000000 vesc_get_position
-C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s:888    .text.vesc_get_position:00000028 $d
-C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s:905    .bss.vesc_map:00000000 vesc_map
-C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s:894    .bss.vesc_count:00000000 $d
-C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s:898    .bss.vesc_count:00000000 vesc_count
-C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s:901    .bss.vesc_map:00000000 $d
-C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s:141    .text.handle_vesc_can_recv:00000061 $d
-C:\Users\jmbli\AppData\Local\Temp\cc4tV6Ad.s:141    .text.handle_vesc_can_recv:00000062 $t
+C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s:20     .text.handle_vesc_can_recv:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s:26     .text.handle_vesc_can_recv:00000000 handle_vesc_can_recv
+C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s:122    .text.handle_vesc_can_recv:0000004e $d
+C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s:424    .text.handle_vesc_can_recv:000001d8 $d
+C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s:433    .text.vesc_system_init:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s:439    .text.vesc_system_init:00000000 vesc_system_init
+C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s:460    .text.vesc_system_init:00000010 $d
+C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s:465    .text.vesc_send_message:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s:471    .text.vesc_send_message:00000000 vesc_send_message
+C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s:504    .text.create_vesc:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s:510    .text.create_vesc:00000000 create_vesc
+C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s:558    .text.create_vesc:00000020 $d
+C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s:567    .text.vesc_set_duty_cycle:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s:573    .text.vesc_set_duty_cycle:00000000 vesc_set_duty_cycle
+C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s:637    .text.vesc_set_duty_cycle:00000040 $d
+C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s:643    .text.vesc_set_rpm:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s:649    .text.vesc_set_rpm:00000000 vesc_set_rpm
+C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s:706    .text.vesc_set_position:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s:712    .text.vesc_set_position:00000000 vesc_set_position
+C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s:758    .text.vesc_set_position:00000038 $d
+C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s:763    .text.vesc_set_current:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s:769    .text.vesc_set_current:00000000 vesc_set_current
+C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s:823    .text.vesc_set_current:00000030 $d
+C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s:828    .text.vesc_get_rpm:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s:834    .text.vesc_get_rpm:00000000 vesc_get_rpm
+C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s:856    .text.vesc_get_position:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s:862    .text.vesc_get_position:00000000 vesc_get_position
+C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s:888    .text.vesc_get_position:00000028 $d
+C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s:905    .bss.vesc_map:00000000 vesc_map
+C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s:894    .bss.vesc_count:00000000 $d
+C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s:898    .bss.vesc_count:00000000 vesc_count
+C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s:901    .bss.vesc_map:00000000 $d
+C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s:141    .text.handle_vesc_can_recv:00000061 $d
+C:\Users\jmbli\AppData\Local\Temp\ccSXjN52.s:141    .text.handle_vesc_can_recv:00000062 $t
 
 UNDEFINED SYMBOLS
 buffer_pop_int32

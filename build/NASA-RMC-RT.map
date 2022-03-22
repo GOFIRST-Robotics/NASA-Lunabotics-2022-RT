@@ -1518,13 +1518,10 @@ Discarded input sections
                 0x00000000       0x48 build/VESC.o
  .text.vesc_set_position
                 0x00000000       0x3c build/VESC.o
+ .text.vesc_get_rpm
+                0x00000000       0x12 build/VESC.o
  .text.vesc_get_position
                 0x00000000       0x2c build/VESC.o
- .text          0x00000000        0x0 build/achoo_controller.o
- .data          0x00000000        0x0 build/achoo_controller.o
- .bss           0x00000000        0x0 build/achoo_controller.o
- .text.getACHOOState
-                0x00000000        0xc build/achoo_controller.o
  .text          0x00000000        0x0 build/buffer.o
  .data          0x00000000        0x0 build/buffer.o
  .bss           0x00000000        0x0 build/buffer.o
@@ -1536,17 +1533,34 @@ Discarded input sections
  .text          0x00000000        0x0 build/drivetrain_controller.o
  .data          0x00000000        0x0 build/drivetrain_controller.o
  .bss           0x00000000        0x0 build/drivetrain_controller.o
+ .text          0x00000000        0x0 build/excavate_controller.o
+ .data          0x00000000        0x0 build/excavate_controller.o
+ .bss           0x00000000        0x0 build/excavate_controller.o
+ .text.excavateCANCallbak
+                0x00000000       0x28 build/excavate_controller.o
+ .bss.targetSpeed
+                0x00000000        0x4 build/excavate_controller.o
  .text          0x00000000        0x0 build/freertos.o
  .data          0x00000000        0x0 build/freertos.o
  .bss           0x00000000        0x0 build/freertos.o
- .text          0x00000000        0x0 build/gesundheit_controller.o
- .data          0x00000000        0x0 build/gesundheit_controller.o
- .bss           0x00000000        0x0 build/gesundheit_controller.o
- .text.getGESUNDHEITState
-                0x00000000        0xc build/gesundheit_controller.o
+ .text          0x00000000        0x0 build/intake_controller.o
+ .data          0x00000000        0x0 build/intake_controller.o
+ .bss           0x00000000        0x0 build/intake_controller.o
  .text          0x00000000        0x0 build/main.o
  .data          0x00000000        0x0 build/main.o
  .bss           0x00000000        0x0 build/main.o
+ .bss.excavateControllerBuffer
+                0x00000000      0x200 build/main.o
+ .bss.excavateControllerControlBlock
+                0x00000000       0x54 build/main.o
+ .text          0x00000000        0x0 build/offload_controller.o
+ .data          0x00000000        0x0 build/offload_controller.o
+ .bss           0x00000000        0x0 build/offload_controller.o
+ .debug_line    0x00000000        0x0 build/offload_controller.o
+ .debug_str     0x00000000       0xf6 build/offload_controller.o
+ .comment       0x00000000       0x4a build/offload_controller.o
+ .ARM.attributes
+                0x00000000       0x34 build/offload_controller.o
  .text          0x00000000        0x0 build/print.o
  .data          0x00000000        0x0 build/print.o
  .bss           0x00000000        0x0 build/print.o
@@ -1569,11 +1583,22 @@ Discarded input sections
  .text          0x00000000        0x0 build/relay.o
  .data          0x00000000        0x0 build/relay.o
  .bss           0x00000000        0x0 build/relay.o
- .text          0x00000000        0x0 build/sneeze_controller.o
- .data          0x00000000        0x0 build/sneeze_controller.o
- .bss           0x00000000        0x0 build/sneeze_controller.o
- .text.isSNEEZEHome
-                0x00000000        0xc build/sneeze_controller.o
+ .text.create_relay
+                0x00000000       0x12 build/relay.o
+ .text.set_relay
+                0x00000000       0x6e build/relay.o
+ .debug_info    0x00000000      0x3a2 build/relay.o
+ .debug_abbrev  0x00000000      0x190 build/relay.o
+ .debug_loc     0x00000000      0x1d6 build/relay.o
+ .debug_aranges
+                0x00000000       0x28 build/relay.o
+ .debug_ranges  0x00000000       0x18 build/relay.o
+ .debug_line    0x00000000      0x209 build/relay.o
+ .debug_str     0x00000000      0x28f build/relay.o
+ .comment       0x00000000       0x4a build/relay.o
+ .debug_frame   0x00000000       0x38 build/relay.o
+ .ARM.attributes
+                0x00000000       0x34 build/relay.o
  .text          0x00000000        0x0 build/stm32f3xx_hal_msp.o
  .data          0x00000000        0x0 build/stm32f3xx_hal_msp.o
  .bss           0x00000000        0x0 build/stm32f3xx_hal_msp.o
@@ -1735,16 +1760,16 @@ LOAD build/stream_buffer.o
 LOAD build/tasks.o
 LOAD build/timers.o
 LOAD build/VESC.o
-LOAD build/achoo_controller.o
 LOAD build/buffer.o
 LOAD build/can_manager.o
 LOAD build/drivetrain_controller.o
+LOAD build/excavate_controller.o
 LOAD build/freertos.o
-LOAD build/gesundheit_controller.o
+LOAD build/intake_controller.o
 LOAD build/main.o
+LOAD build/offload_controller.o
 LOAD build/print.o
 LOAD build/relay.o
-LOAD build/sneeze_controller.o
 LOAD build/stm32f3xx_hal_msp.o
 LOAD build/stm32f3xx_hal_timebase_tim.o
 LOAD build/stm32f3xx_it.o
@@ -1775,7 +1800,7 @@ LOAD c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc
                 0x08000000                g_pfnVectors
                 0x08000194                . = ALIGN (0x4)
 
-.text           0x080001a0     0x5ac0
+.text           0x080001a0     0x565c
                 0x080001a0                . = ALIGN (0x4)
  *(.text)
  .text          0x080001a0       0x40 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
@@ -2189,299 +2214,280 @@ LOAD c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc
  .text.vesc_set_current
                 0x08004b70       0x34 build/VESC.o
                 0x08004b70                vesc_set_current
- .text.vesc_get_rpm
-                0x08004ba4       0x12 build/VESC.o
-                0x08004ba4                vesc_get_rpm
- *fill*         0x08004bb6        0x2 
- .text.achooCANCallback
-                0x08004bb8       0x38 build/achoo_controller.o
-                0x08004bb8                achooCANCallback
- .text.achooControllerFunc
-                0x08004bf0      0x150 build/achoo_controller.o
-                0x08004bf0                achooControllerFunc
  .text.buffer_pop_int32
-                0x08004d40       0x30 build/buffer.o
-                0x08004d40                buffer_pop_int32
+                0x08004ba4       0x30 build/buffer.o
+                0x08004ba4                buffer_pop_int32
  .text.buffer_pop_int16
-                0x08004d70       0x1c build/buffer.o
-                0x08004d70                buffer_pop_int16
+                0x08004bd4       0x1c build/buffer.o
+                0x08004bd4                buffer_pop_int16
  .text.buffer_put_int32
-                0x08004d8c       0x2c build/buffer.o
-                0x08004d8c                buffer_put_int32
+                0x08004bf0       0x2c build/buffer.o
+                0x08004bf0                buffer_put_int32
  .text.do_send_can_message
-                0x08004db8       0x60 build/can_manager.o
-                0x08004db8                do_send_can_message
+                0x08004c1c       0x60 build/can_manager.o
+                0x08004c1c                do_send_can_message
  .text.registerCANMsgHandler
-                0x08004e18       0x24 build/can_manager.o
-                0x08004e18                registerCANMsgHandler
+                0x08004c7c       0x24 build/can_manager.o
+                0x08004c7c                registerCANMsgHandler
  .text.HAL_CAN_RxFifo0MsgPendingCallback
-                0x08004e3c       0x48 build/can_manager.o
-                0x08004e3c                HAL_CAN_RxFifo0MsgPendingCallback
+                0x08004ca0       0x48 build/can_manager.o
+                0x08004ca0                HAL_CAN_RxFifo0MsgPendingCallback
  .text.canRxDispatchTask
-                0x08004e84       0x54 build/can_manager.o
-                0x08004e84                canRxDispatchTask
+                0x08004ce8       0x54 build/can_manager.o
+                0x08004ce8                canRxDispatchTask
  .text.drivetrain_move
-                0x08004ed8       0x98 build/drivetrain_controller.o
-                0x08004ed8                drivetrain_move
+                0x08004d3c       0x98 build/drivetrain_controller.o
+                0x08004d3c                drivetrain_move
  .text.drivetrain_loop
-                0x08004f70       0x78 build/drivetrain_controller.o
-                0x08004f70                drivetrain_loop
+                0x08004dd4       0x78 build/drivetrain_controller.o
+                0x08004dd4                drivetrain_loop
+ .text.excavateControllerFunc
+                0x08004e4c       0x54 build/excavate_controller.o
+                0x08004e4c                excavateControllerFunc
  .text.vApplicationGetIdleTaskMemory
-                0x08004fe8       0x18 build/freertos.o
-                0x08004fe8                vApplicationGetIdleTaskMemory
- .text.gesundheitCANCallback
-                0x08005000       0x80 build/gesundheit_controller.o
-                0x08005000                gesundheitCANCallback
- .text.gesundheitControllerFunc
-                0x08005080      0x224 build/gesundheit_controller.o
-                0x08005080                gesundheitControllerFunc
+                0x08004ea0       0x18 build/freertos.o
+                0x08004ea0                vApplicationGetIdleTaskMemory
+ .text.intakeCANCallback
+                0x08004eb8       0x38 build/intake_controller.o
+                0x08004eb8                intakeCANCallback
+ .text.intakeControllerFunc
+                0x08004ef0      0x10c build/intake_controller.o
+                0x08004ef0                intakeControllerFunc
  .text.MX_GPIO_Init
-                0x080052a4      0x124 build/main.o
+                0x08004ffc      0x134 build/main.o
  .text.StartDefaultTask
-                0x080053c8        0xa build/main.o
-                0x080053c8                StartDefaultTask
- *fill*         0x080053d2        0x2 
+                0x08005130        0xa build/main.o
+                0x08005130                StartDefaultTask
+ *fill*         0x0800513a        0x2 
  .text.HAL_TIM_PeriodElapsedCallback
-                0x080053d4       0x18 build/main.o
-                0x080053d4                HAL_TIM_PeriodElapsedCallback
+                0x0800513c       0x18 build/main.o
+                0x0800513c                HAL_TIM_PeriodElapsedCallback
  .text.Error_Handler
-                0x080053ec        0xc build/main.o
-                0x080053ec                Error_Handler
+                0x08005154        0xc build/main.o
+                0x08005154                Error_Handler
  .text.MX_USART2_UART_Init
-                0x080053f8       0x38 build/main.o
+                0x08005160       0x38 build/main.o
  .text.MX_CAN_Init
-                0x08005430       0x8c build/main.o
+                0x08005198       0x8c build/main.o
  .text.MX_ADC1_Init
-                0x080054bc       0x8c build/main.o
+                0x08005224       0x8c build/main.o
  .text.SystemClock_Config
-                0x08005548       0x8e build/main.o
-                0x08005548                SystemClock_Config
- *fill*         0x080055d6        0x2 
- .text.main     0x080055d8      0x144 build/main.o
-                0x080055d8                main
- .text.create_relay
-                0x0800571c       0x12 build/relay.o
-                0x0800571c                create_relay
- .text.set_relay
-                0x0800572e       0x6e build/relay.o
-                0x0800572e                set_relay
- .text.sneezeCANCallback
-                0x0800579c       0xa0 build/sneeze_controller.o
-                0x0800579c                sneezeCANCallback
- .text.sneezeControllerFunc
-                0x0800583c       0xfc build/sneeze_controller.o
-                0x0800583c                sneezeControllerFunc
+                0x080052b0       0x8e build/main.o
+                0x080052b0                SystemClock_Config
+ *fill*         0x0800533e        0x2 
+ .text.main     0x08005340      0x194 build/main.o
+                0x08005340                main
  .text.HAL_MspInit
-                0x08005938       0x40 build/stm32f3xx_hal_msp.o
-                0x08005938                HAL_MspInit
+                0x080054d4       0x40 build/stm32f3xx_hal_msp.o
+                0x080054d4                HAL_MspInit
  .text.HAL_ADC_MspInit
-                0x08005978       0x5c build/stm32f3xx_hal_msp.o
-                0x08005978                HAL_ADC_MspInit
+                0x08005514       0x5c build/stm32f3xx_hal_msp.o
+                0x08005514                HAL_ADC_MspInit
  .text.HAL_CAN_MspInit
-                0x080059d4       0x88 build/stm32f3xx_hal_msp.o
-                0x080059d4                HAL_CAN_MspInit
+                0x08005570       0x88 build/stm32f3xx_hal_msp.o
+                0x08005570                HAL_CAN_MspInit
  .text.HAL_UART_MspInit
-                0x08005a5c       0x64 build/stm32f3xx_hal_msp.o
-                0x08005a5c                HAL_UART_MspInit
+                0x080055f8       0x64 build/stm32f3xx_hal_msp.o
+                0x080055f8                HAL_UART_MspInit
  .text.HAL_InitTick
-                0x08005ac0       0x78 build/stm32f3xx_hal_timebase_tim.o
-                0x08005ac0                HAL_InitTick
+                0x0800565c       0x78 build/stm32f3xx_hal_timebase_tim.o
+                0x0800565c                HAL_InitTick
  .text.NMI_Handler
-                0x08005b38        0x2 build/stm32f3xx_it.o
-                0x08005b38                NMI_Handler
+                0x080056d4        0x2 build/stm32f3xx_it.o
+                0x080056d4                NMI_Handler
  .text.HardFault_Handler
-                0x08005b3a        0x2 build/stm32f3xx_it.o
-                0x08005b3a                HardFault_Handler
+                0x080056d6        0x2 build/stm32f3xx_it.o
+                0x080056d6                HardFault_Handler
  .text.MemManage_Handler
-                0x08005b3c        0x2 build/stm32f3xx_it.o
-                0x08005b3c                MemManage_Handler
+                0x080056d8        0x2 build/stm32f3xx_it.o
+                0x080056d8                MemManage_Handler
  .text.BusFault_Handler
-                0x08005b3e        0x2 build/stm32f3xx_it.o
-                0x08005b3e                BusFault_Handler
+                0x080056da        0x2 build/stm32f3xx_it.o
+                0x080056da                BusFault_Handler
  .text.UsageFault_Handler
-                0x08005b40        0x2 build/stm32f3xx_it.o
-                0x08005b40                UsageFault_Handler
+                0x080056dc        0x2 build/stm32f3xx_it.o
+                0x080056dc                UsageFault_Handler
  .text.DebugMon_Handler
-                0x08005b42        0x2 build/stm32f3xx_it.o
-                0x08005b42                DebugMon_Handler
+                0x080056de        0x2 build/stm32f3xx_it.o
+                0x080056de                DebugMon_Handler
  .text.USB_LP_CAN_RX0_IRQHandler
-                0x08005b44       0x10 build/stm32f3xx_it.o
-                0x08005b44                USB_LP_CAN_RX0_IRQHandler
+                0x080056e0       0x10 build/stm32f3xx_it.o
+                0x080056e0                USB_LP_CAN_RX0_IRQHandler
  .text.TIM1_UP_TIM16_IRQHandler
-                0x08005b54       0x10 build/stm32f3xx_it.o
-                0x08005b54                TIM1_UP_TIM16_IRQHandler
+                0x080056f0       0x10 build/stm32f3xx_it.o
+                0x080056f0                TIM1_UP_TIM16_IRQHandler
  .text.SystemInit
-                0x08005b64       0x1c build/system_stm32f3xx.o
-                0x08005b64                SystemInit
+                0x08005700       0x1c build/system_stm32f3xx.o
+                0x08005700                SystemInit
  .text.Reset_Handler
-                0x08005b80       0x50 build/startup_stm32f303xe.o
-                0x08005b80                Reset_Handler
+                0x0800571c       0x50 build/startup_stm32f303xe.o
+                0x0800571c                Reset_Handler
  .text.Default_Handler
-                0x08005bd0        0x2 build/startup_stm32f303xe.o
-                0x08005bd0                RTC_Alarm_IRQHandler
-                0x08005bd0                TIM8_TRG_COM_IRQHandler
-                0x08005bd0                TIM8_CC_IRQHandler
-                0x08005bd0                SPI4_IRQHandler
-                0x08005bd0                TIM1_CC_IRQHandler
-                0x08005bd0                USB_HP_IRQHandler
-                0x08005bd0                PVD_IRQHandler
-                0x08005bd0                TAMP_STAMP_IRQHandler
-                0x08005bd0                EXTI3_IRQHandler
-                0x08005bd0                I2C3_ER_IRQHandler
-                0x08005bd0                USB_HP_CAN_TX_IRQHandler
-                0x08005bd0                EXTI0_IRQHandler
-                0x08005bd0                I2C2_EV_IRQHandler
-                0x08005bd0                FPU_IRQHandler
-                0x08005bd0                ADC1_2_IRQHandler
-                0x08005bd0                SPI1_IRQHandler
-                0x08005bd0                CAN_SCE_IRQHandler
-                0x08005bd0                TIM6_DAC_IRQHandler
-                0x08005bd0                TIM8_UP_IRQHandler
-                0x08005bd0                DMA2_Channel2_IRQHandler
-                0x08005bd0                DMA1_Channel4_IRQHandler
-                0x08005bd0                TIM20_TRG_COM_IRQHandler
-                0x08005bd0                USART3_IRQHandler
-                0x08005bd0                DMA1_Channel7_IRQHandler
-                0x08005bd0                UART5_IRQHandler
-                0x08005bd0                ADC3_IRQHandler
-                0x08005bd0                TIM4_IRQHandler
-                0x08005bd0                CAN_RX1_IRQHandler
-                0x08005bd0                DMA2_Channel1_IRQHandler
-                0x08005bd0                I2C1_EV_IRQHandler
-                0x08005bd0                DMA1_Channel6_IRQHandler
-                0x08005bd0                UART4_IRQHandler
-                0x08005bd0                DMA2_Channel4_IRQHandler
-                0x08005bd0                TIM3_IRQHandler
-                0x08005bd0                RCC_IRQHandler
-                0x08005bd0                TIM20_UP_IRQHandler
-                0x08005bd0                DMA1_Channel1_IRQHandler
-                0x08005bd0                Default_Handler
-                0x08005bd0                USBWakeUp_RMP_IRQHandler
-                0x08005bd0                EXTI15_10_IRQHandler
-                0x08005bd0                TIM7_IRQHandler
-                0x08005bd0                I2C3_EV_IRQHandler
-                0x08005bd0                EXTI9_5_IRQHandler
-                0x08005bd0                RTC_WKUP_IRQHandler
-                0x08005bd0                SPI2_IRQHandler
-                0x08005bd0                DMA2_Channel5_IRQHandler
-                0x08005bd0                DMA1_Channel5_IRQHandler
-                0x08005bd0                USB_LP_IRQHandler
-                0x08005bd0                EXTI4_IRQHandler
-                0x08005bd0                TIM1_TRG_COM_TIM17_IRQHandler
-                0x08005bd0                DMA1_Channel3_IRQHandler
-                0x08005bd0                ADC4_IRQHandler
-                0x08005bd0                WWDG_IRQHandler
-                0x08005bd0                TIM2_IRQHandler
-                0x08005bd0                COMP7_IRQHandler
-                0x08005bd0                COMP1_2_3_IRQHandler
-                0x08005bd0                EXTI1_IRQHandler
-                0x08005bd0                USART2_IRQHandler
-                0x08005bd0                COMP4_5_6_IRQHandler
-                0x08005bd0                TIM20_BRK_IRQHandler
-                0x08005bd0                I2C2_ER_IRQHandler
-                0x08005bd0                DMA1_Channel2_IRQHandler
-                0x08005bd0                TIM8_BRK_IRQHandler
-                0x08005bd0                FLASH_IRQHandler
-                0x08005bd0                TIM20_CC_IRQHandler
-                0x08005bd0                USART1_IRQHandler
-                0x08005bd0                SPI3_IRQHandler
-                0x08005bd0                I2C1_ER_IRQHandler
-                0x08005bd0                FMC_IRQHandler
-                0x08005bd0                USBWakeUp_IRQHandler
-                0x08005bd0                DMA2_Channel3_IRQHandler
-                0x08005bd0                EXTI2_TSC_IRQHandler
-                0x08005bd0                TIM1_BRK_TIM15_IRQHandler
- *fill*         0x08005bd2        0x2 
+                0x0800576c        0x2 build/startup_stm32f303xe.o
+                0x0800576c                RTC_Alarm_IRQHandler
+                0x0800576c                TIM8_TRG_COM_IRQHandler
+                0x0800576c                TIM8_CC_IRQHandler
+                0x0800576c                SPI4_IRQHandler
+                0x0800576c                TIM1_CC_IRQHandler
+                0x0800576c                USB_HP_IRQHandler
+                0x0800576c                PVD_IRQHandler
+                0x0800576c                TAMP_STAMP_IRQHandler
+                0x0800576c                EXTI3_IRQHandler
+                0x0800576c                I2C3_ER_IRQHandler
+                0x0800576c                USB_HP_CAN_TX_IRQHandler
+                0x0800576c                EXTI0_IRQHandler
+                0x0800576c                I2C2_EV_IRQHandler
+                0x0800576c                FPU_IRQHandler
+                0x0800576c                ADC1_2_IRQHandler
+                0x0800576c                SPI1_IRQHandler
+                0x0800576c                CAN_SCE_IRQHandler
+                0x0800576c                TIM6_DAC_IRQHandler
+                0x0800576c                TIM8_UP_IRQHandler
+                0x0800576c                DMA2_Channel2_IRQHandler
+                0x0800576c                DMA1_Channel4_IRQHandler
+                0x0800576c                TIM20_TRG_COM_IRQHandler
+                0x0800576c                USART3_IRQHandler
+                0x0800576c                DMA1_Channel7_IRQHandler
+                0x0800576c                UART5_IRQHandler
+                0x0800576c                ADC3_IRQHandler
+                0x0800576c                TIM4_IRQHandler
+                0x0800576c                CAN_RX1_IRQHandler
+                0x0800576c                DMA2_Channel1_IRQHandler
+                0x0800576c                I2C1_EV_IRQHandler
+                0x0800576c                DMA1_Channel6_IRQHandler
+                0x0800576c                UART4_IRQHandler
+                0x0800576c                DMA2_Channel4_IRQHandler
+                0x0800576c                TIM3_IRQHandler
+                0x0800576c                RCC_IRQHandler
+                0x0800576c                TIM20_UP_IRQHandler
+                0x0800576c                DMA1_Channel1_IRQHandler
+                0x0800576c                Default_Handler
+                0x0800576c                USBWakeUp_RMP_IRQHandler
+                0x0800576c                EXTI15_10_IRQHandler
+                0x0800576c                TIM7_IRQHandler
+                0x0800576c                I2C3_EV_IRQHandler
+                0x0800576c                EXTI9_5_IRQHandler
+                0x0800576c                RTC_WKUP_IRQHandler
+                0x0800576c                SPI2_IRQHandler
+                0x0800576c                DMA2_Channel5_IRQHandler
+                0x0800576c                DMA1_Channel5_IRQHandler
+                0x0800576c                USB_LP_IRQHandler
+                0x0800576c                EXTI4_IRQHandler
+                0x0800576c                TIM1_TRG_COM_TIM17_IRQHandler
+                0x0800576c                DMA1_Channel3_IRQHandler
+                0x0800576c                ADC4_IRQHandler
+                0x0800576c                WWDG_IRQHandler
+                0x0800576c                TIM2_IRQHandler
+                0x0800576c                COMP7_IRQHandler
+                0x0800576c                COMP1_2_3_IRQHandler
+                0x0800576c                EXTI1_IRQHandler
+                0x0800576c                USART2_IRQHandler
+                0x0800576c                COMP4_5_6_IRQHandler
+                0x0800576c                TIM20_BRK_IRQHandler
+                0x0800576c                I2C2_ER_IRQHandler
+                0x0800576c                DMA1_Channel2_IRQHandler
+                0x0800576c                TIM8_BRK_IRQHandler
+                0x0800576c                FLASH_IRQHandler
+                0x0800576c                TIM20_CC_IRQHandler
+                0x0800576c                USART1_IRQHandler
+                0x0800576c                SPI3_IRQHandler
+                0x0800576c                I2C1_ER_IRQHandler
+                0x0800576c                FMC_IRQHandler
+                0x0800576c                USBWakeUp_IRQHandler
+                0x0800576c                DMA2_Channel3_IRQHandler
+                0x0800576c                EXTI2_TSC_IRQHandler
+                0x0800576c                TIM1_BRK_TIM15_IRQHandler
+ *fill*         0x0800576e        0x2 
  .text.__libc_init_array
-                0x08005bd4       0x48 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-init.o)
-                0x08005bd4                __libc_init_array
- .text.memcpy   0x08005c1c       0x1c c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memcpy-stub.o)
-                0x08005c1c                memcpy
- .text.memset   0x08005c38       0x10 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
-                0x08005c38                memset
+                0x08005770       0x48 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-init.o)
+                0x08005770                __libc_init_array
+ .text.memcpy   0x080057b8       0x1c c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memcpy-stub.o)
+                0x080057b8                memcpy
+ .text.memset   0x080057d4       0x10 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
+                0x080057d4                memset
  *(.glue_7)
- .glue_7        0x08005c48        0x0 linker stubs
+ .glue_7        0x080057e4        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x08005c48        0x0 linker stubs
+ .glue_7t       0x080057e4        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x08005c48        0x0 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .eh_frame      0x080057e4        0x0 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.init)
- .init          0x08005c48        0x4 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x08005c48                _init
- .init          0x08005c4c        0x8 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
+ .init          0x080057e4        0x4 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x080057e4                _init
+ .init          0x080057e8        0x8 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
  *(.fini)
- .fini          0x08005c54        0x4 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x08005c54                _fini
- .fini          0x08005c58        0x8 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
-                0x08005c60                . = ALIGN (0x4)
-                0x08005c60                _etext = .
+ .fini          0x080057f0        0x4 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x080057f0                _fini
+ .fini          0x080057f4        0x8 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
+                0x080057fc                . = ALIGN (0x4)
+                0x080057fc                _etext = .
 
-.vfp11_veneer   0x08005c60        0x0
- .vfp11_veneer  0x08005c60        0x0 linker stubs
+.vfp11_veneer   0x080057fc        0x0
+ .vfp11_veneer  0x080057fc        0x0 linker stubs
 
-.v4_bx          0x08005c60        0x0
- .v4_bx         0x08005c60        0x0 linker stubs
+.v4_bx          0x080057fc        0x0
+ .v4_bx         0x080057fc        0x0 linker stubs
 
-.iplt           0x08005c60        0x0
- .iplt          0x08005c60        0x0 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.iplt           0x080057fc        0x0
+ .iplt          0x080057fc        0x0 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.rodata         0x08005c60      0x144
-                0x08005c60                . = ALIGN (0x4)
+.rodata         0x080057fc      0x1a4
+                0x080057fc                . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x08005c60       0xa8 build/main.o
+ .rodata        0x080057fc       0xe0 build/main.o
  *(.rodata*)
  .rodata.aPLLMULFactorTable
-                0x08005d08       0x10 build/stm32f3xx_hal_rcc.o
-                0x08005d08                aPLLMULFactorTable
+                0x080058dc       0x10 build/stm32f3xx_hal_rcc.o
+                0x080058dc                aPLLMULFactorTable
  .rodata.aPredivFactorTable
-                0x08005d18       0x10 build/stm32f3xx_hal_rcc.o
-                0x08005d18                aPredivFactorTable
+                0x080058ec       0x10 build/stm32f3xx_hal_rcc.o
+                0x080058ec                aPredivFactorTable
  .rodata.vTaskStartScheduler.str1.4
-                0x08005d28        0x5 build/tasks.o
- *fill*         0x08005d2d        0x3 
+                0x080058fc        0x5 build/tasks.o
+ *fill*         0x08005901        0x3 
  .rodata.str1.4
-                0x08005d30       0x5b build/main.o
- *fill*         0x08005d8b        0x1 
+                0x08005904       0x83 build/main.o
+ *fill*         0x08005987        0x1 
  .rodata.AHBPrescTable
-                0x08005d8c       0x10 build/system_stm32f3xx.o
-                0x08005d8c                AHBPrescTable
+                0x08005988       0x10 build/system_stm32f3xx.o
+                0x08005988                AHBPrescTable
  .rodata.APBPrescTable
-                0x08005d9c        0x8 build/system_stm32f3xx.o
-                0x08005d9c                APBPrescTable
-                0x08005da4                . = ALIGN (0x4)
+                0x08005998        0x8 build/system_stm32f3xx.o
+                0x08005998                APBPrescTable
+                0x080059a0                . = ALIGN (0x4)
 
-.rel.dyn        0x08005da4        0x0
- .rel.iplt      0x08005da4        0x0 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.rel.dyn        0x080059a0        0x0
+ .rel.iplt      0x080059a0        0x0 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x08005da4        0x0
-                0x08005da4                __exidx_start = .
+.ARM            0x080059a0        0x0
+                0x080059a0                __exidx_start = .
  *(.ARM.exidx*)
-                0x08005da4                __exidx_end = .
+                0x080059a0                __exidx_end = .
 
-.preinit_array  0x08005da4        0x0
-                0x08005da4                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x080059a0        0x0
+                0x080059a0                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x08005da4                PROVIDE (__preinit_array_end = .)
+                0x080059a0                PROVIDE (__preinit_array_end = .)
 
-.init_array     0x08005da4        0x4
-                0x08005da4                PROVIDE (__init_array_start = .)
+.init_array     0x080059a0        0x4
+                0x080059a0                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x08005da4        0x4 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x08005da8                PROVIDE (__init_array_end = .)
+ .init_array    0x080059a0        0x4 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x080059a4                PROVIDE (__init_array_end = .)
 
-.fini_array     0x08005da8        0x4
+.fini_array     0x080059a4        0x4
                 [!provide]                PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x08005da8        0x4 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .fini_array    0x080059a4        0x4 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
                 [!provide]                PROVIDE (__fini_array_end = .)
-                0x08005dac                _sidata = LOADADDR (.data)
+                0x080059a8                _sidata = LOADADDR (.data)
 
-.data           0x20000000       0x14 load address 0x08005dac
+.data           0x20000000       0x10 load address 0x080059a8
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                _sdata = .
  *(.data)
@@ -2495,22 +2501,17 @@ LOAD c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc
                 0x20000004                uwTickPrio
  .data.uxCriticalNesting
                 0x20000008        0x4 build/port.o
- .data.currentState
-                0x2000000c        0x1 build/achoo_controller.o
- .data.targetState
-                0x2000000d        0x1 build/achoo_controller.o
- *fill*         0x2000000e        0x2 
  .data.SystemCoreClock
-                0x20000010        0x4 build/system_stm32f3xx.o
-                0x20000010                SystemCoreClock
-                0x20000014                . = ALIGN (0x4)
-                0x20000014                _edata = .
-                0x08005dc0                _siccmram = LOADADDR (.ccmram)
+                0x2000000c        0x4 build/system_stm32f3xx.o
+                0x2000000c                SystemCoreClock
+                0x20000010                . = ALIGN (0x4)
+                0x20000010                _edata = .
+                0x080059b8                _siccmram = LOADADDR (.ccmram)
 
-.igot.plt       0x20000014        0x0 load address 0x08005dc0
- .igot.plt      0x20000014        0x0 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.igot.plt       0x20000010        0x0 load address 0x080059b8
+ .igot.plt      0x20000010        0x0 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.ccmram         0x10000000        0x0 load address 0x08005dc0
+.ccmram         0x10000000        0x0 load address 0x080059b8
                 0x10000000                . = ALIGN (0x4)
                 0x10000000                _sccmram = .
  *(.ccmram)
@@ -2519,219 +2520,213 @@ LOAD c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc
                 0x10000000                _eccmram = .
                 0x10000000                . = ALIGN (0x4)
 
-.bss            0x20000014     0x2428
-                0x20000014                _sbss = .
-                0x20000014                __bss_start__ = _sbss
+.bss            0x20000010     0x2628
+                0x20000010                _sbss = .
+                0x20000010                __bss_start__ = _sbss
  *(.bss)
- .bss           0x20000014       0x1c c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .bss           0x20000010       0x1c c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.bss*)
- .bss.uwTick    0x20000030        0x4 build/stm32f3xx_hal.o
-                0x20000030                uwTick
+ .bss.uwTick    0x2000002c        0x4 build/stm32f3xx_hal.o
+                0x2000002c                uwTick
  .bss.ucMaxSysCallPriority
-                0x20000034        0x1 build/port.o
- *fill*         0x20000035        0x3 
+                0x20000030        0x1 build/port.o
+ *fill*         0x20000031        0x3 
  .bss.ulMaxPRIGROUPValue
-                0x20000038        0x4 build/port.o
- .bss.pxEnd     0x2000003c        0x4 build/heap_4.o
- .bss.ucHeap    0x20000040      0xc00 build/heap_4.o
+                0x20000034        0x4 build/port.o
+ .bss.pxEnd     0x20000038        0x4 build/heap_4.o
+ .bss.ucHeap    0x2000003c      0xc00 build/heap_4.o
  .bss.xBlockAllocatedBit
-                0x20000c40        0x4 build/heap_4.o
+                0x20000c3c        0x4 build/heap_4.o
  .bss.xFreeBytesRemaining
-                0x20000c44        0x4 build/heap_4.o
+                0x20000c40        0x4 build/heap_4.o
  .bss.xMinimumEverFreeBytesRemaining
-                0x20000c48        0x4 build/heap_4.o
- .bss.xStart    0x20000c4c        0x8 build/heap_4.o
+                0x20000c44        0x4 build/heap_4.o
+ .bss.xStart    0x20000c48        0x8 build/heap_4.o
  .bss.pxCurrentTCB
-                0x20000c54        0x4 build/tasks.o
-                0x20000c54                pxCurrentTCB
+                0x20000c50        0x4 build/tasks.o
+                0x20000c50                pxCurrentTCB
  .bss.pxDelayedTaskList
-                0x20000c58        0x4 build/tasks.o
+                0x20000c54        0x4 build/tasks.o
  .bss.pxOverflowDelayedTaskList
-                0x20000c5c        0x4 build/tasks.o
+                0x20000c58        0x4 build/tasks.o
  .bss.pxReadyTasksLists
-                0x20000c60       0x8c build/tasks.o
+                0x20000c5c       0x8c build/tasks.o
  .bss.uxCurrentNumberOfTasks
-                0x20000cec        0x4 build/tasks.o
+                0x20000ce8        0x4 build/tasks.o
  .bss.uxDeletedTasksWaitingCleanUp
-                0x20000cf0        0x4 build/tasks.o
+                0x20000cec        0x4 build/tasks.o
  .bss.uxPendedTicks
-                0x20000cf4        0x4 build/tasks.o
+                0x20000cf0        0x4 build/tasks.o
  .bss.uxSchedulerSuspended
-                0x20000cf8        0x4 build/tasks.o
+                0x20000cf4        0x4 build/tasks.o
  .bss.uxTaskNumber
-                0x20000cfc        0x4 build/tasks.o
+                0x20000cf8        0x4 build/tasks.o
  .bss.uxTopReadyPriority
-                0x20000d00        0x4 build/tasks.o
+                0x20000cfc        0x4 build/tasks.o
  .bss.xDelayedTaskList1
-                0x20000d04       0x14 build/tasks.o
+                0x20000d00       0x14 build/tasks.o
  .bss.xDelayedTaskList2
-                0x20000d18       0x14 build/tasks.o
+                0x20000d14       0x14 build/tasks.o
  .bss.xIdleTaskHandle
-                0x20000d2c        0x4 build/tasks.o
+                0x20000d28        0x4 build/tasks.o
  .bss.xNextTaskUnblockTime
-                0x20000d30        0x4 build/tasks.o
+                0x20000d2c        0x4 build/tasks.o
  .bss.xNumOfOverflows
-                0x20000d34        0x4 build/tasks.o
+                0x20000d30        0x4 build/tasks.o
  .bss.xPendingReadyList
-                0x20000d38       0x14 build/tasks.o
+                0x20000d34       0x14 build/tasks.o
  .bss.xSchedulerRunning
-                0x20000d4c        0x4 build/tasks.o
+                0x20000d48        0x4 build/tasks.o
  .bss.xSuspendedTaskList
-                0x20000d50       0x14 build/tasks.o
+                0x20000d4c       0x14 build/tasks.o
  .bss.xTasksWaitingTermination
-                0x20000d64       0x14 build/tasks.o
+                0x20000d60       0x14 build/tasks.o
  .bss.xTickCount
-                0x20000d78        0x4 build/tasks.o
+                0x20000d74        0x4 build/tasks.o
  .bss.xYieldPending
-                0x20000d7c        0x4 build/tasks.o
+                0x20000d78        0x4 build/tasks.o
  .bss.vesc_count
-                0x20000d80        0x4 build/VESC.o
- .bss.vesc_map  0x20000d84      0x3c0 build/VESC.o
-                0x20000d84                vesc_map
- .bss.leftMotor
-                0x20001144        0x4 build/achoo_controller.o
-                0x20001144                leftMotor
- .bss.rightMotor
-                0x20001148        0x4 build/achoo_controller.o
-                0x20001148                rightMotor
+                0x20000d7c        0x4 build/VESC.o
+ .bss.vesc_map  0x20000d80      0x3c0 build/VESC.o
+                0x20000d80                vesc_map
  .bss.CurTxMailbox
-                0x2000114c        0x4 build/can_manager.o
-                0x2000114c                CurTxMailbox
- .bss.RxData    0x20001150        0x8 build/can_manager.o
-                0x20001150                RxData
- .bss.RxHeader  0x20001158       0x1c build/can_manager.o
-                0x20001158                RxHeader
- .bss.TxHeader  0x20001174       0x18 build/can_manager.o
-                0x20001174                TxHeader
+                0x20001140        0x4 build/can_manager.o
+                0x20001140                CurTxMailbox
+ .bss.RxData    0x20001144        0x8 build/can_manager.o
+                0x20001144                RxData
+ .bss.RxHeader  0x2000114c       0x1c build/can_manager.o
+                0x2000114c                RxHeader
+ .bss.TxHeader  0x20001168       0x18 build/can_manager.o
+                0x20001168                TxHeader
  .bss.canHandlersCt
-                0x2000118c        0x4 build/can_manager.o
-                0x2000118c                canHandlersCt
+                0x20001180        0x4 build/can_manager.o
+                0x20001180                canHandlersCt
  .bss.msgHandlers
-                0x20001190       0x50 build/can_manager.o
-                0x20001190                msgHandlers
+                0x20001184       0x50 build/can_manager.o
+                0x20001184                msgHandlers
  .bss.new_speed_left
-                0x200011e0        0x4 build/drivetrain_controller.o
-                0x200011e0                new_speed_left
+                0x200011d4        0x4 build/drivetrain_controller.o
+                0x200011d4                new_speed_left
  .bss.new_speed_right
-                0x200011e4        0x4 build/drivetrain_controller.o
-                0x200011e4                new_speed_right
+                0x200011d8        0x4 build/drivetrain_controller.o
+                0x200011d8                new_speed_right
+ .bss.leftMotor
+                0x200011dc        0x4 build/excavate_controller.o
+                0x200011dc                leftMotor
+ .bss.rightMotor
+                0x200011e0        0x4 build/excavate_controller.o
+                0x200011e0                rightMotor
  .bss.xIdleStack
-                0x200011e8      0x200 build/freertos.o
+                0x200011e4      0x200 build/freertos.o
  .bss.xIdleTaskTCBBuffer
-                0x200013e8       0x54 build/freertos.o
+                0x200013e4       0x54 build/freertos.o
  .bss.currentState
-                0x2000143c        0x1 build/gesundheit_controller.o
- *fill*         0x2000143d        0x3 
- .bss.door      0x20001440       0x10 build/gesundheit_controller.o
- .bss.doorOpen  0x20001450        0x1 build/gesundheit_controller.o
- *fill*         0x20001451        0x3 
- .bss.extension
-                0x20001454       0x10 build/gesundheit_controller.o
- .bss.flipl     0x20001464       0x10 build/gesundheit_controller.o
- .bss.flipr     0x20001474       0x10 build/gesundheit_controller.o
- .bss.gesundheitMotor
-                0x20001484        0x4 build/gesundheit_controller.o
- .bss.targetRPM
-                0x20001488        0x4 build/gesundheit_controller.o
+                0x20001438        0x1 build/intake_controller.o
+ *fill*         0x20001439        0x3 
+ .bss.intakeMotor
+                0x2000143c        0x4 build/intake_controller.o
+                0x2000143c                intakeMotor
  .bss.targetState
-                0x2000148c        0x1 build/gesundheit_controller.o
- *fill*         0x2000148d        0x3 
+                0x20001440        0x1 build/intake_controller.o
+ *fill*         0x20001441        0x3 
  .bss.achooControllerBuffer
-                0x20001490      0x200 build/main.o
-                0x20001490                achooControllerBuffer
+                0x20001444      0x200 build/main.o
+                0x20001444                achooControllerBuffer
  .bss.achooControllerControlBlock
-                0x20001690       0x54 build/main.o
-                0x20001690                achooControllerControlBlock
+                0x20001644       0x54 build/main.o
+                0x20001644                achooControllerControlBlock
  .bss.achooControllerHandle
-                0x200016e4        0x4 build/main.o
-                0x200016e4                achooControllerHandle
+                0x20001698        0x4 build/main.o
+                0x20001698                achooControllerHandle
  .bss.canRxDispatchBuffer
-                0x200016e8      0x200 build/main.o
-                0x200016e8                canRxDispatchBuffer
+                0x2000169c      0x200 build/main.o
+                0x2000169c                canRxDispatchBuffer
  .bss.canRxDispatchControlBlock
-                0x200018e8       0x54 build/main.o
-                0x200018e8                canRxDispatchControlBlock
+                0x2000189c       0x54 build/main.o
+                0x2000189c                canRxDispatchControlBlock
  .bss.canRxDispatchHandle
-                0x2000193c        0x4 build/main.o
-                0x2000193c                canRxDispatchHandle
+                0x200018f0        0x4 build/main.o
+                0x200018f0                canRxDispatchHandle
  .bss.canTxMutexControlBlock
-                0x20001940       0x48 build/main.o
-                0x20001940                canTxMutexControlBlock
+                0x200018f4       0x48 build/main.o
+                0x200018f4                canTxMutexControlBlock
  .bss.canTxMutexHandle
-                0x20001988        0x4 build/main.o
-                0x20001988                canTxMutexHandle
+                0x2000193c        0x4 build/main.o
+                0x2000193c                canTxMutexHandle
  .bss.defaultTaskBuffer
-                0x2000198c      0x200 build/main.o
-                0x2000198c                defaultTaskBuffer
+                0x20001940      0x200 build/main.o
+                0x20001940                defaultTaskBuffer
  .bss.defaultTaskControlBlock
-                0x20001b8c       0x54 build/main.o
-                0x20001b8c                defaultTaskControlBlock
+                0x20001b40       0x54 build/main.o
+                0x20001b40                defaultTaskControlBlock
  .bss.defaultTaskHandle
-                0x20001be0        0x4 build/main.o
-                0x20001be0                defaultTaskHandle
+                0x20001b94        0x4 build/main.o
+                0x20001b94                defaultTaskHandle
  .bss.drivetrainTaskBuffer
-                0x20001be4      0x200 build/main.o
-                0x20001be4                drivetrainTaskBuffer
+                0x20001b98      0x200 build/main.o
+                0x20001b98                drivetrainTaskBuffer
  .bss.drivetrainTaskControlBlock
-                0x20001de4       0x54 build/main.o
-                0x20001de4                drivetrainTaskControlBlock
+                0x20001d98       0x54 build/main.o
+                0x20001d98                drivetrainTaskControlBlock
  .bss.drivetrainTaskHandle
-                0x20001e38        0x4 build/main.o
-                0x20001e38                drivetrainTaskHandle
+                0x20001dec        0x4 build/main.o
+                0x20001dec                drivetrainTaskHandle
+ .bss.excavateControllerHandle
+                0x20001df0        0x4 build/main.o
+                0x20001df0                excavateControllerHandle
  .bss.gesundheitTaskBuffer
-                0x20001e3c      0x200 build/main.o
-                0x20001e3c                gesundheitTaskBuffer
+                0x20001df4      0x200 build/main.o
+                0x20001df4                gesundheitTaskBuffer
  .bss.gesundheitTaskControlBlock
-                0x2000203c       0x54 build/main.o
-                0x2000203c                gesundheitTaskControlBlock
+                0x20001ff4       0x54 build/main.o
+                0x20001ff4                gesundheitTaskControlBlock
  .bss.gesundheitTaskHandle
-                0x20002090        0x4 build/main.o
-                0x20002090                gesundheitTaskHandle
- .bss.hadc1     0x20002094       0x50 build/main.o
-                0x20002094                hadc1
- .bss.hcan      0x200020e4       0x28 build/main.o
-                0x200020e4                hcan
- .bss.huart2    0x2000210c       0x80 build/main.o
-                0x2000210c                huart2
+                0x20002048        0x4 build/main.o
+                0x20002048                gesundheitTaskHandle
+ .bss.hadc1     0x2000204c       0x50 build/main.o
+                0x2000204c                hadc1
+ .bss.hcan      0x2000209c       0x28 build/main.o
+                0x2000209c                hcan
+ .bss.huart2    0x200020c4       0x80 build/main.o
+                0x200020c4                huart2
+ .bss.intakeControllerBuffer
+                0x20002144      0x200 build/main.o
+                0x20002144                intakeControllerBuffer
+ .bss.intakeControllerControlBlock
+                0x20002344       0x54 build/main.o
+                0x20002344                intakeControllerControlBlock
+ .bss.intakeControllerHandle
+                0x20002398        0x4 build/main.o
+                0x20002398                intakeControllerHandle
  .bss.sneezeControlBuffer
-                0x2000218c      0x200 build/main.o
-                0x2000218c                sneezeControlBuffer
+                0x2000239c      0x200 build/main.o
+                0x2000239c                sneezeControlBuffer
  .bss.sneezeControlControlBlock
-                0x2000238c       0x54 build/main.o
-                0x2000238c                sneezeControlControlBlock
+                0x2000259c       0x54 build/main.o
+                0x2000259c                sneezeControlControlBlock
  .bss.sneezeControlHandle
-                0x200023e0        0x4 build/main.o
-                0x200023e0                sneezeControlHandle
+                0x200025f0        0x4 build/main.o
+                0x200025f0                sneezeControlHandle
  .bss.xCanRxQueue
-                0x200023e4        0x4 build/main.o
-                0x200023e4                xCanRxQueue
- .bss.digMotor  0x200023e8        0x4 build/sneeze_controller.o
- .bss.digSpeed  0x200023ec        0x4 build/sneeze_controller.o
- .bss.isHomed   0x200023f0        0x1 build/sneeze_controller.o
- .bss.state     0x200023f1        0x1 build/sneeze_controller.o
- *fill*         0x200023f2        0x2 
- .bss.transMotor
-                0x200023f4        0x4 build/sneeze_controller.o
- .bss.transSpeed
-                0x200023f8        0x4 build/sneeze_controller.o
- .bss.htim1     0x200023fc       0x40 build/stm32f3xx_hal_timebase_tim.o
-                0x200023fc                htim1
+                0x200025f4        0x4 build/main.o
+                0x200025f4                xCanRxQueue
+ .bss.htim1     0x200025f8       0x40 build/stm32f3xx_hal_timebase_tim.o
+                0x200025f8                htim1
  *(COMMON)
-                0x2000243c                . = ALIGN (0x4)
-                0x2000243c                _ebss = .
-                0x2000243c                __bss_end__ = _ebss
+                0x20002638                . = ALIGN (0x4)
+                0x20002638                _ebss = .
+                0x20002638                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x2000243c      0x604
-                0x20002440                . = ALIGN (0x8)
- *fill*         0x2000243c        0x4 
-                0x20002440                PROVIDE (end = .)
+                0x20002638      0x600
+                0x20002638                . = ALIGN (0x8)
+                0x20002638                PROVIDE (end = .)
                 [!provide]                PROVIDE (_end = .)
-                0x20002640                . = (. + _Min_Heap_Size)
- *fill*         0x20002440      0x200 
-                0x20002a40                . = (. + _Min_Stack_Size)
- *fill*         0x20002640      0x400 
-                0x20002a40                . = ALIGN (0x8)
+                0x20002838                . = (. + _Min_Heap_Size)
+ *fill*         0x20002638      0x200 
+                0x20002c38                . = (. + _Min_Stack_Size)
+ *fill*         0x20002838      0x400 
+                0x20002c38                . = ALIGN (0x8)
 
 /DISCARD/
  libc.a(*)
@@ -2782,54 +2777,50 @@ LOAD c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc
  .ARM.attributes
                 0x000003c6       0x34 build/VESC.o
  .ARM.attributes
-                0x000003fa       0x34 build/achoo_controller.o
+                0x000003fa       0x34 build/buffer.o
  .ARM.attributes
-                0x0000042e       0x34 build/buffer.o
+                0x0000042e       0x34 build/can_manager.o
  .ARM.attributes
-                0x00000462       0x34 build/can_manager.o
+                0x00000462       0x34 build/drivetrain_controller.o
  .ARM.attributes
-                0x00000496       0x34 build/drivetrain_controller.o
+                0x00000496       0x34 build/excavate_controller.o
  .ARM.attributes
                 0x000004ca       0x34 build/freertos.o
  .ARM.attributes
-                0x000004fe       0x34 build/gesundheit_controller.o
+                0x000004fe       0x34 build/intake_controller.o
  .ARM.attributes
                 0x00000532       0x34 build/main.o
  .ARM.attributes
-                0x00000566       0x34 build/relay.o
+                0x00000566       0x34 build/stm32f3xx_hal_msp.o
  .ARM.attributes
-                0x0000059a       0x34 build/sneeze_controller.o
+                0x0000059a       0x34 build/stm32f3xx_hal_timebase_tim.o
  .ARM.attributes
-                0x000005ce       0x34 build/stm32f3xx_hal_msp.o
+                0x000005ce       0x34 build/stm32f3xx_it.o
  .ARM.attributes
-                0x00000602       0x34 build/stm32f3xx_hal_timebase_tim.o
+                0x00000602       0x34 build/system_stm32f3xx.o
  .ARM.attributes
-                0x00000636       0x34 build/stm32f3xx_it.o
+                0x00000636       0x21 build/startup_stm32f303xe.o
  .ARM.attributes
-                0x0000066a       0x34 build/system_stm32f3xx.o
+                0x00000657       0x34 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-init.o)
  .ARM.attributes
-                0x0000069e       0x21 build/startup_stm32f303xe.o
+                0x0000068b       0x34 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memcpy-stub.o)
  .ARM.attributes
-                0x000006bf       0x34 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-init.o)
+                0x000006bf       0x34 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
  .ARM.attributes
-                0x000006f3       0x34 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memcpy-stub.o)
+                0x000006f3       0x1e c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_muldf3.o)
  .ARM.attributes
-                0x00000727       0x34 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
+                0x00000711       0x1e c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_addsubdf3.o)
  .ARM.attributes
-                0x0000075b       0x1e c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_muldf3.o)
+                0x0000072f       0x1e c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_fixdfsi.o)
  .ARM.attributes
-                0x00000779       0x1e c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_addsubdf3.o)
- .ARM.attributes
-                0x00000797       0x1e c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_fixdfsi.o)
- .ARM.attributes
-                0x000007b5       0x1e c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
+                0x0000074d       0x1e c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
 OUTPUT(build/NASA-RMC-RT.elf elf32-littlearm)
 LOAD linker stubs
 LOAD c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a
 LOAD c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a
 LOAD c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard\libgcc.a
 
-.debug_info     0x00000000    0x2029e
+.debug_info     0x00000000    0x1f351
  .debug_info    0x00000000      0x962 build/stm32f3xx_hal.o
  .debug_info    0x00000962     0x1f89 build/stm32f3xx_hal_adc_ex.o
  .debug_info    0x000028eb     0x139c build/stm32f3xx_hal_can.o
@@ -2848,22 +2839,20 @@ LOAD c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc
  .debug_info    0x000123e5     0x231a build/queue.o
  .debug_info    0x000146ff     0x2a8c build/tasks.o
  .debug_info    0x0001718b      0x92d build/VESC.o
- .debug_info    0x00017ab8      0x67c build/achoo_controller.o
- .debug_info    0x00018134      0x23e build/buffer.o
- .debug_info    0x00018372      0xad9 build/can_manager.o
- .debug_info    0x00018e4b      0x4ea build/drivetrain_controller.o
- .debug_info    0x00019335      0x2ab build/freertos.o
- .debug_info    0x000195e0      0x9a6 build/gesundheit_controller.o
- .debug_info    0x00019f86     0x26b9 build/main.o
- .debug_info    0x0001c63f      0x3a2 build/relay.o
- .debug_info    0x0001c9e1      0x6a8 build/sneeze_controller.o
- .debug_info    0x0001d089     0x16d1 build/stm32f3xx_hal_msp.o
- .debug_info    0x0001e75a      0xb44 build/stm32f3xx_hal_timebase_tim.o
- .debug_info    0x0001f29e      0xb61 build/stm32f3xx_it.o
- .debug_info    0x0001fdff      0x47d build/system_stm32f3xx.o
- .debug_info    0x0002027c       0x22 build/startup_stm32f303xe.o
+ .debug_info    0x00017ab8      0x23e build/buffer.o
+ .debug_info    0x00017cf6      0xad9 build/can_manager.o
+ .debug_info    0x000187cf      0x4ea build/drivetrain_controller.o
+ .debug_info    0x00018cb9      0x3fd build/excavate_controller.o
+ .debug_info    0x000190b6      0x2ab build/freertos.o
+ .debug_info    0x00019361      0x61b build/intake_controller.o
+ .debug_info    0x0001997c     0x27c0 build/main.o
+ .debug_info    0x0001c13c     0x16d1 build/stm32f3xx_hal_msp.o
+ .debug_info    0x0001d80d      0xb44 build/stm32f3xx_hal_timebase_tim.o
+ .debug_info    0x0001e351      0xb61 build/stm32f3xx_it.o
+ .debug_info    0x0001eeb2      0x47d build/system_stm32f3xx.o
+ .debug_info    0x0001f32f       0x22 build/startup_stm32f303xe.o
 
-.debug_abbrev   0x00000000     0x45fe
+.debug_abbrev   0x00000000     0x41bf
  .debug_abbrev  0x00000000      0x20a build/stm32f3xx_hal.o
  .debug_abbrev  0x0000020a      0x30d build/stm32f3xx_hal_adc_ex.o
  .debug_abbrev  0x00000517      0x282 build/stm32f3xx_hal_can.o
@@ -2882,22 +2871,20 @@ LOAD c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc
  .debug_abbrev  0x00002593      0x3f6 build/queue.o
  .debug_abbrev  0x00002989      0x36b build/tasks.o
  .debug_abbrev  0x00002cf4      0x208 build/VESC.o
- .debug_abbrev  0x00002efc      0x1f8 build/achoo_controller.o
- .debug_abbrev  0x000030f4       0xe9 build/buffer.o
- .debug_abbrev  0x000031dd      0x274 build/can_manager.o
- .debug_abbrev  0x00003451      0x1a1 build/drivetrain_controller.o
- .debug_abbrev  0x000035f2       0xcc build/freertos.o
- .debug_abbrev  0x000036be      0x217 build/gesundheit_controller.o
- .debug_abbrev  0x000038d5      0x2ec build/main.o
- .debug_abbrev  0x00003bc1      0x190 build/relay.o
- .debug_abbrev  0x00003d51      0x203 build/sneeze_controller.o
- .debug_abbrev  0x00003f54      0x1f2 build/stm32f3xx_hal_msp.o
- .debug_abbrev  0x00004146      0x1ef build/stm32f3xx_hal_timebase_tim.o
- .debug_abbrev  0x00004335      0x19c build/stm32f3xx_it.o
- .debug_abbrev  0x000044d1      0x11b build/system_stm32f3xx.o
- .debug_abbrev  0x000045ec       0x12 build/startup_stm32f303xe.o
+ .debug_abbrev  0x00002efc       0xe9 build/buffer.o
+ .debug_abbrev  0x00002fe5      0x274 build/can_manager.o
+ .debug_abbrev  0x00003259      0x1a1 build/drivetrain_controller.o
+ .debug_abbrev  0x000033fa      0x17c build/excavate_controller.o
+ .debug_abbrev  0x00003576       0xcc build/freertos.o
+ .debug_abbrev  0x00003642      0x1e7 build/intake_controller.o
+ .debug_abbrev  0x00003829      0x2ec build/main.o
+ .debug_abbrev  0x00003b15      0x1f2 build/stm32f3xx_hal_msp.o
+ .debug_abbrev  0x00003d07      0x1ef build/stm32f3xx_hal_timebase_tim.o
+ .debug_abbrev  0x00003ef6      0x19c build/stm32f3xx_it.o
+ .debug_abbrev  0x00004092      0x11b build/system_stm32f3xx.o
+ .debug_abbrev  0x000041ad       0x12 build/startup_stm32f303xe.o
 
-.debug_loc      0x00000000    0x162a8
+.debug_loc      0x00000000    0x15de3
  .debug_loc     0x00000000      0x1e1 build/stm32f3xx_hal.o
  .debug_loc     0x000001e1     0x2605 build/stm32f3xx_hal_adc_ex.o
  .debug_loc     0x000027e6      0xf36 build/stm32f3xx_hal_can.o
@@ -2916,20 +2903,18 @@ LOAD c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc
  .debug_loc     0x00010a7a     0x19f3 build/queue.o
  .debug_loc     0x0001246d     0x236a build/tasks.o
  .debug_loc     0x000147d7      0x773 build/VESC.o
- .debug_loc     0x00014f4a      0x237 build/achoo_controller.o
- .debug_loc     0x00015181      0x173 build/buffer.o
- .debug_loc     0x000152f4      0x1a8 build/can_manager.o
- .debug_loc     0x0001549c      0x198 build/drivetrain_controller.o
- .debug_loc     0x00015634      0x25a build/gesundheit_controller.o
- .debug_loc     0x0001588e      0x1fb build/main.o
- .debug_loc     0x00015a89      0x1d6 build/relay.o
- .debug_loc     0x00015c5f      0x128 build/sneeze_controller.o
- .debug_loc     0x00015d87      0x2f0 build/stm32f3xx_hal_msp.o
- .debug_loc     0x00016077       0xcd build/stm32f3xx_hal_timebase_tim.o
- .debug_loc     0x00016144       0x40 build/stm32f3xx_it.o
- .debug_loc     0x00016184      0x124 build/system_stm32f3xx.o
+ .debug_loc     0x00014f4a      0x173 build/buffer.o
+ .debug_loc     0x000150bd      0x1a8 build/can_manager.o
+ .debug_loc     0x00015265      0x198 build/drivetrain_controller.o
+ .debug_loc     0x000153fd       0xcd build/excavate_controller.o
+ .debug_loc     0x000154ca      0x1fd build/intake_controller.o
+ .debug_loc     0x000156c7      0x1fb build/main.o
+ .debug_loc     0x000158c2      0x2f0 build/stm32f3xx_hal_msp.o
+ .debug_loc     0x00015bb2       0xcd build/stm32f3xx_hal_timebase_tim.o
+ .debug_loc     0x00015c7f       0x40 build/stm32f3xx_it.o
+ .debug_loc     0x00015cbf      0x124 build/system_stm32f3xx.o
 
-.debug_aranges  0x00000000     0x15c0
+.debug_aranges  0x00000000     0x1558
  .debug_aranges
                 0x00000000       0xe0 build/stm32f3xx_hal.o
  .debug_aranges
@@ -2967,35 +2952,31 @@ LOAD c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc
  .debug_aranges
                 0x00001260       0x68 build/VESC.o
  .debug_aranges
-                0x000012c8       0x30 build/achoo_controller.o
+                0x000012c8       0x38 build/buffer.o
  .debug_aranges
-                0x000012f8       0x38 build/buffer.o
+                0x00001300       0x38 build/can_manager.o
  .debug_aranges
-                0x00001330       0x38 build/can_manager.o
+                0x00001338       0x28 build/drivetrain_controller.o
  .debug_aranges
-                0x00001368       0x28 build/drivetrain_controller.o
+                0x00001360       0x28 build/excavate_controller.o
  .debug_aranges
-                0x00001390       0x20 build/freertos.o
+                0x00001388       0x20 build/freertos.o
  .debug_aranges
-                0x000013b0       0x30 build/gesundheit_controller.o
+                0x000013a8       0x28 build/intake_controller.o
  .debug_aranges
-                0x000013e0       0x60 build/main.o
+                0x000013d0       0x60 build/main.o
  .debug_aranges
-                0x00001440       0x28 build/relay.o
+                0x00001430       0x50 build/stm32f3xx_hal_msp.o
  .debug_aranges
-                0x00001468       0x30 build/sneeze_controller.o
+                0x00001480       0x30 build/stm32f3xx_hal_timebase_tim.o
  .debug_aranges
-                0x00001498       0x50 build/stm32f3xx_hal_msp.o
+                0x000014b0       0x58 build/stm32f3xx_it.o
  .debug_aranges
-                0x000014e8       0x30 build/stm32f3xx_hal_timebase_tim.o
+                0x00001508       0x28 build/system_stm32f3xx.o
  .debug_aranges
-                0x00001518       0x58 build/stm32f3xx_it.o
- .debug_aranges
-                0x00001570       0x28 build/system_stm32f3xx.o
- .debug_aranges
-                0x00001598       0x28 build/startup_stm32f303xe.o
+                0x00001530       0x28 build/startup_stm32f303xe.o
 
-.debug_ranges   0x00000000     0x16b8
+.debug_ranges   0x00000000     0x1640
  .debug_ranges  0x00000000       0xd0 build/stm32f3xx_hal.o
  .debug_ranges  0x000000d0      0x158 build/stm32f3xx_hal_adc_ex.o
  .debug_ranges  0x00000228      0x128 build/stm32f3xx_hal_can.o
@@ -3014,22 +2995,20 @@ LOAD c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc
  .debug_ranges  0x00000f68      0x1c8 build/queue.o
  .debug_ranges  0x00001130      0x280 build/tasks.o
  .debug_ranges  0x000013b0       0x70 build/VESC.o
- .debug_ranges  0x00001420       0x50 build/achoo_controller.o
- .debug_ranges  0x00001470       0x28 build/buffer.o
- .debug_ranges  0x00001498       0x40 build/can_manager.o
- .debug_ranges  0x000014d8       0x18 build/drivetrain_controller.o
- .debug_ranges  0x000014f0       0x10 build/freertos.o
- .debug_ranges  0x00001500       0x38 build/gesundheit_controller.o
- .debug_ranges  0x00001538       0x50 build/main.o
- .debug_ranges  0x00001588       0x18 build/relay.o
- .debug_ranges  0x000015a0       0x38 build/sneeze_controller.o
- .debug_ranges  0x000015d8       0x40 build/stm32f3xx_hal_msp.o
- .debug_ranges  0x00001618       0x20 build/stm32f3xx_hal_timebase_tim.o
- .debug_ranges  0x00001638       0x48 build/stm32f3xx_it.o
- .debug_ranges  0x00001680       0x18 build/system_stm32f3xx.o
- .debug_ranges  0x00001698       0x20 build/startup_stm32f303xe.o
+ .debug_ranges  0x00001420       0x28 build/buffer.o
+ .debug_ranges  0x00001448       0x40 build/can_manager.o
+ .debug_ranges  0x00001488       0x18 build/drivetrain_controller.o
+ .debug_ranges  0x000014a0       0x18 build/excavate_controller.o
+ .debug_ranges  0x000014b8       0x10 build/freertos.o
+ .debug_ranges  0x000014c8       0x48 build/intake_controller.o
+ .debug_ranges  0x00001510       0x50 build/main.o
+ .debug_ranges  0x00001560       0x40 build/stm32f3xx_hal_msp.o
+ .debug_ranges  0x000015a0       0x20 build/stm32f3xx_hal_timebase_tim.o
+ .debug_ranges  0x000015c0       0x48 build/stm32f3xx_it.o
+ .debug_ranges  0x00001608       0x18 build/system_stm32f3xx.o
+ .debug_ranges  0x00001620       0x20 build/startup_stm32f303xe.o
 
-.debug_line     0x00000000    0x17622
+.debug_line     0x00000000    0x16db4
  .debug_line    0x00000000      0x52c build/stm32f3xx_hal.o
  .debug_line    0x0000052c     0x29de build/stm32f3xx_hal_adc_ex.o
  .debug_line    0x00002f0a     0x10eb build/stm32f3xx_hal_can.o
@@ -3048,22 +3027,20 @@ LOAD c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc
  .debug_line    0x000103cc     0x1b96 build/queue.o
  .debug_line    0x00011f62     0x243b build/tasks.o
  .debug_line    0x0001439d      0x462 build/VESC.o
- .debug_line    0x000147ff      0x405 build/achoo_controller.o
- .debug_line    0x00014c04      0x227 build/buffer.o
- .debug_line    0x00014e2b      0x3df build/can_manager.o
- .debug_line    0x0001520a      0x2cf build/drivetrain_controller.o
- .debug_line    0x000154d9      0x1b9 build/freertos.o
- .debug_line    0x00015692      0x4cf build/gesundheit_controller.o
- .debug_line    0x00015b61      0x8b7 build/main.o
- .debug_line    0x00016418      0x209 build/relay.o
- .debug_line    0x00016621      0x3cb build/sneeze_controller.o
- .debug_line    0x000169ec      0x423 build/stm32f3xx_hal_msp.o
- .debug_line    0x00016e0f      0x291 build/stm32f3xx_hal_timebase_tim.o
- .debug_line    0x000170a0      0x2b9 build/stm32f3xx_it.o
- .debug_line    0x00017359      0x256 build/system_stm32f3xx.o
- .debug_line    0x000175af       0x73 build/startup_stm32f303xe.o
+ .debug_line    0x000147ff      0x227 build/buffer.o
+ .debug_line    0x00014a26      0x3df build/can_manager.o
+ .debug_line    0x00014e05      0x2cf build/drivetrain_controller.o
+ .debug_line    0x000150d4      0x254 build/excavate_controller.o
+ .debug_line    0x00015328      0x1b9 build/freertos.o
+ .debug_line    0x000154e1      0x3b5 build/intake_controller.o
+ .debug_line    0x00015896      0x8e8 build/main.o
+ .debug_line    0x0001617e      0x423 build/stm32f3xx_hal_msp.o
+ .debug_line    0x000165a1      0x291 build/stm32f3xx_hal_timebase_tim.o
+ .debug_line    0x00016832      0x2b9 build/stm32f3xx_it.o
+ .debug_line    0x00016aeb      0x256 build/system_stm32f3xx.o
+ .debug_line    0x00016d41       0x73 build/startup_stm32f303xe.o
 
-.debug_str      0x00000000     0x7789
+.debug_str      0x00000000     0x76c5
  .debug_str     0x00000000      0x9b4 build/stm32f3xx_hal.o
                                 0xa0d (size before relaxing)
  .debug_str     0x000009b4      0xc3d build/stm32f3xx_hal_adc_ex.o
@@ -3100,33 +3077,29 @@ LOAD c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc
                                0x1007 (size before relaxing)
  .debug_str     0x00006c4c      0x201 build/VESC.o
                                 0x3dc (size before relaxing)
- .debug_str     0x00006e4d      0x10d build/achoo_controller.o
-                                0x436 (size before relaxing)
- .debug_str     0x00006f5a       0x28 build/buffer.o
+ .debug_str     0x00006e4d       0x28 build/buffer.o
                                 0x208 (size before relaxing)
- .debug_str     0x00006f82       0xc8 build/can_manager.o
+ .debug_str     0x00006e75       0xc8 build/can_manager.o
                                 0x708 (size before relaxing)
- .debug_str     0x0000704a       0x7e build/drivetrain_controller.o
+ .debug_str     0x00006f3d       0x8b build/drivetrain_controller.o
                                 0x351 (size before relaxing)
- .debug_str     0x000070c8       0x5b build/freertos.o
+ .debug_str     0x00006fc8       0x7b build/excavate_controller.o
+                                0x341 (size before relaxing)
+ .debug_str     0x00007043       0x5b build/freertos.o
                                 0x2fc (size before relaxing)
- .debug_str     0x00007123      0x147 build/gesundheit_controller.o
-                                0x506 (size before relaxing)
- .debug_str     0x0000726a      0x2f6 build/main.o
-                               0x18d0 (size before relaxing)
- .debug_str     0x00007560        0xc build/relay.o
-                                0x28f (size before relaxing)
- .debug_str     0x0000756c       0x9c build/sneeze_controller.o
-                                0x412 (size before relaxing)
- .debug_str     0x00007608       0x18 build/stm32f3xx_hal_msp.o
+ .debug_str     0x0000709e       0xc5 build/intake_controller.o
+                                0x409 (size before relaxing)
+ .debug_str     0x00007163      0x3e1 build/main.o
+                               0x19bb (size before relaxing)
+ .debug_str     0x00007544       0x18 build/stm32f3xx_hal_msp.o
                                0x1047 (size before relaxing)
- .debug_str     0x00007620       0x4d build/stm32f3xx_hal_timebase_tim.o
+ .debug_str     0x0000755c       0x4d build/stm32f3xx_hal_timebase_tim.o
                                 0xc06 (size before relaxing)
- .debug_str     0x0000766d       0xab build/stm32f3xx_it.o
+ .debug_str     0x000075a9       0xab build/stm32f3xx_it.o
                                 0x8c3 (size before relaxing)
- .debug_str     0x00007718       0x4d build/system_stm32f3xx.o
+ .debug_str     0x00007654       0x4d build/system_stm32f3xx.o
                                 0x2c7 (size before relaxing)
- .debug_str     0x00007765       0x24 build/startup_stm32f303xe.o
+ .debug_str     0x000076a1       0x24 build/startup_stm32f303xe.o
                                  0x5c (size before relaxing)
 
 .comment        0x00000000       0x49
@@ -3149,21 +3122,19 @@ LOAD c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc
  .comment       0x00000049       0x4a build/queue.o
  .comment       0x00000049       0x4a build/tasks.o
  .comment       0x00000049       0x4a build/VESC.o
- .comment       0x00000049       0x4a build/achoo_controller.o
  .comment       0x00000049       0x4a build/buffer.o
  .comment       0x00000049       0x4a build/can_manager.o
  .comment       0x00000049       0x4a build/drivetrain_controller.o
+ .comment       0x00000049       0x4a build/excavate_controller.o
  .comment       0x00000049       0x4a build/freertos.o
- .comment       0x00000049       0x4a build/gesundheit_controller.o
+ .comment       0x00000049       0x4a build/intake_controller.o
  .comment       0x00000049       0x4a build/main.o
- .comment       0x00000049       0x4a build/relay.o
- .comment       0x00000049       0x4a build/sneeze_controller.o
  .comment       0x00000049       0x4a build/stm32f3xx_hal_msp.o
  .comment       0x00000049       0x4a build/stm32f3xx_hal_timebase_tim.o
  .comment       0x00000049       0x4a build/stm32f3xx_it.o
  .comment       0x00000049       0x4a build/system_stm32f3xx.o
 
-.debug_frame    0x00000000     0x3b94
+.debug_frame    0x00000000     0x3ad8
  .debug_frame   0x00000000      0x1cc build/stm32f3xx_hal.o
  .debug_frame   0x000001cc      0x4d0 build/stm32f3xx_hal_adc_ex.o
  .debug_frame   0x0000069c      0x2dc build/stm32f3xx_hal_can.o
@@ -3182,25 +3153,23 @@ LOAD c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc
  .debug_frame   0x00002a54      0x360 build/queue.o
  .debug_frame   0x00002db4      0x574 build/tasks.o
  .debug_frame   0x00003328      0x12c build/VESC.o
- .debug_frame   0x00003454       0x5c build/achoo_controller.o
- .debug_frame   0x000034b0       0x80 build/buffer.o
- .debug_frame   0x00003530       0x80 build/can_manager.o
- .debug_frame   0x000035b0       0x64 build/drivetrain_controller.o
- .debug_frame   0x00003614       0x20 build/freertos.o
- .debug_frame   0x00003634       0x60 build/gesundheit_controller.o
- .debug_frame   0x00003694      0x108 build/main.o
- .debug_frame   0x0000379c       0x38 build/relay.o
- .debug_frame   0x000037d4       0x58 build/sneeze_controller.o
- .debug_frame   0x0000382c       0xd4 build/stm32f3xx_hal_msp.o
- .debug_frame   0x00003900       0x50 build/stm32f3xx_hal_timebase_tim.o
- .debug_frame   0x00003950       0xa0 build/stm32f3xx_it.o
- .debug_frame   0x000039f0       0x30 build/system_stm32f3xx.o
- .debug_frame   0x00003a20       0x2c c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-init.o)
- .debug_frame   0x00003a4c       0x28 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memcpy-stub.o)
- .debug_frame   0x00003a74       0x20 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
- .debug_frame   0x00003a94       0x30 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_muldf3.o)
- .debug_frame   0x00003ac4       0xac c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_addsubdf3.o)
- .debug_frame   0x00003b70       0x24 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_fixdfsi.o)
+ .debug_frame   0x00003454       0x80 build/buffer.o
+ .debug_frame   0x000034d4       0x80 build/can_manager.o
+ .debug_frame   0x00003554       0x64 build/drivetrain_controller.o
+ .debug_frame   0x000035b8       0x44 build/excavate_controller.o
+ .debug_frame   0x000035fc       0x20 build/freertos.o
+ .debug_frame   0x0000361c       0x4c build/intake_controller.o
+ .debug_frame   0x00003668      0x108 build/main.o
+ .debug_frame   0x00003770       0xd4 build/stm32f3xx_hal_msp.o
+ .debug_frame   0x00003844       0x50 build/stm32f3xx_hal_timebase_tim.o
+ .debug_frame   0x00003894       0xa0 build/stm32f3xx_it.o
+ .debug_frame   0x00003934       0x30 build/system_stm32f3xx.o
+ .debug_frame   0x00003964       0x2c c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-init.o)
+ .debug_frame   0x00003990       0x28 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x000039b8       0x20 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
+ .debug_frame   0x000039d8       0x30 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_muldf3.o)
+ .debug_frame   0x00003a08       0xac c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_addsubdf3.o)
+ .debug_frame   0x00003ab4       0x24 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_fixdfsi.o)
 
 Cross Reference Table
 
@@ -3433,9 +3402,7 @@ HAL_GPIO_Init                                     build/stm32f3xx_hal_gpio.o
                                                   build/stm32f3xx_hal_rcc.o
 HAL_GPIO_LockPin                                  build/stm32f3xx_hal_gpio.o
 HAL_GPIO_ReadPin                                  build/stm32f3xx_hal_gpio.o
-                                                  build/sneeze_controller.o
-                                                  build/gesundheit_controller.o
-                                                  build/achoo_controller.o
+                                                  build/intake_controller.o
 HAL_GPIO_TogglePin                                build/stm32f3xx_hal_gpio.o
 HAL_GPIO_WritePin                                 build/stm32f3xx_hal_gpio.o
                                                   build/relay.o
@@ -3971,24 +3938,18 @@ _wait                                             build/syscalls.o
 _write                                            build/syscalls.o
 aPLLMULFactorTable                                build/stm32f3xx_hal_rcc.o
 aPredivFactorTable                                build/stm32f3xx_hal_rcc.o
-achooCANCallback                                  build/achoo_controller.o
 achooControllerBuffer                             build/main.o
 achooControllerControlBlock                       build/main.o
-achooControllerFunc                               build/achoo_controller.o
-                                                  build/main.o
+achooControllerFunc                               build/main.o
 achooControllerHandle                             build/main.o
 atexit                                            c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
 buffer_pop_int16                                  build/buffer.o
                                                   build/VESC.o
 buffer_pop_int32                                  build/buffer.o
-                                                  build/sneeze_controller.o
-                                                  build/gesundheit_controller.o
                                                   build/drivetrain_controller.o
                                                   build/VESC.o
 buffer_put_int16                                  build/buffer.o
 buffer_put_int32                                  build/buffer.o
-                                                  build/sneeze_controller.o
-                                                  build/gesundheit_controller.o
                                                   build/VESC.o
 canHandlersCt                                     build/can_manager.o
 canRxDispatchBuffer                               build/main.o
@@ -4000,19 +3961,15 @@ canTxMutexControlBlock                            build/main.o
 canTxMutexHandle                                  build/main.o
                                                   build/can_manager.o
 create_relay                                      build/relay.o
-                                                  build/gesundheit_controller.o
 create_vesc                                       build/VESC.o
-                                                  build/sneeze_controller.o
-                                                  build/gesundheit_controller.o
+                                                  build/intake_controller.o
+                                                  build/excavate_controller.o
                                                   build/drivetrain_controller.o
-                                                  build/achoo_controller.o
 defaultTaskBuffer                                 build/main.o
 defaultTaskControlBlock                           build/main.o
 defaultTaskHandle                                 build/main.o
 do_send_can_message                               build/can_manager.o
-                                                  build/sneeze_controller.o
-                                                  build/gesundheit_controller.o
-                                                  build/achoo_controller.o
+                                                  build/intake_controller.o
                                                   build/VESC.o
 drivetrainTaskBuffer                              build/main.o
 drivetrainTaskControlBlock                        build/main.o
@@ -4022,17 +3979,20 @@ drivetrain_loop                                   build/drivetrain_controller.o
 drivetrain_move                                   build/drivetrain_controller.o
 end                                               build/syscalls.o
 environ                                           build/syscalls.o
+excavateCANCallback                               build/excavate_controller.o
+excavateCANCallbak                                build/excavate_controller.o
+excavateControllerBuffer                          build/main.o
+excavateControllerControlBlock                    build/main.o
+excavateControllerFunc                            build/excavate_controller.o
+                                                  build/main.o
+excavateControllerHandle                          build/main.o
 exit                                              c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-exit.o)
                                                   c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
 g_pfnVectors                                      build/startup_stm32f303xe.o
-gesundheitCANCallback                             build/gesundheit_controller.o
-gesundheitControllerFunc                          build/gesundheit_controller.o
-                                                  build/main.o
+gesundheitControllerFunc                          build/main.o
 gesundheitTaskBuffer                              build/main.o
 gesundheitTaskControlBlock                        build/main.o
 gesundheitTaskHandle                              build/main.o
-getACHOOState                                     build/achoo_controller.o
-getGESUNDHEITState                                build/gesundheit_controller.o
 hadc1                                             build/main.o
 handle_vesc_can_recv                              build/VESC.o
 hardware_init_hook                                c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
@@ -4044,8 +4004,15 @@ htim1                                             build/stm32f3xx_hal_timebase_t
 huart2                                            build/main.o
                                                   build/print.o
 initialise_monitor_handles                        build/syscalls.o
-isSNEEZEHome                                      build/sneeze_controller.o
-leftMotor                                         build/achoo_controller.o
+intakeCANCallback                                 build/intake_controller.o
+intakeControllerBuffer                            build/main.o
+intakeControllerControlBlock                      build/main.o
+intakeControllerFunc                              build/intake_controller.o
+                                                  build/main.o
+intakeControllerHandle                            build/main.o
+intakeMotor                                       build/intake_controller.o
+isThreadCreate                                    build/main.o
+leftMotor                                         build/excavate_controller.o
 main                                              build/main.o
                                                   build/startup_stm32f303xe.o
                                                   c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
@@ -4137,20 +4104,16 @@ pxCurrentTCB                                      build/tasks.o
 pxPortInitialiseStack                             build/port.o
                                                   build/tasks.o
 registerCANMsgHandler                             build/can_manager.o
-                                                  build/sneeze_controller.o
-                                                  build/gesundheit_controller.o
+                                                  build/intake_controller.o
+                                                  build/excavate_controller.o
                                                   build/drivetrain_controller.o
-                                                  build/achoo_controller.o
                                                   build/VESC.o
-rightMotor                                        build/achoo_controller.o
+rightMotor                                        build/excavate_controller.o
 set_relay                                         build/relay.o
-                                                  build/gesundheit_controller.o
-sneezeCANCallback                                 build/sneeze_controller.o
 sneezeControlBuffer                               build/main.o
 sneezeControlControlBlock                         build/main.o
 sneezeControlHandle                               build/main.o
-sneezeControllerFunc                              build/sneeze_controller.o
-                                                  build/main.o
+sneezeControllerFunc                              build/main.o
 software_init_hook                                c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
 ulTaskNotifyTake                                  build/tasks.o
 uwTick                                            build/stm32f3xx_hal.o
@@ -4221,10 +4184,9 @@ vTaskDelay                                        build/tasks.o
                                                   build/can_manager.o
                                                   build/cmsis_os.o
 vTaskDelayUntil                                   build/tasks.o
-                                                  build/sneeze_controller.o
-                                                  build/gesundheit_controller.o
+                                                  build/intake_controller.o
+                                                  build/excavate_controller.o
                                                   build/drivetrain_controller.o
-                                                  build/achoo_controller.o
                                                   build/cmsis_os.o
 vTaskDelete                                       build/tasks.o
                                                   build/cmsis_os.o
@@ -4262,17 +4224,14 @@ vTaskSwitchContext                                build/tasks.o
                                                   build/port.o
 vesc_get_position                                 build/VESC.o
 vesc_get_rpm                                      build/VESC.o
-                                                  build/sneeze_controller.o
-                                                  build/gesundheit_controller.o
 vesc_map                                          build/VESC.o
 vesc_send_message                                 build/VESC.o
 vesc_set_current                                  build/VESC.o
-                                                  build/achoo_controller.o
+                                                  build/intake_controller.o
+                                                  build/excavate_controller.o
 vesc_set_duty_cycle                               build/VESC.o
 vesc_set_position                                 build/VESC.o
 vesc_set_rpm                                      build/VESC.o
-                                                  build/sneeze_controller.o
-                                                  build/gesundheit_controller.o
                                                   build/drivetrain_controller.o
 vesc_system_init                                  build/VESC.o
                                                   build/main.o

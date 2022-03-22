@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
   28:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****             (+++) Configure the USARTx interrupt priority.
   29:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****             (+++) Enable the NVIC USART IRQ handle.
   30:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****         (++) UART interrupts handling:
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 2
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 2
 
 
   31:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****               -@@-  The specific UART interrupts (Transmission complete interrupt,
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
   85:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     (+) AbortCpltCallback         : Abort Complete Callback.
   86:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     (+) AbortTransmitCpltCallback : Abort Transmit Complete Callback.
   87:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     (+) AbortReceiveCpltCallback  : Abort Receive Complete Callback.
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 3
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 3
 
 
   88:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     (+) WakeupCallback            : Wakeup Callback.
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  142:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   ******************************************************************************
  143:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   * @attention
  144:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   *
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 4
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 4
 
 
  145:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   * <h2><center>&copy; Copyright (c) 2016 STMicroelectronics.
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  199:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** static void UART_DMATxHalfCplt(DMA_HandleTypeDef *hdma);
  200:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** static void UART_DMAError(DMA_HandleTypeDef *hdma);
  201:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** static void UART_DMAAbortOnError(DMA_HandleTypeDef *hdma);
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 5
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 5
 
 
  202:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** static void UART_DMATxAbortCallback(DMA_HandleTypeDef *hdma);
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  256:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
  257:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   Depending on the frame length defined by the M1 and M0 bits (7-bit,
  258:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   8-bit or 9-bit), the possible UART formats are listed in the
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 6
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 6
 
 
  259:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   following table.
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  313:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
  314:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     if (huart->MspInitCallback == NULL)
  315:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     {
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 7
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 7
 
 
  316:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****       huart->MspInitCallback = HAL_UART_MspInit;
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  370:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
  371:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   if (huart->gState == HAL_UART_STATE_RESET)
  372:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   {
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 8
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 8
 
 
  373:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     /* Allocate lock resource and initialize it */
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  427:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   * @param BreakDetectLength Specifies the LIN break detection length.
  428:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   *        This parameter can be one of the following values:
  429:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   *          @arg @ref UART_LINBREAKDETECTLENGTH_10B 10-bit break detection
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 9
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 9
 
 
  430:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   *          @arg @ref UART_LINBREAKDETECTLENGTH_11B 11-bit break detection
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  484:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   {
  485:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     return HAL_ERROR;
  486:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   }
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 10
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 10
 
 
  487:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  541:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   if (huart->gState == HAL_UART_STATE_RESET)
  542:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   {
  543:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     /* Allocate lock resource and initialize it */
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 11
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 11
 
 
  544:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     huart->Lock = HAL_UNLOCKED;
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  598:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
  599:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** /**
  600:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   * @brief DeInitialize the UART peripheral.
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 12
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 12
 
 
  601:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   * @param huart UART handle.
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  655:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****             the HAL_UART_MspInit can be implemented in the user file
  656:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****    */
  657:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** }
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 13
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 13
 
 
  658:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  712:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   {
  713:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     switch (CallbackID)
  714:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     {
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 14
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 14
 
 
  715:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****       case HAL_UART_TX_HALFCOMPLETE_CB_ID :
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  769:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     switch (CallbackID)
  770:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     {
  771:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****       case HAL_UART_MSPINIT_CB_ID :
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 15
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 15
 
 
  772:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****         huart->MspInitCallback = pCallback;
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  826:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   {
  827:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     switch (CallbackID)
  828:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     {
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 16
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 16
 
 
  829:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****       case HAL_UART_TX_HALFCOMPLETE_CB_ID :
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  883:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     {
  884:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****       case HAL_UART_MSPINIT_CB_ID :
  885:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****         huart->MspInitCallback = HAL_UART_MspInit;
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 17
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 17
 
 
  886:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****         break;
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  940:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****         (+) HAL_UART_Transmit()
  941:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****         (+) HAL_UART_Receive()
  942:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 18
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 18
 
 
  943:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     (#) Non-Blocking mode API's with Interrupt are :
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  997:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   *         of u16 provided through pData.
  998:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   * @param huart   UART handle.
  999:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   * @param pData   Pointer to data buffer (u8 or u16 data elements).
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 19
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 19
 
 
 1000:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   * @param Size    Amount of data elements (u8 or u16) to be sent.
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 1054:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****         huart->Instance->TDR = (uint8_t)(*pdata8bits & 0xFFU);
 1055:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****         pdata8bits++;
 1056:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****       }
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 20
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 20
 
 
 1057:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****       huart->TxXferCount--;
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 1111:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
 1112:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     huart->RxXferSize  = Size;
 1113:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     huart->RxXferCount = Size;
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 21
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 21
 
 
 1114:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 1168:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   *         of u16 provided through pData.
 1169:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   * @param huart UART handle.
 1170:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   * @param pData Pointer to data buffer (u8 or u16 data elements).
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 22
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 22
 
 
 1171:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   * @param Size  Amount of data elements (u8 or u16) to be sent.
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 1225:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   * @retval HAL status
 1226:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   */
 1227:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** HAL_StatusTypeDef HAL_UART_Receive_IT(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size)
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 23
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 23
 
 
 1228:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** {
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 1282:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   * @param pData Pointer to data buffer (u8 or u16 data elements).
 1283:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   * @param Size  Amount of data elements (u8 or u16) to be sent.
 1284:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   * @retval HAL status
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 24
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 24
 
 
 1285:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   */
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 1339:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     in the UART CR3 register */
 1340:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     SET_BIT(huart->Instance->CR3, USART_CR3_DMAT);
 1341:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 25
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 25
 
 
 1342:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     return HAL_OK;
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 1396:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****       {
 1397:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****         /* Set error code to DMA */
 1398:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****         huart->ErrorCode = HAL_UART_ERROR_DMA;
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 26
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 26
 
 
 1399:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 1453:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     /* Disable the UART DMA Rx request */
 1454:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     CLEAR_BIT(huart->Instance->CR3, USART_CR3_DMAR);
 1455:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   }
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 27
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 27
 
 
 1456:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 1510:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
 1511:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   /* Stop UART DMA Tx request if ongoing */
 1512:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   if ((HAL_IS_BIT_SET(huart->Instance->CR3, USART_CR3_DMAT)) &&
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 28
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 28
 
 
 1513:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****       (gstate == HAL_UART_STATE_BUSY_TX))
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 1567:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   *           - Disable UART Interrupts (Tx and Rx)
 1568:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   *           - Disable the DMA transfer in the peripheral register (if enabled)
 1569:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   *           - Abort DMA transfer by calling HAL_DMA_Abort (in case of transfer in DMA mode)
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 29
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 29
 
 
 1570:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   *           - Set handle State to READY
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 1624:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****           return HAL_TIMEOUT;
 1625:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****         }
 1626:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****       }
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 30
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 30
 
 
 1627:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     }
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 1681:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****         if (HAL_DMA_GetError(huart->hdmatx) == HAL_DMA_ERROR_TIMEOUT)
 1682:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****         {
 1683:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****           /* Set error code to DMA */
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 31
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 31
 
 
 1684:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****           huart->ErrorCode = HAL_UART_ERROR_DMA;
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 1738:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
 1739:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****           return HAL_TIMEOUT;
 1740:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****         }
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 32
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 32
 
 
 1741:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****       }
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 1795:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****       huart->hdmatx->XferAbortCallback = NULL;
 1796:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     }
 1797:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   }
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 33
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 33
 
 
 1798:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   /* DMA Rx Handle is valid */
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 1852:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****         abortcplt = 1U;
 1853:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****       }
 1854:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****       else
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 34
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 34
 
 
 1855:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****       {
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 1909:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   * @note   This procedure is executed in Interrupt mode, meaning that abort procedure could be
 1910:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   *         considered as completed only when user abort complete callback is executed (not when ex
 1911:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   * @retval HAL status
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 35
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 35
 
 
 1912:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   */
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 1966:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
 1967:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     /* Restore huart->gState to Ready */
 1968:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     huart->gState = HAL_UART_STATE_READY;
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 36
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 36
 
 
 1969:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 2023:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     {
 2024:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****       /* Reset Rx transfer counter */
 2025:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****       huart->RxXferCount = 0U;
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 37
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 37
 
 
 2026:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 2080:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   */
 2081:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** void HAL_UART_IRQHandler(UART_HandleTypeDef *huart)
 2082:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** {
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 38
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 38
 
 
 2083:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   uint32_t isrflags   = READ_REG(huart->Instance->ISR);
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 2137:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****         && (((cr1its & USART_CR1_RXNEIE) != 0U) ||
 2138:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****             ((cr3its & USART_CR3_EIE) != 0U)))
 2139:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     {
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 39
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 39
 
 
 2140:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****       __HAL_UART_CLEAR_FLAG(huart, UART_CLEAR_OREF);
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 2194:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****             {
 2195:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****               /* Call Directly huart->hdmarx->XferAbortCallback function in case of error */
 2196:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****               huart->hdmarx->XferAbortCallback(huart->hdmarx);
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 40
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 40
 
 
 2197:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****             }
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 2251:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     /* Call registered Wakeup Callback */
 2252:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     huart->WakeupCallback(huart);
 2253:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** #else
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 41
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 41
 
 
 2254:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     /* Call legacy weak Wakeup Callback */
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 2308:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** }
 2309:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
 2310:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** /**
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 42
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 42
 
 
 2311:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   * @brief  Rx Transfer completed callback.
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 2365:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   /* NOTE : This function should not be modified, when the callback is needed,
 2366:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****             the HAL_UART_AbortCpltCallback can be implemented in the user file.
 2367:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****    */
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 43
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 43
 
 
 2368:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** }
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 2422:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****      (+) HAL_HalfDuplex_EnableTransmitter() API disables receiver and enables transmitter
 2423:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****      (+) HAL_HalfDuplex_EnableReceiver() API disables transmitter and enables receiver
 2424:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****      (+) HAL_LIN_SendBreak() API transmits the break characters
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 44
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 44
 
 
 2425:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** @endverbatim
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 2479:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   */
 2480:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** HAL_StatusTypeDef HAL_UART_DisableReceiverTimeout(UART_HandleTypeDef *huart)
 2481:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** {
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 45
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 45
 
 
 2482:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   if (huart->gState == HAL_UART_STATE_READY)
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 2536:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
 2537:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   /* Disable USART mute mode by clearing the MME bit in the CR1 register */
 2538:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   CLEAR_BIT(huart->Instance->CR1, USART_CR1_MME);
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 46
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 46
 
 
 2539:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 2593:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   SET_BIT(huart->Instance->CR1, USART_CR1_RE);
 2594:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
 2595:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   huart->gState = HAL_UART_STATE_READY;
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 47
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 47
 
 
 2596:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 2650:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   *               the configuration information for the specified UART.
 2651:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   * @retval HAL state
 2652:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   */
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 48
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 48
 
 
 2653:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** HAL_UART_StateTypeDef HAL_UART_GetState(UART_HandleTypeDef *huart)
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 2707:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** /**
 2708:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   * @brief Configure the UART peripheral.
 2709:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   * @param huart UART handle.
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 49
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 49
 
 
 2710:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   * @retval HAL status
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 2764:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     switch (clocksource)
 2765:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     {
 2766:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****       case UART_CLOCKSOURCE_PCLK1:
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 50
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 50
 
 
 2767:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****         pclk = HAL_RCC_GetPCLK1Freq();
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 2821:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****         usartdiv = (uint16_t)(UART_DIV_SAMPLING16(LSE_VALUE, huart->Init.BaudRate));
 2822:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****         break;
 2823:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****       default:
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 51
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 51
 
 
 2824:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****         ret = HAL_ERROR;
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 2878:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   /* if required, configure RX/TX pins swap */
 2879:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   if (HAL_IS_BIT_SET(huart->AdvancedInit.AdvFeatureInit, UART_ADVFEATURE_SWAP_INIT))
 2880:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   {
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 52
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 52
 
 
 2881:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     assert_param(IS_UART_ADVFEATURE_SWAP(huart->AdvancedInit.Swap));
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 2935:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
 2936:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   /* Check if the Transmitter is enabled */
 2937:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   if ((huart->Instance->CR1 & USART_CR1_TE) == USART_CR1_TE)
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 53
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 53
 
 
 2938:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   {
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 2992:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****         huart->RxState = HAL_UART_STATE_READY;
 2993:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
 2994:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****         __HAL_UNLOCK(huart);
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 54
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 54
 
 
 2995:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
   40              		.loc 1 3037 17 is_stmt 0 view .LVU3
   41 000a 2023     		movs	r3, #32
   42 000c 4367     		str	r3, [r0, #116]
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 55
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 55
 
 
 3038:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** }
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 3057:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** }
   80              		.loc 1 3057 1 view .LVU12
   81 001c 7047     		bx	lr
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 56
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 56
 
 
   82              		.cfi_endproc
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 3102:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
 3103:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** #if (USE_HAL_UART_REGISTER_CALLBACKS == 1)
 3104:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   /*Call registered Tx Half complete callback*/
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 57
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 57
 
 
 3105:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   huart->TxHalfCpltCallback(huart);
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 3159:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** #else
 3160:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   /*Call legacy weak Rx Half complete callback*/
 3161:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   HAL_UART_RxHalfCpltCallback(huart);
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 58
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 58
 
 
 3162:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** #endif /* USE_HAL_UART_REGISTER_CALLBACKS */
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 3216:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** #if (USE_HAL_UART_REGISTER_CALLBACKS == 1)
 3217:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   /*Call registered error callback*/
 3218:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   huart->ErrorCallback(huart);
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 59
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 59
 
 
 3219:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** #else
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 3273:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
 3274:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** /**
 3275:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   * @brief  DMA UART Rx communication abort callback, when initiated by user
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 60
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 60
 
 
 3276:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   *         (To be called at end of DMA Rx Abort procedure following user abort request).
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 3330:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   * @param  hdma DMA handle.
 3331:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   * @retval None
 3332:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   */
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 61
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 61
 
 
 3333:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** static void UART_DMATxOnlyAbortCallback(DMA_HandleTypeDef *hdma)
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 3387:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   * @brief TX interrrupt handler for 7 or 8 bits data word length .
 3388:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   * @note   Function is called under interruption only, once
 3389:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   *         interruptions have been enabled by HAL_UART_Transmit_IT().
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 62
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 62
 
 
 3390:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   * @param huart UART handle.
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 3404:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     }
  120              		.loc 1 3404 7 view .LVU22
  121 001a 0268     		ldr	r2, [r0]
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 63
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 63
 
 
  122 001c 1368     		ldr	r3, [r2]
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 3417:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   * @note   Function is called under interruption only, once
 3418:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   *         interruptions have been enabled by HAL_UART_Transmit_IT().
 3419:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   * @param huart UART handle.
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 64
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 64
 
 
 3420:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   * @retval None
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  188 0012 1368     		ldr	r3, [r2]
  189 0014 23F08003 		bic	r3, r3, #128
  190 0018 1360     		str	r3, [r2]
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 65
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 65
 
 
 3435:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     }
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  233              		.weak	HAL_UART_MspInit
  234              		.syntax unified
  235              		.thumb
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 66
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 66
 
 
  236              		.thumb_func
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  287              		.loc 1 607 3 view .LVU66
  607:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   {
  288              		.loc 1 607 6 is_stmt 0 view .LVU67
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 67
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 67
 
 
  289 0000 C0B1     		cbz	r0, .L15
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  635:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   huart->gState = HAL_UART_STATE_RESET;
  328              		.loc 1 635 3 view .LVU83
  635:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   huart->gState = HAL_UART_STATE_RESET;
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 68
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 68
 
 
  329              		.loc 1 635 20 is_stmt 0 view .LVU84
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  372              		.loc 1 1175 1 is_stmt 1 view -0
  373              		.cfi_startproc
  374              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 69
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 69
 
 
  375              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  410              		.loc 1 1191 5 is_stmt 1 discriminator 2 view .LVU116
 1191:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     huart->gState = HAL_UART_STATE_BUSY_TX;
  411              		.loc 1 1191 22 is_stmt 0 discriminator 2 view .LVU117
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 70
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 70
 
 
  412 0026 C367     		str	r3, [r0, #124]
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  450              	.LVL18:
  451              	.L28:
 1195:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     {
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 71
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 71
 
 
  452              		.loc 1 1195 71 discriminator 1 view .LVU134
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  495              	.LFE139:
  497              		.section	.text.HAL_UART_Receive_IT,"ax",%progbits
  498              		.align	1
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 72
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 72
 
 
  499              		.global	HAL_UART_Receive_IT
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  539 001e A0F85820 		strh	r2, [r0, #88]	@ movhi
 1241:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     huart->RxISR       = NULL;
  540              		.loc 1 1241 5 is_stmt 1 discriminator 2 view .LVU161
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 73
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 73
 
 
 1241:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     huart->RxISR       = NULL;
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  582 0062 1BD0     		beq	.L47
 1245:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
  583              		.loc 1 1245 5 discriminator 10 view .LVU175
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 74
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 74
 
 
  584 0064 0023     		movs	r3, #0
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  622 008e 0168     		ldr	r1, [r0]
  623              	.LVL29:
 1266:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 75
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 75
 
 
  624              		.loc 1 1266 5 is_stmt 0 view .LVU192
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  666 00be 7047     		bx	lr
  667              	.LVL35:
  668              	.L43:
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 76
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 76
 
 
 1234:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     }
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  715 0004 40D1     		bne	.L54
 1287:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   /* Check that a Tx process is not already ongoing */
  716              		.loc 1 1287 1 view .LVU215
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 77
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 77
 
 
  717 0006 10B5     		push	{r4, lr}
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  754 002e 2123     		movs	r3, #33
  755 0030 4367     		str	r3, [r0, #116]
 1305:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     {
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 78
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 78
 
 
  756              		.loc 1 1305 5 is_stmt 1 discriminator 2 view .LVU233
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 1320:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****       {
  793              		.loc 1 1320 11 view .LVU251
  794 0054 C16C     		ldr	r1, [r0, #76]
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 79
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 79
 
 
  795 0056 806E     		ldr	r0, [r0, #104]
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  833 0084 9360     		str	r3, [r2, #8]
 1342:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   }
  834              		.loc 1 1342 5 view .LVU268
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 80
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 80
 
 
  835              	.L52:
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  880              		.cfi_endproc
  881              	.LFE141:
  883              		.section	.text.HAL_UART_Receive_DMA,"ax",%progbits
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 81
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 81
 
 
  884              		.align	1
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  926              		.loc 1 1374 5 discriminator 2 view .LVU290
 1374:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     huart->RxXferSize = Size;
  927              		.loc 1 1374 23 is_stmt 0 discriminator 2 view .LVU291
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 82
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 82
 
 
  928 0020 4165     		str	r1, [r0, #84]
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 1392:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
  964              		.loc 1 1392 7 is_stmt 1 view .LVU310
 1392:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 83
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 83
 
 
  965              		.loc 1 1392 12 is_stmt 0 view .LVU311
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  1003              	.L66:
 1408:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
  1004              		.loc 1 1408 5 is_stmt 1 view .LVU328
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 84
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 84
 
 
 1408:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  1048              		.loc 1 1369 14 view .LVU339
  1049 0096 FAE7     		b	.L65
  1050              	.LVL65:
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 85
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 85
 
 
  1051              	.L69:
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 1436:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
  1098              		.loc 1 1436 31 is_stmt 0 view .LVU349
  1099 0004 816F     		ldr	r1, [r0, #120]
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 86
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 86
 
 
  1100              	.LVL71:
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 1459:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** }
  1138              		.loc 1 1459 10 is_stmt 0 view .LVU366
  1139 0036 1846     		mov	r0, r3
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 87
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 87
 
 
  1140              	.LVL72:
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  1187              		.global	HAL_UART_DMAResume
  1188              		.syntax unified
  1189              		.thumb
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 88
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 88
 
 
  1190              		.thumb_func
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  1229              		.loc 1 1491 10 is_stmt 0 view .LVU390
  1230 0020 1846     		mov	r0, r3
  1231              	.LVL77:
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 89
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 89
 
 
 1491:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** }
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  1280              	.LVL80:
  1281              	.LFB145:
 1500:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   /* The Lock is not implemented on this API to allow the user application
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 90
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 90
 
 
  1282              		.loc 1 1500 1 is_stmt 1 view -0
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  1323 0020 222D     		cmp	r5, #34
  1324 0022 17D0     		beq	.L101
 1559:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** }
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 91
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 91
 
 
  1325              		.loc 1 1559 10 view .LVU413
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  1365              		.loc 1 1527 11 is_stmt 1 view .LVU427
 1527:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****         }
  1366              		.loc 1 1527 18 is_stmt 0 view .LVU428
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 92
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 92
 
 
  1367 0050 0320     		movs	r0, #3
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  1406              		.loc 1 1551 11 is_stmt 1 view .LVU443
 1551:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****         }
  1407              		.loc 1 1551 18 is_stmt 0 view .LVU444
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 93
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 93
 
 
  1408 007e 0320     		movs	r0, #3
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 1581:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   {
  1455              		.loc 1 1581 6 view .LVU454
  1456 001c 12F0800F 		tst	r2, #128
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 94
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 94
 
 
  1457 0020 0BD0     		beq	.L105
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 1611:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     {
  1495              		.loc 1 1611 8 view .LVU471
  1496 004e 2BB1     		cbz	r3, .L107
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 95
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 95
 
 
 1615:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  1534 007c E067     		str	r0, [r4, #124]
 1647:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** }
  1535              		.loc 1 1647 3 is_stmt 1 view .LVU489
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 96
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 96
 
 
  1536              	.L106:
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  1575              	.LFE146:
  1577              		.section	.text.HAL_UART_AbortTransmit,"ax",%progbits
  1578              		.align	1
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 97
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 97
 
 
  1579              		.global	HAL_UART_AbortTransmit
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  1622 0026 5A63     		str	r2, [r3, #52]
 1679:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****       {
  1623              		.loc 1 1679 7 is_stmt 1 view .LVU517
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 98
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 98
 
 
 1679:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****       {
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  1662 004c F5E7     		b	.L113
  1663              		.cfi_endproc
  1664              	.LFE147:
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 99
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 99
 
 
  1666              		.section	.text.HAL_UART_AbortReceive,"ax",%progbits
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 1726:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     {
  1711              		.loc 1 1726 8 view .LVU544
  1712 002c 2BB1     		cbz	r3, .L117
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 100
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 100
 
 
 1730:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  1751              		.loc 1 1734 13 is_stmt 0 view .LVU560
  1752 0056 E06E     		ldr	r0, [r4, #108]
  1753 0058 FFF7FEFF 		bl	HAL_DMA_GetError
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 101
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 101
 
 
  1754              	.LVL108:
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 3066:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   UART_HandleTypeDef *huart = (UART_HandleTypeDef *)(hdma->Parent);
  1803              		.loc 1 3066 1 is_stmt 0 view .LVU570
  1804 0000 08B5     		push	{r3, lr}
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 102
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 102
 
 
  1805              	.LCFI15:
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  1846              	.LVL116:
 3092:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
  1847              		.loc 1 3092 1 view .LVU584
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 103
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 103
 
 
  1848 002c FAE7     		b	.L122
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 3466:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   /*Call registered Tx complete callback*/
 3467:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   huart->TxCpltCallback(huart);
 3468:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** #else
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 104
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 104
 
 
 3469:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   /*Call legacy weak Tx complete callback*/
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  1932              		.loc 1 3101 3 is_stmt 1 view .LVU599
  1933              	.LVL121:
 3108:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** #endif /* USE_HAL_UART_REGISTER_CALLBACKS */
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 105
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 105
 
 
  1934              		.loc 1 3108 3 view .LVU600
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  1979              		.loc 1 3480 1 is_stmt 0 view .LVU607
  1980 0000 08B5     		push	{r3, lr}
  1981              	.LCFI18:
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 106
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 106
 
 
  1982              		.cfi_def_cfa_offset 8
@@ -6358,7 +6358,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  1998 000e 9369     		ldr	r3, [r2, #24]
  1999              	.LVL127:
  2000              		.loc 1 3518 5 is_stmt 0 view .LVU615
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 107
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 107
 
 
  2001 0010 43F00803 		orr	r3, r3, #8
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  2039 0034 A0F85A30 		strh	r3, [r0, #90]	@ movhi
 3492:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     {
  2040              		.loc 1 3492 5 is_stmt 1 view .LVU631
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 108
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 108
 
 
 3492:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     {
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 3526:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   * @param huart UART handle.
 3527:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   * @retval None
 3528:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   */
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 109
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 109
 
 
 3529:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** static void UART_RxISR_16BIT(UART_HandleTypeDef *huart)
@@ -6538,7 +6538,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 3561:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** #else
 3562:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****       /*Call legacy weak Rx complete callback*/
 3563:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****       HAL_UART_RxCpltCallback(huart);
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 110
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 110
 
 
 3564:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** #endif /* USE_HAL_UART_REGISTER_CALLBACKS */
@@ -6598,7 +6598,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 3542:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
  2139              		.loc 1 3542 5 is_stmt 1 view .LVU664
 3542:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 111
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 111
 
 
  2140              		.loc 1 3542 10 is_stmt 0 view .LVU665
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  2182              		.section	.text.UART_DMAReceiveCplt,"ax",%progbits
  2183              		.align	1
  2184              		.syntax unified
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 112
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 112
 
 
  2185              		.thumb
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  2228 0026 0268     		ldr	r2, [r0]
  2229 0028 9368     		ldr	r3, [r2, #8]
  2230 002a 23F04003 		bic	r3, r3, #64
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 113
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 113
 
 
  2231 002e 9360     		str	r3, [r2, #8]
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  2280 0000 08B5     		push	{r3, lr}
  2281              	.LCFI21:
  2282              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 114
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 114
 
 
  2283              		.cfi_offset 3, -8
@@ -6838,7 +6838,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  2332              		.loc 1 3171 1 is_stmt 0 view .LVU708
  2333 0000 38B5     		push	{r3, r4, r5, lr}
  2334              	.LCFI22:
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 115
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 115
 
 
  2335              		.cfi_def_cfa_offset 16
@@ -6898,7 +6898,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 3193:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
  2375              		.loc 1 3193 3 is_stmt 1 view .LVU723
 3193:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 116
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 116
 
 
  2376              		.loc 1 3193 20 is_stmt 0 view .LVU724
@@ -6958,7 +6958,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  2422              	.LFB152:
 2082:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   uint32_t isrflags   = READ_REG(huart->Instance->ISR);
  2423              		.loc 1 2082 1 view -0
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 117
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 117
 
 
  2424              		.cfi_startproc
@@ -7018,7 +7018,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  2462              		.loc 1 2095 5 is_stmt 1 view .LVU751
 2095:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****         && ((cr1its & USART_CR1_RXNEIE) != 0U))
  2463              		.loc 1 2095 8 is_stmt 0 view .LVU752
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 118
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 118
 
 
  2464 0014 13F0200F 		tst	r3, #32
@@ -7078,7 +7078,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  2503 0050 10F0400F 		tst	r0, #64
  2504 0054 40F08E80 		bne	.L180
  2505              	.LVL172:
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 119
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 119
 
 
  2506              	.L155:
@@ -7138,7 +7138,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 2120:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     {
  2546              		.loc 1 2120 5 is_stmt 1 view .LVU782
 2120:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     {
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 120
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 120
 
 
  2547              		.loc 1 2120 8 is_stmt 0 view .LVU783
@@ -7198,7 +7198,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  2587              	.L165:
 2140:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
  2588              		.loc 1 2140 7 is_stmt 1 view .LVU798
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 121
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 121
 
 
  2589 00b6 2268     		ldr	r2, [r4]
@@ -7258,7 +7258,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  2628              		.loc 1 2160 9 is_stmt 1 view .LVU813
 2160:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****         {
  2629              		.loc 1 2160 18 is_stmt 0 view .LVU814
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 122
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 122
 
 
  2630 00f0 236E     		ldr	r3, [r4, #96]
@@ -7318,7 +7318,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  2670 0120 9A60     		str	r2, [r3, #8]
 2186:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****           {
  2671              		.loc 1 2186 11 view .LVU829
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 123
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 123
 
 
 2186:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****           {
@@ -7378,7 +7378,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  2712 014c 2046     		mov	r0, r4
  2713 014e FFF7FEFF 		bl	HAL_UART_ErrorCallback
  2714              	.LVL189:
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 124
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 124
 
 
 2235:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****       }
@@ -7438,7 +7438,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 2274:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     return;
  2755              		.loc 1 2274 5 view .LVU858
  2756 0174 2046     		mov	r0, r4
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 125
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 125
 
 
  2757              	.LVL199:
@@ -7498,7 +7498,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  2802              	.LVL203:
 3223:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
  2803              		.loc 1 3223 1 is_stmt 0 view .LVU870
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 126
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 126
 
 
  2804 0012 08BD     		pop	{r3, pc}
@@ -7558,7 +7558,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  2855 0008 23F4F073 		bic	r3, r3, #480
  2856 000c 1360     		str	r3, [r2]
 1780:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 127
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 127
 
 
  2857              		.loc 1 1780 3 view .LVU878
@@ -7618,7 +7618,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  2895              	.L189:
 1814:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   {
  2896              		.loc 1 1814 3 is_stmt 1 view .LVU895
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 128
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 128
 
 
 1814:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   {
@@ -7678,7 +7678,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  2936 006a DEE7     		b	.L187
  2937              	.L190:
 1809:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     }
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 129
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 129
 
 
  2938              		.loc 1 1809 7 is_stmt 1 view .LVU911
@@ -7738,7 +7738,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  2976              		.loc 1 1852 9 is_stmt 1 view .LVU927
  2977              	.LVL212:
 1862:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   {
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 130
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 130
 
 
  2978              		.loc 1 1862 3 view .LVU928
@@ -7798,7 +7798,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  3015              	.LVL213:
  3016 00c2 05E0     		b	.L193
  3017              	.LVL214:
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 131
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 131
 
 
  3018              	.L196:
@@ -7858,7 +7858,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  3065              		.cfi_offset 3, -8
  3066              		.cfi_offset 14, -4
 3284:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 132
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 132
 
 
  3067              		.loc 1 3284 3 is_stmt 1 view .LVU955
@@ -7918,7 +7918,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  3103 0024 0268     		ldr	r2, [r0]
  3104 0026 9369     		ldr	r3, [r2, #24]
  3105 0028 43F00803 		orr	r3, r3, #8
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 133
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 133
 
 
  3106 002c 9361     		str	r3, [r2, #24]
@@ -7978,7 +7978,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  3149              		.loc 1 3237 36 view .LVU986
  3150 0006 0022     		movs	r2, #0
  3151 0008 5A63     		str	r2, [r3, #52]
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 134
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 134
 
 
 3240:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   {
@@ -8038,7 +8038,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 3271:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
  3188              		.loc 1 3271 1 is_stmt 0 view .LVU1005
  3189 002e 08BD     		pop	{r3, pc}
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 135
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 135
 
 
  3190              		.cfi_endproc
@@ -8098,7 +8098,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 1919:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   {
  3241              		.loc 1 1919 7 is_stmt 0 view .LVU1013
  3242 000e 0368     		ldr	r3, [r0]
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 136
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 136
 
 
  3243 0010 9A68     		ldr	r2, [r3, #8]
@@ -8158,7 +8158,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 1940:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
  3281              		.loc 1 1940 26 is_stmt 0 view .LVU1030
  3282 0038 0023     		movs	r3, #0
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 137
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 137
 
 
  3283 003a A0F85230 		strh	r3, [r0, #82]	@ movhi
@@ -8218,7 +8218,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  3321              	.L215:
  3322 0060 00000000 		.word	UART_DMATxOnlyAbortCallback
  3323              		.cfi_endproc
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 138
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 138
 
 
  3324              	.LFE150:
@@ -8278,7 +8278,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  3372              	HAL_UART_AbortReceiveCpltCallback:
  3373              	.LVL237:
  3374              	.LFB160:
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 139
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 139
 
 
 2391:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   /* Prevent unused argument(s) compilation warning */
@@ -8338,7 +8338,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  3421              		.loc 1 2004 6 view .LVU1066
  3422 001c 12F0400F 		tst	r2, #64
  3423 0020 20D0     		beq	.L221
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 140
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 140
 
 
 2006:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
@@ -8398,7 +8398,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  3461              		.loc 1 2028 7 is_stmt 1 view .LVU1083
 2028:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
  3462              		.loc 1 2028 25 is_stmt 0 view .LVU1084
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 141
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 141
 
 
  3463 0048 4365     		str	r3, [r0, #84]
@@ -8458,7 +8458,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  3502              		.loc 1 2073 3 view .LVU1099
 2074:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
  3503              		.loc 1 2074 1 is_stmt 0 view .LVU1100
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 142
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 142
 
 
  3504 0078 0020     		movs	r0, #0
@@ -8518,7 +8518,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 3374:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
  3551              		.loc 1 3374 3 view .LVU1110
 3374:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 143
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 143
 
 
  3552              		.loc 1 3374 18 is_stmt 0 view .LVU1111
@@ -8578,7 +8578,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  3603              		@ frame_needed = 0, uses_anonymous_args = 0
  3604              		@ link register save eliminated.
 2451:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   {
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 144
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 144
 
 
  3605              		.loc 1 2451 3 view .LVU1119
@@ -8638,7 +8638,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  3642              		.loc 1 2466 12 discriminator 2 view .LVU1136
  3643 002e 7047     		bx	lr
  3644              	.LVL253:
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 145
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 145
 
 
  3645              	.L232:
@@ -8698,7 +8698,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 2485:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
  3690              		.loc 1 2485 5 discriminator 2 view .LVU1148
 2487:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 146
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 146
 
 
  3691              		.loc 1 2487 5 discriminator 2 view .LVU1149
@@ -8758,7 +8758,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  3732              		.section	.text.HAL_MultiProcessor_EnterMuteMode,"ax",%progbits
  3733              		.align	1
  3734              		.global	HAL_MultiProcessor_EnterMuteMode
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 147
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 147
 
 
  3735              		.syntax unified
@@ -8818,7 +8818,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  3782              		.loc 1 2564 17 is_stmt 0 discriminator 2 view .LVU1173
  3783 000e 2423     		movs	r3, #36
  3784 0010 4367     		str	r3, [r0, #116]
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 148
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 148
 
 
 2567:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
@@ -8878,7 +8878,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  3829              	.LFB168:
 2585:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   __HAL_LOCK(huart);
  3830              		.loc 1 2585 1 is_stmt 1 view -0
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 149
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 149
 
 
  3831              		.cfi_startproc
@@ -8938,7 +8938,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  3870              	.LVL269:
 2599:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** }
  3871              		.loc 1 2599 10 discriminator 2 view .LVU1202
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 150
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 150
 
 
  3872 0032 7047     		bx	lr
@@ -8998,7 +8998,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 2620:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
  3917              		.loc 1 2620 3 discriminator 2 view .LVU1214
 2620:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 151
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 151
 
 
  3918              		.loc 1 2620 17 is_stmt 0 discriminator 2 view .LVU1215
@@ -9058,7 +9058,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  3961 0000 426F     		ldr	r2, [r0, #116]
  3962              	.LVL277:
 2658:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 152
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 152
 
 
  3963              		.loc 1 2658 3 is_stmt 1 view .LVU1229
@@ -9118,7 +9118,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  4012              		@ args = 0, pretend = 0, frame = 0
  4013              		@ frame_needed = 0, uses_anonymous_args = 0
 2713:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   uint32_t tmpreg;
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 153
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 153
 
 
  4014              		.loc 1 2713 1 is_stmt 0 view .LVU1239
@@ -9178,7 +9178,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  4048 000c 1343     		orrs	r3, r3, r2
 2739:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   MODIFY_REG(huart->Instance->CR1, USART_CR1_FIELDS, tmpreg);
  4049              		.loc 1 2739 98 view .LVU1260
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 154
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 154
 
 
  4050 000e C269     		ldr	r2, [r0, #28]
@@ -9238,7 +9238,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  4091 003e 2368     		ldr	r3, [r4]
  4092 0040 914A     		ldr	r2, .L310+4
  4093              	.LVL290:
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 155
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 155
 
 
 2760:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
@@ -9298,7 +9298,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  4138 007a 0425     		movs	r5, #4
  4139 007c 11E0     		b	.L253
  4140              	.LVL292:
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 156
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 156
 
 
  4141              	.L255:
@@ -9358,7 +9358,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  4184 00ba F600     		.2byte	(.L301-.L276)/2
  4185 00bc D500     		.2byte	(.L277-.L276)/2
  4186 00be F600     		.2byte	(.L301-.L276)/2
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 157
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 157
 
 
  4187 00c0 F600     		.2byte	(.L301-.L276)/2
@@ -9418,7 +9418,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  4236              	.L308:
 2760:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
  4237              		.loc 1 2760 3 is_stmt 1 discriminator 53 view .LVU1300
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 158
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 158
 
 
  4238 011c 5F4B     		ldr	r3, .L310+24
@@ -9478,7 +9478,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  4291              	.L293:
  4292 0172 1025     		movs	r5, #16
  4293 0174 95E7     		b	.L253
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 159
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 159
 
 
  4294              	.L295:
@@ -9538,7 +9538,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 2771:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****         usartdiv = (uint16_t)(UART_DIV_SAMPLING8(pclk, huart->Init.BaudRate));
  4341              		.loc 1 2771 16 is_stmt 0 view .LVU1309
  4342 01ac FFF7FEFF 		bl	HAL_RCC_GetPCLK2Freq
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 160
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 160
 
 
  4343              	.LVL301:
@@ -9598,7 +9598,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  4383 01dc 6268     		ldr	r2, [r4, #4]
  4384 01de 5308     		lsrs	r3, r2, #1
  4385 01e0 03EB4003 		add	r3, r3, r0, lsl #1
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 161
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 161
 
 
  4386 01e4 B3FBF2F3 		udiv	r3, r3, r2
@@ -9658,7 +9658,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 2792:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****       brrtemp |= (uint16_t)((usartdiv & (uint16_t)0x000FU) >> 1U);
  4427              		.loc 1 2792 7 is_stmt 1 view .LVU1337
 2792:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****       brrtemp |= (uint16_t)((usartdiv & (uint16_t)0x000FU) >> 1U);
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 162
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 162
 
 
  4428              		.loc 1 2792 17 is_stmt 0 view .LVU1338
@@ -9718,7 +9718,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  4467              		.loc 1 2811 9 is_stmt 1 view .LVU1353
 2811:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****         break;
  4468              		.loc 1 2811 31 is_stmt 0 view .LVU1354
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 163
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 163
 
 
  4469 0238 6268     		ldr	r2, [r4, #4]
@@ -9778,7 +9778,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  4510              		.loc 1 2819 9 is_stmt 1 view .LVU1367
 2718:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   uint32_t pclk;
  4511              		.loc 1 2718 21 is_stmt 0 view .LVU1368
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 164
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 164
 
 
  4512 026e 0025     		movs	r5, #0
@@ -9838,7 +9838,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  4555 02a8 4FF6EF72 		movw	r2, #65519
  4556 02ac 9142     		cmp	r1, r2
  4557 02ae 08D8     		bhi	.L302
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 165
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 165
 
 
 2831:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     }
@@ -9898,7 +9898,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  4601              	.LVL345:
  4602              	.LFB173:
 2853:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   /* Check whether the set of advanced features to configure is properly set */
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 166
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 166
 
 
  4603              		.loc 1 2853 1 is_stmt 1 view -0
@@ -9958,7 +9958,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  4643 002e 13F0040F 		tst	r3, #4
  4644 0032 06D0     		beq	.L315
 2874:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     MODIFY_REG(huart->Instance->CR2, USART_CR2_DATAINV, huart->AdvancedInit.DataInvert);
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 167
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 167
 
 
  4645              		.loc 1 2874 5 is_stmt 1 view .LVU1408
@@ -10018,7 +10018,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  4686 006e 436A     		ldr	r3, [r0, #36]
 2893:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   {
  4687              		.loc 1 2893 6 view .LVU1422
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 168
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 168
 
 
  4688 0070 13F0200F 		tst	r3, #32
@@ -10078,7 +10078,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  4727              		.loc 1 2916 5 is_stmt 1 view .LVU1437
 2917:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   }
  4728              		.loc 1 2917 5 view .LVU1438
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 169
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 169
 
 
  4729 00aa 0268     		ldr	r2, [r0]
@@ -10138,7 +10138,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  4780 000a 9946     		mov	r9, r3
  4781 000c DDF82080 		ldr	r8, [sp, #32]
 2980:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   {
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 170
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 170
 
 
  4782              		.loc 1 2980 3 is_stmt 1 view .LVU1444
@@ -10198,7 +10198,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 3001:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****         {
  4821              		.loc 1 3001 13 is_stmt 0 view .LVU1460
  4822 0048 DA69     		ldr	r2, [r3, #28]
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 171
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 171
 
 
 3001:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****         {
@@ -10258,7 +10258,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  4861 007e 1368     		ldr	r3, [r2]
  4862 0080 23F4D073 		bic	r3, r3, #416
  4863 0084 1360     		str	r3, [r2]
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 172
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 172
 
 
 2989:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
@@ -10318,7 +10318,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  4906              		.cfi_startproc
  4907              		@ args = 0, pretend = 0, frame = 0
  4908              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 173
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 173
 
 
 1005:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   uint8_t  *pdata8bits;
@@ -10378,7 +10378,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  4950 0026 80F87030 		strb	r3, [r0, #112]
 1018:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
  4951              		.loc 1 1018 5 discriminator 2 view .LVU1504
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 174
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 174
 
 
 1020:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     huart->gState = HAL_UART_STATE_BUSY_TX;
@@ -10438,7 +10438,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  4988 0052 4FF00008 		mov	r8, #0
  4989 0056 0FE0     		b	.L334
  4990              	.L343:
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 175
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 175
 
 
 1033:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     }
@@ -10498,7 +10498,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  5029              		.loc 1 1043 7 is_stmt 1 view .LVU1538
 1043:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****       {
  5030              		.loc 1 1043 11 is_stmt 0 view .LVU1539
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 176
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 176
 
 
  5031 0080 0096     		str	r6, [sp]
@@ -10558,7 +10558,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  5071 00b0 6367     		str	r3, [r4, #116]
 1068:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
  5072              		.loc 1 1068 5 is_stmt 1 view .LVU1554
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 177
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 177
 
 
 1068:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
@@ -10618,7 +10618,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  5115 00cc F6E7     		b	.L332
  5116              	.LVL370:
  5117              	.L344:
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 178
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 178
 
 
 1045:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****       }
@@ -10678,7 +10678,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  5164              	.LVL372:
 1097:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   {
  5165              		.loc 1 1097 6 view .LVU1577
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 179
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 179
 
 
  5166 000a 202B     		cmp	r3, #32
@@ -10738,7 +10738,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  5204 0038 A4F85880 		strh	r8, [r4, #88]	@ movhi
 1113:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
  5205              		.loc 1 1113 5 is_stmt 1 discriminator 2 view .LVU1594
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 180
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 180
 
 
 1113:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
@@ -10798,7 +10798,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 1116:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     uhMask = huart->Mask;
  5248              		.loc 1 1116 5 discriminator 13 view .LVU1607
 1117:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 181
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 181
 
 
  5249              		.loc 1 1117 5 discriminator 13 view .LVU1608
@@ -10858,7 +10858,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  5290 00b2 0CE0     		b	.L360
  5291              	.LVL379:
  5292              	.L376:
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 182
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 182
 
 
 1140:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****         pdata16bits++;
@@ -10918,7 +10918,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 1138:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****       {
  5332              		.loc 1 1138 7 is_stmt 1 view .LVU1637
 1138:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****       {
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 183
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 183
 
 
  5333              		.loc 1 1138 10 is_stmt 0 view .LVU1638
@@ -10978,7 +10978,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  5370              		.loc 1 1162 1 view .LVU1655
  5371 0108 03B0     		add	sp, sp, #12
  5372              	.LCFI40:
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 184
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 184
 
 
  5373              		.cfi_remember_state
@@ -11038,7 +11038,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  5421              		@ frame_needed = 0, uses_anonymous_args = 0
 2927:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   uint32_t tickstart;
  5422              		.loc 1 2927 1 is_stmt 0 view .LVU1664
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 185
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 185
 
 
  5423 0000 30B5     		push	{r4, r5, lr}
@@ -11098,7 +11098,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  5463              	.L380:
 2959:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   huart->RxState = HAL_UART_STATE_READY;
  5464              		.loc 1 2959 3 is_stmt 1 view .LVU1679
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 186
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 186
 
 
 2959:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   huart->RxState = HAL_UART_STATE_READY;
@@ -11158,7 +11158,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  5506 004e EFE7     		b	.L379
  5507              	.L385:
 2951:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****     {
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 187
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 187
 
 
  5508              		.loc 1 2951 5 is_stmt 1 view .LVU1693
@@ -11218,7 +11218,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  306:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   {
  5554              		.loc 1 306 12 is_stmt 0 view .LVU1704
  5555 0006 436F     		ldr	r3, [r0, #116]
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 188
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 188
 
 
  306:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   {
@@ -11278,7 +11278,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  5597 0042 1360     		str	r3, [r2]
  351:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** }
  5598              		.loc 1 351 3 view .LVU1718
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 189
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 189
 
 
  351:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** }
@@ -11338,7 +11338,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  361:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   /* Check the UART handle allocation */
  5646              		.loc 1 361 1 is_stmt 1 view -0
  5647              		.cfi_startproc
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 190
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 190
 
 
  5648              		@ args = 0, pretend = 0, frame = 0
@@ -11398,7 +11398,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  5687              		.loc 1 402 26 is_stmt 0 view .LVU1743
  5688 0024 636A     		ldr	r3, [r4, #36]
  402:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   {
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 191
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 191
 
 
  5689              		.loc 1 402 6 view .LVU1744
@@ -11458,7 +11458,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  5731              		.loc 1 404 5 is_stmt 1 view .LVU1756
  5732 0062 2046     		mov	r0, r4
  5733 0064 FFF7FEFF 		bl	UART_AdvFeatureConfig
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 192
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 192
 
 
  5734              	.LVL416:
@@ -11518,7 +11518,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  447:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   {
  5781              		.loc 1 447 18 is_stmt 0 view .LVU1766
  5782 000a C369     		ldr	r3, [r0, #28]
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 193
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 193
 
 
  447:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   {
@@ -11578,7 +11578,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  5821              	.L411:
  496:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   CLEAR_BIT(huart->Instance->CR3, (USART_CR3_HDSEL | USART_CR3_IREN | USART_CR3_SCEN));
  5822              		.loc 1 496 3 is_stmt 1 view .LVU1783
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 194
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 194
 
 
  5823 0038 2268     		ldr	r2, [r4]
@@ -11638,7 +11638,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  5866              	.L420:
  490:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   }
  5867              		.loc 1 490 5 is_stmt 1 view .LVU1795
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 195
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 195
 
 
  5868 007e 2046     		mov	r0, r4
@@ -11698,7 +11698,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  531:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   /* Check the UART handle allocation */
  5918              		.loc 1 531 1 is_stmt 1 view -0
  5919              		.cfi_startproc
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 196
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 196
 
 
  5920              		@ args = 0, pretend = 0, frame = 0
@@ -11758,7 +11758,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  5961 0026 1CD0     		beq	.L422
  572:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   {
  5962              		.loc 1 572 3 is_stmt 1 view .LVU1816
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 197
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 197
 
 
  572:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   {
@@ -11818,7 +11818,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  6005              	.L431:
  544:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
  6006              		.loc 1 544 5 is_stmt 1 view .LVU1829
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 198
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 198
 
 
  544:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
@@ -11878,7 +11878,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  6055              		.cfi_startproc
  6056              		@ args = 0, pretend = 0, frame = 0
  6057              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 199
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 199
 
 
 2512:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c ****   __HAL_LOCK(huart);
@@ -11938,7 +11938,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 2513:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** 
  6098              		.loc 1 2513 3 view .LVU1852
  6099 002a FCE7     		b	.L435
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 200
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 200
 
 
  6100              		.cfi_endproc
@@ -11998,7 +11998,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
 2542:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** }
  6145              		.loc 1 2542 3 is_stmt 1 discriminator 2 view .LVU1864
 2542:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c **** }
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 201
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 201
 
 
  6146              		.loc 1 2542 11 is_stmt 0 discriminator 2 view .LVU1865
@@ -12031,160 +12031,160 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 1
  6171              		.file 9 "Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h"
  6172              		.file 10 "Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h"
  6173              		.file 11 "Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart_ex.h"
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 202
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 202
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f3xx_hal_uart.c
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:20     .text.UART_EndTxTransfer:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:25     .text.UART_EndTxTransfer:00000000 UART_EndTxTransfer
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:49     .text.UART_EndRxTransfer:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:54     .text.UART_EndRxTransfer:00000000 UART_EndRxTransfer
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:86     .text.UART_TxISR_8BIT:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:91     .text.UART_TxISR_8BIT:00000000 UART_TxISR_8BIT
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:156    .text.UART_TxISR_16BIT:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:161    .text.UART_TxISR_16BIT:00000000 UART_TxISR_16BIT
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:232    .text.HAL_UART_MspInit:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:238    .text.HAL_UART_MspInit:00000000 HAL_UART_MspInit
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:253    .text.HAL_UART_MspDeInit:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:259    .text.HAL_UART_MspDeInit:00000000 HAL_UART_MspDeInit
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:274    .text.HAL_UART_DeInit:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:280    .text.HAL_UART_DeInit:00000000 HAL_UART_DeInit
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:363    .text.HAL_UART_Transmit_IT:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:369    .text.HAL_UART_Transmit_IT:00000000 HAL_UART_Transmit_IT
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:492    .text.HAL_UART_Transmit_IT:00000068 $d
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:498    .text.HAL_UART_Receive_IT:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:504    .text.HAL_UART_Receive_IT:00000000 HAL_UART_Receive_IT
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:691    .text.HAL_UART_Receive_IT:000000cc $d
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:1972   .text.UART_RxISR_8BIT:00000000 UART_RxISR_8BIT
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:2079   .text.UART_RxISR_16BIT:00000000 UART_RxISR_16BIT
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:697    .text.HAL_UART_Transmit_DMA:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:703    .text.HAL_UART_Transmit_DMA:00000000 HAL_UART_Transmit_DMA
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:877    .text.HAL_UART_Transmit_DMA:00000098 $d
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:1796   .text.UART_DMATransmitCplt:00000000 UART_DMATransmitCplt
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:1919   .text.UART_DMATxHalfCplt:00000000 UART_DMATxHalfCplt
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:2325   .text.UART_DMAError:00000000 UART_DMAError
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:884    .text.HAL_UART_Receive_DMA:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:890    .text.HAL_UART_Receive_DMA:00000000 HAL_UART_Receive_DMA
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:1067   .text.HAL_UART_Receive_DMA:000000a0 $d
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:2188   .text.UART_DMAReceiveCplt:00000000 UART_DMAReceiveCplt
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:2272   .text.UART_DMARxHalfCplt:00000000 UART_DMARxHalfCplt
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:1074   .text.HAL_UART_DMAPause:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:1080   .text.HAL_UART_DMAPause:00000000 HAL_UART_DMAPause
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:1186   .text.HAL_UART_DMAResume:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:1192   .text.HAL_UART_DMAResume:00000000 HAL_UART_DMAResume
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:1273   .text.HAL_UART_DMAStop:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:1279   .text.HAL_UART_DMAStop:00000000 HAL_UART_DMAStop
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:1421   .text.HAL_UART_Abort:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:1427   .text.HAL_UART_Abort:00000000 HAL_UART_Abort
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:1578   .text.HAL_UART_AbortTransmit:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:1584   .text.HAL_UART_AbortTransmit:00000000 HAL_UART_AbortTransmit
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:1667   .text.HAL_UART_AbortReceive:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:1673   .text.HAL_UART_AbortReceive:00000000 HAL_UART_AbortReceive
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:1770   .text.HAL_UART_TxCpltCallback:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:1776   .text.HAL_UART_TxCpltCallback:00000000 HAL_UART_TxCpltCallback
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:1791   .text.UART_DMATransmitCplt:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:1853   .text.UART_EndTransmit_IT:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:1858   .text.UART_EndTransmit_IT:00000000 UART_EndTransmit_IT
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:1893   .text.HAL_UART_TxHalfCpltCallback:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:1899   .text.HAL_UART_TxHalfCpltCallback:00000000 HAL_UART_TxHalfCpltCallback
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:1914   .text.UART_DMATxHalfCplt:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:1946   .text.HAL_UART_RxCpltCallback:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:1952   .text.HAL_UART_RxCpltCallback:00000000 HAL_UART_RxCpltCallback
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 203
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:20     .text.UART_EndTxTransfer:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:25     .text.UART_EndTxTransfer:00000000 UART_EndTxTransfer
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:49     .text.UART_EndRxTransfer:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:54     .text.UART_EndRxTransfer:00000000 UART_EndRxTransfer
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:86     .text.UART_TxISR_8BIT:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:91     .text.UART_TxISR_8BIT:00000000 UART_TxISR_8BIT
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:156    .text.UART_TxISR_16BIT:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:161    .text.UART_TxISR_16BIT:00000000 UART_TxISR_16BIT
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:232    .text.HAL_UART_MspInit:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:238    .text.HAL_UART_MspInit:00000000 HAL_UART_MspInit
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:253    .text.HAL_UART_MspDeInit:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:259    .text.HAL_UART_MspDeInit:00000000 HAL_UART_MspDeInit
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:274    .text.HAL_UART_DeInit:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:280    .text.HAL_UART_DeInit:00000000 HAL_UART_DeInit
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:363    .text.HAL_UART_Transmit_IT:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:369    .text.HAL_UART_Transmit_IT:00000000 HAL_UART_Transmit_IT
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:492    .text.HAL_UART_Transmit_IT:00000068 $d
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:498    .text.HAL_UART_Receive_IT:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:504    .text.HAL_UART_Receive_IT:00000000 HAL_UART_Receive_IT
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:691    .text.HAL_UART_Receive_IT:000000cc $d
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:1972   .text.UART_RxISR_8BIT:00000000 UART_RxISR_8BIT
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:2079   .text.UART_RxISR_16BIT:00000000 UART_RxISR_16BIT
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:697    .text.HAL_UART_Transmit_DMA:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:703    .text.HAL_UART_Transmit_DMA:00000000 HAL_UART_Transmit_DMA
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:877    .text.HAL_UART_Transmit_DMA:00000098 $d
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:1796   .text.UART_DMATransmitCplt:00000000 UART_DMATransmitCplt
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:1919   .text.UART_DMATxHalfCplt:00000000 UART_DMATxHalfCplt
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:2325   .text.UART_DMAError:00000000 UART_DMAError
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:884    .text.HAL_UART_Receive_DMA:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:890    .text.HAL_UART_Receive_DMA:00000000 HAL_UART_Receive_DMA
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:1067   .text.HAL_UART_Receive_DMA:000000a0 $d
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:2188   .text.UART_DMAReceiveCplt:00000000 UART_DMAReceiveCplt
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:2272   .text.UART_DMARxHalfCplt:00000000 UART_DMARxHalfCplt
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:1074   .text.HAL_UART_DMAPause:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:1080   .text.HAL_UART_DMAPause:00000000 HAL_UART_DMAPause
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:1186   .text.HAL_UART_DMAResume:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:1192   .text.HAL_UART_DMAResume:00000000 HAL_UART_DMAResume
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:1273   .text.HAL_UART_DMAStop:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:1279   .text.HAL_UART_DMAStop:00000000 HAL_UART_DMAStop
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:1421   .text.HAL_UART_Abort:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:1427   .text.HAL_UART_Abort:00000000 HAL_UART_Abort
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:1578   .text.HAL_UART_AbortTransmit:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:1584   .text.HAL_UART_AbortTransmit:00000000 HAL_UART_AbortTransmit
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:1667   .text.HAL_UART_AbortReceive:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:1673   .text.HAL_UART_AbortReceive:00000000 HAL_UART_AbortReceive
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:1770   .text.HAL_UART_TxCpltCallback:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:1776   .text.HAL_UART_TxCpltCallback:00000000 HAL_UART_TxCpltCallback
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:1791   .text.UART_DMATransmitCplt:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:1853   .text.UART_EndTransmit_IT:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:1858   .text.UART_EndTransmit_IT:00000000 UART_EndTransmit_IT
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:1893   .text.HAL_UART_TxHalfCpltCallback:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:1899   .text.HAL_UART_TxHalfCpltCallback:00000000 HAL_UART_TxHalfCpltCallback
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:1914   .text.UART_DMATxHalfCplt:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:1946   .text.HAL_UART_RxCpltCallback:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:1952   .text.HAL_UART_RxCpltCallback:00000000 HAL_UART_RxCpltCallback
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 203
 
 
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:1967   .text.UART_RxISR_8BIT:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:2074   .text.UART_RxISR_16BIT:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:2183   .text.UART_DMAReceiveCplt:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:2246   .text.HAL_UART_RxHalfCpltCallback:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:2252   .text.HAL_UART_RxHalfCpltCallback:00000000 HAL_UART_RxHalfCpltCallback
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:2267   .text.UART_DMARxHalfCplt:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:2299   .text.HAL_UART_ErrorCallback:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:2305   .text.HAL_UART_ErrorCallback:00000000 HAL_UART_ErrorCallback
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:2320   .text.UART_DMAError:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:2414   .text.HAL_UART_IRQHandler:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:2420   .text.HAL_UART_IRQHandler:00000000 HAL_UART_IRQHandler
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:2766   .text.HAL_UART_IRQHandler:0000017c $d
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:2776   .text.UART_DMAAbortOnError:00000000 UART_DMAAbortOnError
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:2771   .text.UART_DMAAbortOnError:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:2809   .text.HAL_UART_AbortCpltCallback:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:2815   .text.HAL_UART_AbortCpltCallback:00000000 HAL_UART_AbortCpltCallback
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:2830   .text.HAL_UART_Abort_IT:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:2836   .text.HAL_UART_Abort_IT:00000000 HAL_UART_Abort_IT
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:3043   .text.HAL_UART_Abort_IT:000000d4 $d
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:3129   .text.UART_DMATxAbortCallback:00000000 UART_DMATxAbortCallback
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:3054   .text.UART_DMARxAbortCallback:00000000 UART_DMARxAbortCallback
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:3049   .text.UART_DMARxAbortCallback:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:3124   .text.UART_DMATxAbortCallback:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:3194   .text.HAL_UART_AbortTransmitCpltCallback:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:3200   .text.HAL_UART_AbortTransmitCpltCallback:00000000 HAL_UART_AbortTransmitCpltCallback
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:3215   .text.HAL_UART_AbortTransmit_IT:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:3221   .text.HAL_UART_AbortTransmit_IT:00000000 HAL_UART_AbortTransmit_IT
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:3322   .text.HAL_UART_AbortTransmit_IT:00000060 $d
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:3332   .text.UART_DMATxOnlyAbortCallback:00000000 UART_DMATxOnlyAbortCallback
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:3327   .text.UART_DMATxOnlyAbortCallback:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:3366   .text.HAL_UART_AbortReceiveCpltCallback:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:3372   .text.HAL_UART_AbortReceiveCpltCallback:00000000 HAL_UART_AbortReceiveCpltCallback
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:3387   .text.HAL_UART_AbortReceive_IT:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:3393   .text.HAL_UART_AbortReceive_IT:00000000 HAL_UART_AbortReceive_IT
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:3511   .text.HAL_UART_AbortReceive_IT:0000007c $d
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:3521   .text.UART_DMARxOnlyAbortCallback:00000000 UART_DMARxOnlyAbortCallback
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:3516   .text.UART_DMARxOnlyAbortCallback:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:3564   .text.HAL_UART_ReceiverTimeout_Config:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:3570   .text.HAL_UART_ReceiverTimeout_Config:00000000 HAL_UART_ReceiverTimeout_Config
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:3591   .text.HAL_UART_EnableReceiverTimeout:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:3597   .text.HAL_UART_EnableReceiverTimeout:00000000 HAL_UART_EnableReceiverTimeout
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:3662   .text.HAL_UART_DisableReceiverTimeout:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:3668   .text.HAL_UART_DisableReceiverTimeout:00000000 HAL_UART_DisableReceiverTimeout
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:3733   .text.HAL_MultiProcessor_EnterMuteMode:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:3739   .text.HAL_MultiProcessor_EnterMuteMode:00000000 HAL_MultiProcessor_EnterMuteMode
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:3758   .text.HAL_HalfDuplex_EnableTransmitter:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:3764   .text.HAL_HalfDuplex_EnableTransmitter:00000000 HAL_HalfDuplex_EnableTransmitter
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:3821   .text.HAL_HalfDuplex_EnableReceiver:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:3827   .text.HAL_HalfDuplex_EnableReceiver:00000000 HAL_HalfDuplex_EnableReceiver
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:3884   .text.HAL_LIN_SendBreak:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:3890   .text.HAL_LIN_SendBreak:00000000 HAL_LIN_SendBreak
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:3943   .text.HAL_UART_GetState:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:3949   .text.HAL_UART_GetState:00000000 HAL_UART_GetState
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:3977   .text.HAL_UART_GetError:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:3983   .text.HAL_UART_GetError:00000000 HAL_UART_GetError
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:4001   .text.UART_SetConfig:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:4007   .text.UART_SetConfig:00000000 UART_SetConfig
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s 			page 204
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:1967   .text.UART_RxISR_8BIT:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:2074   .text.UART_RxISR_16BIT:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:2183   .text.UART_DMAReceiveCplt:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:2246   .text.HAL_UART_RxHalfCpltCallback:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:2252   .text.HAL_UART_RxHalfCpltCallback:00000000 HAL_UART_RxHalfCpltCallback
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:2267   .text.UART_DMARxHalfCplt:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:2299   .text.HAL_UART_ErrorCallback:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:2305   .text.HAL_UART_ErrorCallback:00000000 HAL_UART_ErrorCallback
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:2320   .text.UART_DMAError:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:2414   .text.HAL_UART_IRQHandler:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:2420   .text.HAL_UART_IRQHandler:00000000 HAL_UART_IRQHandler
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:2766   .text.HAL_UART_IRQHandler:0000017c $d
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:2776   .text.UART_DMAAbortOnError:00000000 UART_DMAAbortOnError
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:2771   .text.UART_DMAAbortOnError:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:2809   .text.HAL_UART_AbortCpltCallback:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:2815   .text.HAL_UART_AbortCpltCallback:00000000 HAL_UART_AbortCpltCallback
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:2830   .text.HAL_UART_Abort_IT:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:2836   .text.HAL_UART_Abort_IT:00000000 HAL_UART_Abort_IT
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:3043   .text.HAL_UART_Abort_IT:000000d4 $d
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:3129   .text.UART_DMATxAbortCallback:00000000 UART_DMATxAbortCallback
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:3054   .text.UART_DMARxAbortCallback:00000000 UART_DMARxAbortCallback
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:3049   .text.UART_DMARxAbortCallback:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:3124   .text.UART_DMATxAbortCallback:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:3194   .text.HAL_UART_AbortTransmitCpltCallback:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:3200   .text.HAL_UART_AbortTransmitCpltCallback:00000000 HAL_UART_AbortTransmitCpltCallback
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:3215   .text.HAL_UART_AbortTransmit_IT:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:3221   .text.HAL_UART_AbortTransmit_IT:00000000 HAL_UART_AbortTransmit_IT
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:3322   .text.HAL_UART_AbortTransmit_IT:00000060 $d
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:3332   .text.UART_DMATxOnlyAbortCallback:00000000 UART_DMATxOnlyAbortCallback
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:3327   .text.UART_DMATxOnlyAbortCallback:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:3366   .text.HAL_UART_AbortReceiveCpltCallback:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:3372   .text.HAL_UART_AbortReceiveCpltCallback:00000000 HAL_UART_AbortReceiveCpltCallback
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:3387   .text.HAL_UART_AbortReceive_IT:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:3393   .text.HAL_UART_AbortReceive_IT:00000000 HAL_UART_AbortReceive_IT
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:3511   .text.HAL_UART_AbortReceive_IT:0000007c $d
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:3521   .text.UART_DMARxOnlyAbortCallback:00000000 UART_DMARxOnlyAbortCallback
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:3516   .text.UART_DMARxOnlyAbortCallback:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:3564   .text.HAL_UART_ReceiverTimeout_Config:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:3570   .text.HAL_UART_ReceiverTimeout_Config:00000000 HAL_UART_ReceiverTimeout_Config
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:3591   .text.HAL_UART_EnableReceiverTimeout:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:3597   .text.HAL_UART_EnableReceiverTimeout:00000000 HAL_UART_EnableReceiverTimeout
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:3662   .text.HAL_UART_DisableReceiverTimeout:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:3668   .text.HAL_UART_DisableReceiverTimeout:00000000 HAL_UART_DisableReceiverTimeout
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:3733   .text.HAL_MultiProcessor_EnterMuteMode:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:3739   .text.HAL_MultiProcessor_EnterMuteMode:00000000 HAL_MultiProcessor_EnterMuteMode
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:3758   .text.HAL_HalfDuplex_EnableTransmitter:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:3764   .text.HAL_HalfDuplex_EnableTransmitter:00000000 HAL_HalfDuplex_EnableTransmitter
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:3821   .text.HAL_HalfDuplex_EnableReceiver:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:3827   .text.HAL_HalfDuplex_EnableReceiver:00000000 HAL_HalfDuplex_EnableReceiver
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:3884   .text.HAL_LIN_SendBreak:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:3890   .text.HAL_LIN_SendBreak:00000000 HAL_LIN_SendBreak
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:3943   .text.HAL_UART_GetState:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:3949   .text.HAL_UART_GetState:00000000 HAL_UART_GetState
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:3977   .text.HAL_UART_GetError:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:3983   .text.HAL_UART_GetError:00000000 HAL_UART_GetError
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:4001   .text.UART_SetConfig:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:4007   .text.UART_SetConfig:00000000 UART_SetConfig
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s 			page 204
 
 
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:4125   .text.UART_SetConfig:00000072 $d
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:4129   .text.UART_SetConfig:00000076 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:4181   .text.UART_SetConfig:000000b4 $d
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:4191   .text.UART_SetConfig:000000c6 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:4313   .text.UART_SetConfig:0000018e $d
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:4535   .text.UART_SetConfig:00000284 $d
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:4545   .text.UART_SetConfig:000002a0 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:4594   .text.UART_AdvFeatureConfig:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:4600   .text.UART_AdvFeatureConfig:00000000 UART_AdvFeatureConfig
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:4752   .text.UART_WaitOnFlagUntilTimeout:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:4758   .text.UART_WaitOnFlagUntilTimeout:00000000 UART_WaitOnFlagUntilTimeout
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:4896   .text.HAL_UART_Transmit:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:4902   .text.HAL_UART_Transmit:00000000 HAL_UART_Transmit
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:5129   .text.HAL_UART_Receive:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:5135   .text.HAL_UART_Receive:00000000 HAL_UART_Receive
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:5409   .text.UART_CheckIdleState:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:5415   .text.UART_CheckIdleState:00000000 UART_CheckIdleState
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:5528   .text.HAL_UART_Init:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:5534   .text.HAL_UART_Init:00000000 HAL_UART_Init
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:5637   .text.HAL_HalfDuplex_Init:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:5643   .text.HAL_HalfDuplex_Init:00000000 HAL_HalfDuplex_Init
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:5751   .text.HAL_LIN_Init:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:5757   .text.HAL_LIN_Init:00000000 HAL_LIN_Init
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:5909   .text.HAL_MultiProcessor_Init:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:5915   .text.HAL_MultiProcessor_Init:00000000 HAL_MultiProcessor_Init
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:6045   .text.HAL_MultiProcessor_EnableMuteMode:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:6051   .text.HAL_MultiProcessor_EnableMuteMode:00000000 HAL_MultiProcessor_EnableMuteMode
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:6104   .text.HAL_MultiProcessor_DisableMuteMode:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:6110   .text.HAL_MultiProcessor_DisableMuteMode:00000000 HAL_MultiProcessor_DisableMuteMode
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:4322   .text.UART_SetConfig:00000197 $d
-C:\Users\jmbli\AppData\Local\Temp\ccLSa2ws.s:4322   .text.UART_SetConfig:00000198 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:4125   .text.UART_SetConfig:00000072 $d
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:4129   .text.UART_SetConfig:00000076 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:4181   .text.UART_SetConfig:000000b4 $d
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:4191   .text.UART_SetConfig:000000c6 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:4313   .text.UART_SetConfig:0000018e $d
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:4535   .text.UART_SetConfig:00000284 $d
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:4545   .text.UART_SetConfig:000002a0 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:4594   .text.UART_AdvFeatureConfig:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:4600   .text.UART_AdvFeatureConfig:00000000 UART_AdvFeatureConfig
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:4752   .text.UART_WaitOnFlagUntilTimeout:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:4758   .text.UART_WaitOnFlagUntilTimeout:00000000 UART_WaitOnFlagUntilTimeout
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:4896   .text.HAL_UART_Transmit:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:4902   .text.HAL_UART_Transmit:00000000 HAL_UART_Transmit
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:5129   .text.HAL_UART_Receive:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:5135   .text.HAL_UART_Receive:00000000 HAL_UART_Receive
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:5409   .text.UART_CheckIdleState:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:5415   .text.UART_CheckIdleState:00000000 UART_CheckIdleState
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:5528   .text.HAL_UART_Init:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:5534   .text.HAL_UART_Init:00000000 HAL_UART_Init
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:5637   .text.HAL_HalfDuplex_Init:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:5643   .text.HAL_HalfDuplex_Init:00000000 HAL_HalfDuplex_Init
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:5751   .text.HAL_LIN_Init:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:5757   .text.HAL_LIN_Init:00000000 HAL_LIN_Init
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:5909   .text.HAL_MultiProcessor_Init:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:5915   .text.HAL_MultiProcessor_Init:00000000 HAL_MultiProcessor_Init
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:6045   .text.HAL_MultiProcessor_EnableMuteMode:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:6051   .text.HAL_MultiProcessor_EnableMuteMode:00000000 HAL_MultiProcessor_EnableMuteMode
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:6104   .text.HAL_MultiProcessor_DisableMuteMode:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:6110   .text.HAL_MultiProcessor_DisableMuteMode:00000000 HAL_MultiProcessor_DisableMuteMode
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:4322   .text.UART_SetConfig:00000197 $d
+C:\Users\jmbli\AppData\Local\Temp\ccUEQZdb.s:4322   .text.UART_SetConfig:00000198 $t
 
 UNDEFINED SYMBOLS
 HAL_DMA_Start_IT

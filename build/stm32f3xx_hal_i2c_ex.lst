@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s 			page 1
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccTKx4KS.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s 			page 1
   27:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.c ****     (#) Configure I2C Digital noise filter using the function HAL_I2CEx_ConfigDigitalFilter()
   28:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.c ****     (#) Configure the enable or disable of I2C Wake Up Mode using the functions :
   29:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.c ****           (++) HAL_I2CEx_EnableWakeUp()
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s 			page 2
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccTKx4KS.s 			page 2
 
 
   30:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.c ****           (++) HAL_I2CEx_DisableWakeUp()
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s 			page 1
   84:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.c ****       (+) Configure Fast Mode Plus
   85:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.c **** 
   86:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.c **** @endverbatim
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s 			page 3
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccTKx4KS.s 			page 3
 
 
   87:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.c ****   * @{
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s 			page 1
   59 0020 1368     		ldr	r3, [r2]
   60 0022 23F00103 		bic	r3, r3, #1
   61 0026 1360     		str	r3, [r2]
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s 			page 4
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccTKx4KS.s 			page 4
 
 
  112:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.c **** 
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s 			page 1
  128:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.c ****   else
  129:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.c ****   {
  130:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.c ****     return HAL_BUSY;
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s 			page 5
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccTKx4KS.s 			page 5
 
 
  100              		.loc 1 130 12 view .LVU29
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s 			page 1
  136 0004 DBB2     		uxtb	r3, r3
  137              		.loc 1 149 6 view .LVU39
  138 0006 202B     		cmp	r3, #32
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s 			page 6
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccTKx4KS.s 			page 6
 
 
  139 0008 22D1     		bne	.L7
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s 			page 1
  173              		.loc 1 169 25 is_stmt 0 discriminator 2 view .LVU55
  174 0034 1160     		str	r1, [r2]
  170:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.c **** 
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s 			page 7
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccTKx4KS.s 			page 7
 
 
  171:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.c ****     __HAL_I2C_ENABLE(hi2c);
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s 			page 1
  215              		.syntax unified
  216              		.thumb
  217              		.thumb_func
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s 			page 8
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccTKx4KS.s 			page 8
 
 
  219              	HAL_I2CEx_EnableWakeUp:
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s 			page 1
  252 0026 1360     		str	r3, [r2]
  206:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.c **** 
  207:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.c ****     /* Enable wakeup from stop mode */
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s 			page 9
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccTKx4KS.s 			page 9
 
 
  208:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.c ****     hi2c->Instance->CR1 |= I2C_CR1_WUPEN;
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s 			page 1
  222:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.c ****   }
  223:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.c **** }
  292              		.loc 1 223 1 view .LVU96
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s 			page 10
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccTKx4KS.s 			page 10
 
 
  293 0052 7047     		bx	lr
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s 			page 1
  331 0018 2423     		movs	r3, #36
  332 001a 80F84130 		strb	r3, [r0, #65]
  242:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.c **** 
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s 			page 11
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccTKx4KS.s 			page 11
 
 
  243:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.c ****     /* Disable the selected I2C peripheral */
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s 			page 1
  369              	.LVL25:
  370              		.loc 1 260 12 view .LVU122
  371 004e 7047     		bx	lr
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s 			page 12
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccTKx4KS.s 			page 12
 
 
  372              	.LVL26:
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s 			page 1
  402              		.loc 1 285 3 view .LVU128
  403              	.LBB2:
  404              		.loc 1 285 3 view .LVU129
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s 			page 13
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccTKx4KS.s 			page 13
 
 
  405              		.loc 1 285 3 view .LVU130
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s 			page 1
  300:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.c ****   * @note  For all I2C2 pins fast mode plus driving capability can be disabled
  301:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.c ****   *        only by using I2C_FASTMODEPLUS_I2C2 parameter.
  302:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.c ****   * @note  For all I2C3 pins fast mode plus driving capability can be disabled
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s 			page 14
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccTKx4KS.s 			page 14
 
 
  303:Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.c ****   *        only by using I2C_FASTMODEPLUS_I2C3 parameter.
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s 			page 1
  487 0024 00100240 		.word	1073876992
  488 0028 00000140 		.word	1073807360
  489              		.cfi_endproc
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s 			page 15
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccTKx4KS.s 			page 15
 
 
  490              	.LFE135:
@@ -850,24 +850,24 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s 			page 1
  497              		.file 5 "Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h"
  498              		.file 6 "Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_dma.h"
  499              		.file 7 "Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_i2c.h"
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s 			page 16
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccTKx4KS.s 			page 16
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f3xx_hal_i2c_ex.c
-C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s:20     .text.HAL_I2CEx_ConfigAnalogFilter:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s:26     .text.HAL_I2CEx_ConfigAnalogFilter:00000000 HAL_I2CEx_ConfigAnalogFilter
-C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s:116    .text.HAL_I2CEx_ConfigDigitalFilter:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s:122    .text.HAL_I2CEx_ConfigDigitalFilter:00000000 HAL_I2CEx_ConfigDigitalFilter
-C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s:213    .text.HAL_I2CEx_EnableWakeUp:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s:219    .text.HAL_I2CEx_EnableWakeUp:00000000 HAL_I2CEx_EnableWakeUp
-C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s:298    .text.HAL_I2CEx_DisableWakeUp:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s:304    .text.HAL_I2CEx_DisableWakeUp:00000000 HAL_I2CEx_DisableWakeUp
-C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s:383    .text.HAL_I2CEx_EnableFastModePlus:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s:389    .text.HAL_I2CEx_EnableFastModePlus:00000000 HAL_I2CEx_EnableFastModePlus
-C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s:432    .text.HAL_I2CEx_EnableFastModePlus:00000024 $d
-C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s:438    .text.HAL_I2CEx_DisableFastModePlus:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s:444    .text.HAL_I2CEx_DisableFastModePlus:00000000 HAL_I2CEx_DisableFastModePlus
-C:\Users\jmbli\AppData\Local\Temp\ccqIzjKN.s:487    .text.HAL_I2CEx_DisableFastModePlus:00000024 $d
+C:\Users\jmbli\AppData\Local\Temp\ccTKx4KS.s:20     .text.HAL_I2CEx_ConfigAnalogFilter:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccTKx4KS.s:26     .text.HAL_I2CEx_ConfigAnalogFilter:00000000 HAL_I2CEx_ConfigAnalogFilter
+C:\Users\jmbli\AppData\Local\Temp\ccTKx4KS.s:116    .text.HAL_I2CEx_ConfigDigitalFilter:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccTKx4KS.s:122    .text.HAL_I2CEx_ConfigDigitalFilter:00000000 HAL_I2CEx_ConfigDigitalFilter
+C:\Users\jmbli\AppData\Local\Temp\ccTKx4KS.s:213    .text.HAL_I2CEx_EnableWakeUp:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccTKx4KS.s:219    .text.HAL_I2CEx_EnableWakeUp:00000000 HAL_I2CEx_EnableWakeUp
+C:\Users\jmbli\AppData\Local\Temp\ccTKx4KS.s:298    .text.HAL_I2CEx_DisableWakeUp:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccTKx4KS.s:304    .text.HAL_I2CEx_DisableWakeUp:00000000 HAL_I2CEx_DisableWakeUp
+C:\Users\jmbli\AppData\Local\Temp\ccTKx4KS.s:383    .text.HAL_I2CEx_EnableFastModePlus:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccTKx4KS.s:389    .text.HAL_I2CEx_EnableFastModePlus:00000000 HAL_I2CEx_EnableFastModePlus
+C:\Users\jmbli\AppData\Local\Temp\ccTKx4KS.s:432    .text.HAL_I2CEx_EnableFastModePlus:00000024 $d
+C:\Users\jmbli\AppData\Local\Temp\ccTKx4KS.s:438    .text.HAL_I2CEx_DisableFastModePlus:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccTKx4KS.s:444    .text.HAL_I2CEx_DisableFastModePlus:00000000 HAL_I2CEx_DisableFastModePlus
+C:\Users\jmbli\AppData\Local\Temp\ccTKx4KS.s:487    .text.HAL_I2CEx_DisableFastModePlus:00000024 $d
 
 NO UNDEFINED SYMBOLS

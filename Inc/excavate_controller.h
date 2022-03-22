@@ -3,7 +3,7 @@
 
 #include "can_manager.h"
 
-#define ACHOO_MOTOR_POLE_PAIRS 7
+#define EXCAVATE_MOTOR_POLE_PAIRS 7
 
 #define EXCAVATE_MSG_SET_DIG_SPEED  50u
 

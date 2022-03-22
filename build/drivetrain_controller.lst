@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccKJBxfJ.s 			page 1
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccMGPVfk.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccKJBxfJ.s 			page 1
   33 0000 00B5     		push	{lr}
   34              	.LCFI0:
   35              		.cfi_def_cfa_offset 4
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccKJBxfJ.s 			page 2
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccMGPVfk.s 			page 2
 
 
   36              		.cfi_offset 14, -4
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccKJBxfJ.s 			page 1
   52:Src/drivetrain_controller.c **** }
   62              		.loc 1 52 1 view .LVU8
   63 0018 07B0     		add	sp, sp, #28
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccKJBxfJ.s 			page 3
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccMGPVfk.s 			page 3
 
 
   64              	.LCFI3:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccKJBxfJ.s 			page 1
   42:Src/drivetrain_controller.c ****       new_speed_left = cmd_speed * 2 - new_speed_right;
  108              		.loc 1 42 23 view .LVU19
  109 0056 0D4A     		ldr	r2, .L5+4
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccKJBxfJ.s 			page 4
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccMGPVfk.s 			page 4
 
 
  110 0058 82ED008A 		vstr.32	s16, [r2]
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccKJBxfJ.s 			page 1
   53:Src/drivetrain_controller.c **** 
   54:Src/drivetrain_controller.c **** void drivetrain_loop(void const* argument) {
  155              		.loc 1 54 44 is_stmt 1 view -0
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccKJBxfJ.s 			page 5
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccMGPVfk.s 			page 5
 
 
  156              		.cfi_startproc
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccKJBxfJ.s 			page 1
  205 002a 0646     		mov	r6, r0
  206              	.LVL18:
   60:Src/drivetrain_controller.c ****   VESC* flm = create_vesc(DRIVE_MOTOR_FL, DRIVE_MOTOR_POLE_PAIRS);
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccKJBxfJ.s 			page 6
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccMGPVfk.s 			page 6
 
 
  207              		.loc 1 60 3 is_stmt 1 view .LVU44
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccKJBxfJ.s 			page 1
   65:Src/drivetrain_controller.c ****     vTaskDelayUntil(
  247              		.loc 1 65 9 discriminator 1 view .LVU54
  248 006a E4E7     		b	.L8
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccKJBxfJ.s 			page 7
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccMGPVfk.s 			page 7
 
 
  249              	.L11:
@@ -392,21 +392,21 @@ ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccKJBxfJ.s 			page 1
  282              		.file 8 "Middlewares/Third_Party/FreeRTOS/Source/include/task.h"
  283              		.file 9 "Inc/buffer.h"
  284              		.file 10 "Inc/drivetrain_controller.h"
-ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccKJBxfJ.s 			page 8
+ARM GAS  C:\Users\jmbli\AppData\Local\Temp\ccMGPVfk.s 			page 8
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 drivetrain_controller.c
-C:\Users\jmbli\AppData\Local\Temp\ccKJBxfJ.s:20     .text.drivetrain_move:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccKJBxfJ.s:26     .text.drivetrain_move:00000000 drivetrain_move
-C:\Users\jmbli\AppData\Local\Temp\ccKJBxfJ.s:138    .text.drivetrain_move:00000088 $d
-C:\Users\jmbli\AppData\Local\Temp\ccKJBxfJ.s:146    .text.drivetrain_loop:00000000 $t
-C:\Users\jmbli\AppData\Local\Temp\ccKJBxfJ.s:152    .text.drivetrain_loop:00000000 drivetrain_loop
-C:\Users\jmbli\AppData\Local\Temp\ccKJBxfJ.s:252    .text.drivetrain_loop:0000006c $d
-C:\Users\jmbli\AppData\Local\Temp\ccKJBxfJ.s:272    .bss.new_speed_right:00000000 new_speed_right
-C:\Users\jmbli\AppData\Local\Temp\ccKJBxfJ.s:265    .bss.new_speed_left:00000000 new_speed_left
-C:\Users\jmbli\AppData\Local\Temp\ccKJBxfJ.s:261    .bss.new_speed_left:00000000 $d
-C:\Users\jmbli\AppData\Local\Temp\ccKJBxfJ.s:268    .bss.new_speed_right:00000000 $d
+C:\Users\jmbli\AppData\Local\Temp\ccMGPVfk.s:20     .text.drivetrain_move:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccMGPVfk.s:26     .text.drivetrain_move:00000000 drivetrain_move
+C:\Users\jmbli\AppData\Local\Temp\ccMGPVfk.s:138    .text.drivetrain_move:00000088 $d
+C:\Users\jmbli\AppData\Local\Temp\ccMGPVfk.s:146    .text.drivetrain_loop:00000000 $t
+C:\Users\jmbli\AppData\Local\Temp\ccMGPVfk.s:152    .text.drivetrain_loop:00000000 drivetrain_loop
+C:\Users\jmbli\AppData\Local\Temp\ccMGPVfk.s:252    .text.drivetrain_loop:0000006c $d
+C:\Users\jmbli\AppData\Local\Temp\ccMGPVfk.s:272    .bss.new_speed_right:00000000 new_speed_right
+C:\Users\jmbli\AppData\Local\Temp\ccMGPVfk.s:265    .bss.new_speed_left:00000000 new_speed_left
+C:\Users\jmbli\AppData\Local\Temp\ccMGPVfk.s:261    .bss.new_speed_left:00000000 $d
+C:\Users\jmbli\AppData\Local\Temp\ccMGPVfk.s:268    .bss.new_speed_right:00000000 $d
 
 UNDEFINED SYMBOLS
 buffer_pop_int32

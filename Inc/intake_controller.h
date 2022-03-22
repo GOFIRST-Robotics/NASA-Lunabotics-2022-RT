@@ -5,6 +5,8 @@
 
 typedef enum { UP=0, MOVING_UP, MOVING_DOWN, DOWN } IntakeState;
 
+#define INTAKE_MOTOR_POLE_PAIRS 7
+
 #define INTAKE_MSG_SET_POSITION 40u
 #define INTAKE_MSG_STATUS 41u
 
