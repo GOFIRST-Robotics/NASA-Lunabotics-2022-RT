@@ -14,7 +14,7 @@ static IntakeState targetState = UP;
 static IntakeState currentState = UP;
 
 VESC* intakeMotor;
-
+ 
 void intakeCANCallback(rmc_can_msg msg) {
   U32 msg_type = msg.id >> 8u;
   if (msg_type == INTAKE_MSG_SET_POSITION && msg.length >= 1) {
