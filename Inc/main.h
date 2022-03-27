@@ -66,10 +66,6 @@ void Error_Handler(void);
 #define USART_RX_GPIO_Port GPIOA
 #define LD2_Pin GPIO_PIN_5
 #define LD2_GPIO_Port GPIOA
-#define R_DOOR_RV_Pin GPIO_PIN_12
-#define R_DOOR_RV_GPIO_Port GPIOB
-#define R_DOOR_FW_Pin GPIO_PIN_13
-#define R_DOOR_FW_GPIO_Port GPIOB
 #define INTAKE_LimitLL_Pin GPIO_PIN_9
 #define INTAKE_LimitLL_GPIO_Port GPIOC
 #define INTAKE_LimitLH_Pin GPIO_PIN_8

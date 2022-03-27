@@ -37,8 +37,6 @@ BUILD_DIR = build
 # C sources
 C_SOURCES =  \
 Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal.c \
-Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_adc.c \
-Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_adc_ex.c \
 Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_can.c \
 Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_cortex.c \
 Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c \

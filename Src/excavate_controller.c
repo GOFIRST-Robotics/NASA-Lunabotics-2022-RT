@@ -13,7 +13,7 @@ static int targetSpeed;
 VESC* leftMotor;
 VESC* rightMotor;
 
-void excavateCANCallbak(rmc_can_msg msg) {
+void excavateCANCallback(rmc_can_msg msg) {
   U32 msg_type = msg.id >> 8u;
   if (msg_type == EXCAVATE_MSG_SET_DIG_SPEED && msg.length >= 1) {
     targetSpeed = msg.buf[0];
